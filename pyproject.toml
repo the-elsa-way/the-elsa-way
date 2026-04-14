@@ -1,0 +1,19 @@
+[project]
+name = "the-elsa-way"
+version = "0.1.0"
+description = "A community resource for responsible AI in healthcare"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "CC-BY-4.0" }
+dependencies = [
+    "jupyter-book>=2.1.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pip-tools>=7.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

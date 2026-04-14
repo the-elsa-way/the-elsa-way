@@ -9,11 +9,10 @@ dependencies = [
     "jupyter-book>=2.1.2",
 ]
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "pip-tools>=7.0",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[tool.uv]
+package = false

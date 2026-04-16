@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" font-family="sans-serif">
+  <!-- Background circle (track) -->
+  <circle cx="250" cy="250" r="170" fill="none" stroke="#e2e8f0" stroke-width="40"/>
+
+  <!-- Arcs for each phase (each ~80deg of 360, with gaps) -->
+  <!-- Design: top-right arc -->
+  <path d="M 250 80 A 170 170 0 0 1 420 250" fill="none" stroke="#4f85cc" stroke-width="40" stroke-linecap="round"/>
+  <!-- Development: bottom-right arc -->
+  <path d="M 420 250 A 170 170 0 0 1 250 420" fill="none" stroke="#2e9e6b" stroke-width="40" stroke-linecap="round"/>
+  <!-- Evaluation: bottom-left arc -->
+  <path d="M 250 420 A 170 170 0 0 1 80 250" fill="none" stroke="#d97706" stroke-width="40" stroke-linecap="round"/>
+  <!-- Deployment: top-left arc -->
+  <path d="M 80 250 A 170 170 0 0 1 250 80" fill="none" stroke="#c0392b" stroke-width="40" stroke-linecap="round"/>
+
+  <!-- Arrow heads -->
+  <polygon points="250,58 238,82 262,82" fill="#4f85cc"/>
+  <polygon points="442,250 418,238 418,262" fill="#2e9e6b"/>
+  <polygon points="250,442 238,418 262,418" fill="#d97706"/>
+  <polygon points="58,250 82,238 82,262" fill="#c0392b"/>
+
+  <!-- Labels -->
+  <text x="310" y="155" text-anchor="middle" font-size="17" font-weight="bold" fill="#4f85cc">Design</text>
+  <text x="390" y="345" text-anchor="middle" font-size="17" font-weight="bold" fill="#2e9e6b">Development</text>
+  <text x="175" y="400" text-anchor="middle" font-size="17" font-weight="bold" fill="#d97706">Evaluation</text>
+  <text x="110" y="180" text-anchor="middle" font-size="17" font-weight="bold" fill="#c0392b">Deployment</text>
+
+  <!-- Centre label -->
+  <text x="250" y="243" text-anchor="middle" font-size="15" fill="#555">AI Lifecycle</text>
+  <text x="250" y="263" text-anchor="middle" font-size="15" fill="#555">in Healthcare</text>
+</svg>

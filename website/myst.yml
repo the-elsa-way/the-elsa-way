@@ -1,6 +1,8 @@
 version: 1
 project:
   title: The ELSA Way
+  description: A community-driven handbook for developing ethical, legal, social, and accessible AI systems across every phase of the healthcare AI lifecycle.
+  thumbnail: figures/logo_elsa-nn.png
   authors:
     - name: The ELSA Way Community
   copyright: "2026"

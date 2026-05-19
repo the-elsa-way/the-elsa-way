@@ -1,6 +1,6 @@
 # The ELSA Way
 
-A community-driven handbook for developing AI responsibly in healthcare, built by the [ELSA AI Lab Northern Netherlands](https://elsa-ai.nl).
+A community-driven handbook for developing AI responsibly in healthcare, built by the ELSA AI Lab Northern Netherlands.
 
 > **Vibe-coding experiment.** The current content of this book was generated entirely by [Claude Code](https://claude.ai/code) as a proof-of-concept. Chapter text, structure, citations, and figures were produced from the project brief, the FUTURE-AI framework, and the ELSA Way description without human review of the substance. This content is a scaffold, not authoritative guidance. Do not rely on it in practice.
 

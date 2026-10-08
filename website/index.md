@@ -54,7 +54,7 @@ The ELSA Way is written for everyone involved in building and using AI in health
 - **Policy makers and managers** establishing governance and procurement frameworks
 - **Patients and communities** who want a voice in how AI affects their care
 
-See the [Pathways](pathways/pathways.md) section to find the route most relevant to you.
+See the [Pathways](pathways/pathways.md) section to find the route most relevant to you, or go straight to the [Toolbox](toolbox/toolbox.md) for practical tools you can use in your project.
 
 ## How to contribute
 

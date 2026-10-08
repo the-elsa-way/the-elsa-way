@@ -1,0 +1,59 @@
+id: gripp2
+name: GRIPP2
+full_name: Guidance for Reporting Involvement of Patients and the Public, version 2
+summary: >-
+  A reporting checklist that helps you describe how patients and the public
+  were involved in your research, what they did and what difference it made.
+description: >-
+  GRIPP2 comes in two forms. The long form has 34 items for studies whose
+  main subject is patient and public involvement (PPI); the short form has
+  five items (aim, methods, results, outcomes and critical reflection) for
+  studies where PPI was part of the work but not its focus. It was
+  developed with a three-round Delphi survey and a consensus meeting, with
+  patients involved as research partners throughout. Using it when you plan
+  involvement also reminds you what you will need to record.
+healthcare: >-
+  GRIPP2 was written for health and social care research and is listed by
+  the EQUATOR Network. It applies directly when you involve patients in the
+  design or evaluation of a medical AI study.
+url: https://www.equator-network.org/reporting-guidelines/gripp2-reporting-checklists-tools-to-improve-reporting-of-patient-and-public-involvement-in-research/
+developers:
+  - Sophie Staniszewska
+  - Jo Brett
+  - Iveta Simera
+  - Kate Seers
+year: 2017
+type: reporting-guideline
+format: Reporting checklist (long form and short form)
+lifecycle: [design, evaluation]
+future_ai: [general, traceability]
+audiences: [researchers, patients-communities]
+practical:
+  facilitator: not-needed
+  skills: none
+  cost: free
+  languages: [en, ja]
+maturity: established
+license:
+  name: CC-BY-4.0
+  url: https://doi.org/10.1186/s40900-017-0062-2
+  rehost: true
+references:
+  - citation: >-
+      Staniszewska S, Brett J, Simera I, et al. GRIPP2 reporting checklists:
+      tools to improve reporting of patient and public involvement in
+      research. BMJ. 2017;358:j3453.
+    doi: 10.1136/bmj.j3453
+  - citation: >-
+      Staniszewska S, Brett J, Simera I, et al. GRIPP2 reporting checklists:
+      tools to improve reporting of patient and public involvement in
+      research. Res Involv Engagem. 2017;3:13.
+    doi: 10.1186/s40900-017-0062-2
+passages:
+  - id: design-stakeholder-engagement-methods
+    why: >-
+      Whichever engagement method you choose, the GRIPP2 items tell you what
+      to plan and record so that you can later report who was involved, how,
+      and what changed as a result.
+see_also: [tripod-ai, consort-ai, spirit-ai]
+last_reviewed: "2026-10-08"

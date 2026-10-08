@@ -1,0 +1,51 @@
+id: evidently
+name: Evidently
+summary: >-
+  An open-source Python library for checking data quality, data drift and model
+  performance, which you can run as one-off reports or as an ongoing monitoring
+  dashboard.
+description: >-
+  Evidently compares a current batch of data or predictions against a
+  reference set, such as your validation data, and produces reports and
+  pass/fail tests. It includes more than 100 metrics, among them over 20
+  statistical tests for drift in input features and outputs, plus
+  classification and regression metrics once true labels arrive. You can run it
+  in a notebook, add it to a scheduled pipeline, or host its open-source
+  monitoring UI yourself. The company behind it, Evidently AI, also sells a
+  hosted Evidently Cloud with extra features such as alerting; that service is
+  separate from the Apache-2.0 open-source library.
+healthcare: >-
+  After a clinical model goes live, you can use Evidently to spot shifts in
+  patient case mix, coding practice or scanner settings that may degrade
+  performance, often before outcome labels are available. Because it runs
+  self-hosted, you can keep monitoring data inside the hospital's own
+  infrastructure; check this before sending any data to the cloud version.
+url: https://www.evidentlyai.com
+source_code: https://github.com/evidentlyai/evidently
+developers:
+  - Evidently AI
+year: 2020
+type: technical-library
+format: Python package with self-hosted dashboard
+lifecycle: [evaluation, deployment]
+future_ai: [robustness, traceability]
+audiences: [ai-developers]
+practical:
+  duration: ongoing
+  facilitator: not-needed
+  skills: Python, basic statistics
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Apache-2.0
+  url: https://github.com/evidentlyai/evidently/blob/main/LICENSE
+  rehost: true
+passages:
+  - id: deployment-monitoring-auditing-continuous
+    why: >-
+      Its drift tests and performance reports give you a ready-made way to
+      detect changes in input and output distributions and to track metrics
+      over time once your model is in clinical use.
+see_also: [mlflow]
+last_reviewed: "2026-10-08"

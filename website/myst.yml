@@ -155,6 +155,16 @@ project:
         - file: deployment/governance-accountability.md
           title: Governance and Accountability
 
+    # ===== Toolbox ===============================================================
+    # Tool pages are generated from toolbox/tools/*.yml by `make toolbox`.
+    - file: toolbox/toolbox.md
+      children:
+        - file: toolbox/contributing-tools.md
+          title: Adding a Tool
+        - title: All Tools
+          children:
+            - pattern: toolbox/tools/*.md
+
     # ===== FUTURE-AI Principles ==================================================
     - file: future-ai/future-ai.md
       children:

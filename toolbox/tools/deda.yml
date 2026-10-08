@@ -1,0 +1,61 @@
+id: deda
+name: DEDA
+full_name: De Ethische Data Assistent (Data Ethics Decision Aid)
+summary: >-
+  A poster and handbook that walk a project team through the ethical and
+  practical questions of a data or AI project and help you document the
+  choices you make.
+description: >-
+  DEDA is a large poster with a sequence of questions on technical and
+  societal topics such as data sources, algorithms, anonymisation, access and
+  reuse, privacy, bias and transparent communication, supported by a handbook
+  that explains each question. A mixed team works through the poster in a session
+  around a real project and ends with written conclusions that can feed into
+  the next project steps. You can run it yourself, ask Utrecht University's
+  Data School to moderate, or use the online DEDA Remote version. The toolkit
+  was substantially revised in 2026 to cover generative AI and recent
+  legislation.
+url: https://deda.dataschool.nl/en/
+developers:
+  - Data School, Utrecht University
+  - Mirko Tobias Schäfer
+  - Aline Franzke
+type: canvas
+format: Poster with handbook, for an in-person or online workshop
+lifecycle: [design, development]
+future_ai: [general, traceability]
+audiences: [ai-developers, policy-managers]
+practical:
+  duration: 3-4 hours
+  group_size: 4-8 per poster
+  facilitator: recommended
+  skills: none
+  cost: free
+  languages: [nl, en, de, el, fi]
+maturity: established
+license:
+  name: Open access (free to download); no licence stated, © Data School, Utrecht University
+  url: https://deda.dataschool.nl/en/disclaimer/
+  rehost: false
+references:
+  - citation: >-
+      Franzke AS, Muis I, Schäfer MT. Data Ethics Decision Aid (DEDA): a
+      dialogical framework for ethical inquiry of AI and data projects in the
+      Netherlands. Ethics Inf Technol. 2021;23(3):551-567.
+    doi: 10.1007/s10676-020-09577-5
+passages:
+  - id: design-data-strategy-minimisation
+    why: >-
+      DEDA's questions on which data you collect and why make your team
+      justify each data source against the project purpose, which is the
+      heart of data minimisation.
+  - id: design-ethical-review-issues
+    why: >-
+      Working through the poster as a team helps you spot ethical issues such
+      as bias, privacy and transparency early and leaves a written
+      record of how you dealt with them.
+see_also: [data-ethics-canvas, iama, algoritmekader]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/de-ethische-data-assistent-deda/
+last_reviewed: "2026-10-08"

@@ -1,0 +1,58 @@
+id: arx
+name: ARX
+full_name: ARX Data Anonymization Tool
+summary: >-
+  Free desktop software and Java library for anonymising structured personal
+  data, with built-in checks of re-identification risk and of how much useful
+  information remains.
+description: >-
+  ARX lets you load a table, mark which columns are direct identifiers,
+  quasi-identifiers or sensitive attributes, and define generalisation
+  hierarchies (for example, exact age to five-year bands). It then searches for
+  a transformation that meets privacy models you choose, such as k-anonymity,
+  l-diversity, t-closeness or differential privacy, while keeping as much data
+  utility as possible. Its graphical interface shows the estimated
+  re-identification risk before and after anonymisation, so you can document
+  why the output is safe to share. ARX grew out of medical informatics research
+  at the Technical University of Munich and is now developed together with the
+  Berlin Institute of Health at Charité.
+healthcare: >-
+  ARX was built with biomedical data in mind and its developers present it as
+  a tool for sharing research and clinical data. For a clinical AI project you
+  can use it on tabular extracts, such as patient characteristics, diagnoses
+  and lab results, before you share or publish them. It does not handle free
+  text, DICOM headers or images, so you need other tools for those.
+url: https://arx.deidentifier.org/
+source_code: https://github.com/arx-deidentifier/arx
+developers:
+  - Technical University of Munich
+  - Berlin Institute of Health at Charité
+type: technical-library
+format: Desktop application and Java library
+lifecycle: [design, development]
+future_ai: [general, traceability]
+audiences: [ai-developers, researchers]
+practical:
+  facilitator: not-needed
+  skills: Basic knowledge of anonymisation concepts; Java only for the library
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Apache-2.0
+  url: https://github.com/arx-deidentifier/arx/blob/master/LICENSE
+  rehost: true
+references:
+  - citation: >-
+      Prasser F, Eicher J, Spengler H, Bild R, Kuhn KA. Flexible data
+      anonymization using ARX: Current status and challenges ahead. Software:
+      Practice and Experience. 2020;50(7):1277-1304.
+    doi: 10.1002/spe.2812
+passages:
+  - id: development-privacy-security-anonymisation
+    why: >-
+      ARX lets you apply and test formal anonymisation models on tabular
+      patient data and measure the remaining re-identification risk, instead of
+      assuming that removing names is enough.
+see_also: [flower]
+last_reviewed: "2026-10-08"

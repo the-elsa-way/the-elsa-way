@@ -26,3 +26,10 @@ This pathway is for academic researchers studying, developing, or validating AI 
 - **DECIDE-AI** {cite}`decideai2022`: for early-stage clinical evaluation of decision support AI
 
 These are referenced throughout the Evaluation section.
+
+## Tools
+
+These tools from the [Toolbox](#toolbox) are a good fit for your role.
+
+:::{include} ../toolbox/_generated/audiences/researchers.md
+:::

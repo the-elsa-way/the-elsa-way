@@ -1,0 +1,59 @@
+id: altai
+name: ALTAI
+full_name: Assessment List for Trustworthy Artificial Intelligence
+summary: >-
+  A self-assessment checklist from the EU High-Level Expert Group on AI that
+  helps you test an AI system against the seven requirements for trustworthy
+  AI and spot where you need extra measures.
+description: >-
+  ALTAI turns the 2019 Ethics Guidelines for Trustworthy AI into questions,
+  grouped under seven requirements: human agency and oversight, technical
+  robustness and safety, privacy and data governance, transparency,
+  diversity, non-discrimination and fairness, societal and environmental
+  well-being, and accountability. You answer them with a multidisciplinary
+  team, ideally after a fundamental rights impact assessment, and pick the
+  questions that fit your system and sector. It is a reflection tool, not a
+  certification: completing it does not prove compliance. It comes as a PDF
+  and as an interactive web version with extra explanatory notes.
+healthcare: >-
+  ALTAI is sector-neutral. In clinical AI it works well as a broad first pass
+  over ethical and technical risks before you move to medical-device and AI
+  Act specific checks.
+url: https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment
+developers:
+  - High-Level Expert Group on Artificial Intelligence (AI HLEG), European Commission
+year: 2020
+type: assessment
+format: Self-assessment checklist (PDF and web tool)
+lifecycle: [design, development, deployment]
+future_ai: [general, robustness, fairness]
+audiences: [ai-developers, policy-managers]
+practical:
+  facilitator: recommended
+  skills: none
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: European Commission reuse policy (Decision 2011/833/EU); reuse allowed with acknowledgement
+  url: https://eur-lex.europa.eu/eli/dec/2011/833/oj
+  rehost: false
+references:
+  - citation: >-
+      High-Level Expert Group on Artificial Intelligence. Assessment List for
+      Trustworthy Artificial Intelligence (ALTAI) for self-assessment.
+      Brussels: European Commission; 2020.
+    doi: 10.2759/002360
+passages:
+  - id: design-risk-management-identification
+    why: >-
+      Its seven requirement areas give your interdisciplinary team a broad
+      prompt list, so you catch ethical, societal and technical risks that a
+      purely technical review would miss.
+  - id: design-ethical-review-issues
+    why: >-
+      Many of its questions, on human oversight, non-discrimination,
+      accountability and environmental well-being, line up with the ethical
+      concerns you need to document during design.
+see_also: [iama, ai-impact-assessment, algoritmekader]
+last_reviewed: "2026-10-08"

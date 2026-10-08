@@ -1,0 +1,67 @@
+id: decide-ai
+name: DECIDE-AI
+full_name: Developmental and Exploratory Clinical Investigations of DEcision support systems driven by Artificial Intelligence
+summary: >-
+  A reporting checklist for small, early clinical studies of AI decision
+  support, where you first test a tool with real users before a large trial.
+description: >-
+  DECIDE-AI covers the stage between building a model and running a
+  large comparative trial: the first studies in which clinicians use the
+  system with real patients. It has 17 AI-specific items and 10 generic ones,
+  and asks you to report how the system was used in practice, how it fitted
+  into the workflow, what human factors and usability issues came up, how
+  safety was monitored and what changed in the tool during the study. It was
+  agreed through an international consensus process and published in 2022 in
+  Nature Medicine and The BMJ.
+healthcare: >-
+  Written for clinical decision support systems, so it fits first-in-clinic
+  pilots, feasibility studies and silent or shadow-mode evaluations that come
+  before a randomised trial.
+url: https://www.equator-network.org/reporting-guidelines/reporting-guideline-for-the-early-stage-clinical-evaluation-of-decision-support-systems-driven-by-artificial-intelligence-decide-ai/
+developers:
+  - DECIDE-AI Expert Group (Baptiste Vasey, Peter McCulloch and colleagues)
+year: 2022
+type: reporting-guideline
+format: Checklist with explanatory paper
+lifecycle: [evaluation, deployment]
+future_ai: [usability, traceability, general]
+audiences: [researchers, healthcare-professionals, ai-developers]
+practical:
+  facilitator: not-needed
+  skills: Clinical research methods
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: CC-BY-NC-4.0 (BMJ version); Nature Medicine version is not openly licensed
+  url: https://www.bmj.com/content/377/bmj-2022-070904
+  rehost: false
+references:
+  - citation: >-
+      Vasey B, Nagendran M, Campbell B, Clifton DA, Collins GS, Denaxas S, et
+      al. Reporting guideline for the early-stage clinical evaluation of
+      decision support systems driven by artificial intelligence: DECIDE-AI.
+      Nature Medicine. 2022;28:924-933.
+    doi: 10.1038/s41591-022-01772-9
+  - citation: >-
+      Vasey B, Nagendran M, Campbell B, Clifton DA, Collins GS, Denaxas S, et
+      al. Reporting guideline for the early stage clinical evaluation of
+      decision support systems driven by artificial intelligence: DECIDE-AI.
+      BMJ. 2022;377:e070904.
+    doi: 10.1136/bmj-2022-070904
+passages:
+  - id: evaluation-clinical-utility-safety-plan
+    why: >-
+      If you cannot yet justify a full trial, the checklist helps you plan a
+      smaller first clinical study that still collects the safety, usability
+      and workflow evidence a later trial will need.
+  - id: deployment-clinical-integration-workflow
+    why: >-
+      Its items on how the tool was actually used and fitted into care give
+      you a structured way to record workflow problems during early roll-out.
+  - id: evaluation-reporting-transparency-standards
+    why: >-
+      Use it to report early-stage clinical evaluations, the gap between
+      model validation and a randomised trial.
+see_also: [consort-ai, spirit-ai, system-usability-scale]
+last_reviewed: "2026-10-08"

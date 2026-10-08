@@ -24,6 +24,9 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 Before sharing or publishing datasets, scrub DICOM headers of all identifying fields (patient name, DOB, study date, accession number, equipment serial numbers). For brain imaging, consider skull-stripping to remove facial features.
 :::
 
+:::{include} ../toolbox/_generated/passages/development-privacy-security-anonymisation.md
+:::
+
 ## Access controls
 
 Implement role-based access controls:
@@ -49,6 +52,9 @@ Where high-sensitivity data is involved, consider privacy-preserving machine lea
 - **Secure multi-party computation**: collaborative computation without revealing individual inputs
 
 These techniques involve trade-offs with model performance and should be weighed against your specific risk profile.
+
+:::{include} ../toolbox/_generated/passages/development-privacy-security-techniques.md
+:::
 
 ## Model output privacy
 

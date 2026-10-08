@@ -1,0 +1,50 @@
+id: algoritmekader
+name: Algoritmekader
+full_name: Algoritmekader (Dutch government Algorithm Framework)
+summary: >-
+  A Dutch government website that brings together the legal requirements,
+  recommended measures and supporting tools for responsible use of algorithms
+  and AI, organised by lifecycle phase, role and topic.
+description: >-
+  The Algoritmekader links each legal requirement (for example from the GDPR,
+  the AI Act and non-discrimination law) to practical measures and to tools
+  such as the IAMA and the AI Impact Assessment. You can filter by lifecycle
+  phase, from problem analysis to decommissioning, by role, such as project
+  leader, jurist or developer, and by topic, such as privacy, discrimination or
+  procurement. It also has a section on the AI Act, with timelines and help
+  to classify your system. The content is developed in the open on GitHub and
+  updated in numbered releases; the site is in Dutch.
+healthcare: >-
+  It targets Dutch government bodies rather than health care, but public
+  health organisations can use it to find which rules and measures apply at
+  each stage of a clinical AI project.
+url: https://minbzk.github.io/Algoritmekader/
+source_code: https://github.com/MinBZK/Algoritmekader
+developers:
+  - Dutch Ministry of the Interior and Kingdom Relations (MinBZK)
+type: framework
+format: Website with filterable requirements, measures and tools
+lifecycle: [design, development, evaluation, deployment]
+future_ai: [traceability, fairness, general]
+audiences: [policy-managers, ai-developers]
+practical:
+  facilitator: not-needed
+  skills: none
+  cost: free
+  languages: [nl]
+maturity: established
+license:
+  name: EUPL-1.2
+  url: https://github.com/MinBZK/Algoritmekader/blob/main/LICENSE.md
+  rehost: false
+passages:
+  - id: design-legal-regulatory-country
+    why: >-
+      For Dutch projects it is the government's own map of which laws apply to
+      an algorithm and what you need to do to comply with each one.
+  - id: deployment-governance-accountability-structures
+    why: >-
+      Its role-based view shows who in the organisation is responsible for
+      which measures, which helps you set up oversight and change management.
+see_also: [iama, ai-impact-assessment, altai]
+last_reviewed: "2026-10-08"

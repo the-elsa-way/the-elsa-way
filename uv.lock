@@ -1346,7 +1346,9 @@ name = "the-elsa-way"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "jsonschema" },
     { name = "jupyter-book" },
+    { name = "pyyaml" },
 ]
 
 [package.dev-dependencies]
@@ -1355,7 +1357,11 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "jupyter-book", specifier = ">=2.1.2" }]
+requires-dist = [
+    { name = "jsonschema", specifier = ">=4.26.0" },
+    { name = "jupyter-book", specifier = ">=2.1.2" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
+]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pip-tools", specifier = ">=7.0" }]

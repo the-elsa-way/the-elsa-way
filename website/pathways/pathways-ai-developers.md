@@ -20,3 +20,10 @@ This pathway is for data scientists, machine learning engineers, and software de
 13. [Evaluation → Robustness Testing](../evaluation/robustness-testing.md)
 14. [Evaluation → Reporting and Transparency](../evaluation/reporting-transparency.md)
 15. [FUTURE-AI Principles](../future-ai/future-ai.md)
+
+## Tools
+
+These tools from the [Toolbox](#toolbox) are a good fit for your role.
+
+:::{include} ../toolbox/_generated/audiences/ai-developers.md
+:::

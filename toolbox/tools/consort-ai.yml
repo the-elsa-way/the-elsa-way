@@ -1,0 +1,63 @@
+id: consort-ai
+name: CONSORT-AI
+full_name: Consolidated Standards of Reporting Trials, Artificial Intelligence extension
+summary: >-
+  An extension of the CONSORT checklist that tells you what to report when a
+  randomised trial tests an intervention with an AI component.
+description: >-
+  CONSORT-AI adds 14 AI-specific items to the standard CONSORT checklist for
+  reporting randomised controlled trials. The new items ask you to describe
+  the AI intervention and the skills needed to use it, the setting it was
+  built into, how its inputs and outputs were handled, how people interacted
+  with it, and what you learned from analysing its errors. It was
+  developed through an international consensus process together with
+  SPIRIT-AI and published in 2020 in several journals at once, including
+  Nature Medicine and The BMJ.
+healthcare: >-
+  Written specifically for clinical trials of AI interventions, so you can use
+  it directly when you report a trial of a diagnostic, triage or treatment
+  support system.
+url: https://www.equator-network.org/reporting-guidelines/consort-artificial-intelligence/
+developers:
+  - SPIRIT-AI and CONSORT-AI Working Group
+year: 2020
+type: reporting-guideline
+format: Checklist extension with explanatory paper
+lifecycle: [evaluation]
+future_ai: [traceability, general]
+audiences: [researchers, healthcare-professionals]
+practical:
+  facilitator: not-needed
+  skills: Clinical trial methods
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: CC-BY-4.0
+  url: https://www.bmj.com/content/370/bmj.m3164
+  rehost: true
+references:
+  - citation: >-
+      Liu X, Cruz Rivera S, Moher D, Calvert MJ, Denniston AK; SPIRIT-AI and
+      CONSORT-AI Working Group. Reporting guidelines for clinical trial reports
+      for interventions involving artificial intelligence: the CONSORT-AI
+      extension. Nature Medicine. 2020;26:1364-1374.
+    doi: 10.1038/s41591-020-1034-x
+  - citation: >-
+      Liu X, Cruz Rivera S, Moher D, Calvert MJ, Denniston AK; SPIRIT-AI and
+      CONSORT-AI Working Group. Reporting guidelines for clinical trial reports
+      for interventions involving artificial intelligence: the CONSORT-AI
+      extension. BMJ. 2020;370:m3164.
+    doi: 10.1136/bmj.m3164
+passages:
+  - id: evaluation-reporting-transparency-standards
+    why: >-
+      This is the standard to follow when your evaluation is a randomised
+      trial of an AI intervention.
+  - id: evaluation-clinical-utility-safety-plan
+    why: >-
+      If your clinical evaluation plan points to a randomised trial, the
+      checklist shows what you will need to record about the AI, its inputs and
+      its use so that the trial can be reported in full.
+see_also: [spirit-ai, decide-ai, tripod-ai]
+last_reviewed: "2026-10-08"

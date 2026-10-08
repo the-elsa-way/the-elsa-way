@@ -1,0 +1,66 @@
+id: iama
+name: IAMA
+full_name: Impact Assessment Mensenrechten en Algoritmes (Fundamental Rights and Algorithms Impact Assessment)
+summary: >-
+  A structured discussion guide that helps a public organisation decide whether
+  and how to use an algorithm, with a step-by-step check of its effects on
+  fundamental rights.
+description: >-
+  The IAMA is a long list of questions that a multidisciplinary team works
+  through together before building, buying or using an algorithm. It moves from
+  why you want the system, to the data and the model, to how it will be used,
+  and ends with a dedicated part on fundamental rights where you weigh any
+  interference against its purpose. The answers form a written record of the
+  choices you made. The second version (February 2026) is shorter, comes with a
+  separate explanatory document, and flags the questions that relate to the
+  fundamental rights impact assessment required by Article 27 of the EU AI Act
+  for certain deployers of high-risk AI systems. The current version is in
+  Dutch; an English translation (FRAIA) exists for the first version.
+healthcare: >-
+  The IAMA was written for Dutch government bodies, not specifically for health
+  care, but its fundamental rights part fits clinical AI well. Public hospitals
+  and other organisations that provide public services may fall under the AI
+  Act's Article 27 duty, and the IAMA gives you a ready-made route to that
+  assessment.
+url: https://www.rijksoverheid.nl/documenten/rapporten/2026/02/16/impact-assessment-mensenrechten-en-algoritmes
+developers:
+  - Utrecht University (Utrecht Data School)
+  - Dutch Ministry of the Interior and Kingdom Relations (commissioning ministry)
+year: 2021
+type: assessment
+format: Question-based assessment document (PDF) with an explanatory guide
+lifecycle: [design, deployment]
+future_ai: [fairness, traceability, general]
+audiences: [policy-managers, ai-developers, healthcare-professionals]
+practical:
+  facilitator: recommended
+  skills: none; legal input needed for the fundamental rights part
+  cost: free
+  languages: [nl, en]
+maturity: established
+license:
+  name: No licence stated in the document; Rijksoverheid.nl offers its website content under CC0
+  url: https://www.rijksoverheid.nl/copyright
+  rehost: false
+references:
+  - citation: >-
+      Gerards J, Schäfer MT, Vankan A, Muis I. Fundamental Rights and Algorithms
+      Impact Assessment (FRAIA). Dutch Ministry of the Interior and Kingdom
+      Relations; 2022 (English translation of IAMA version 1).
+    url: https://www.government.nl/documents/reports/2021/07/31/impact-assessment-fundamental-rights-and-algorithms
+passages:
+  - id: design-legal-regulatory-country
+    why: >-
+      In the Netherlands the IAMA is the government's standard instrument for
+      checking an algorithm against fundamental rights, so it shows you what a
+      national framework expects in practice.
+  - id: design-legal-regulatory-ai-act
+    why: >-
+      Version 2 marks the questions that map onto the AI Act's fundamental
+      rights impact assessment, so you can use it to prepare that obligation
+      for a high-risk clinical AI system.
+see_also: [ai-impact-assessment, algoritmekader, altai]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/impact-assessment-mensenrechten-en-algoritmes-iama/
+last_reviewed: "2026-10-08"

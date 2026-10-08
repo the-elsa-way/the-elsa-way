@@ -1,0 +1,58 @@
+id: fairlearn
+name: Fairlearn
+summary: >-
+  An open-source Python library that breaks model performance down by subgroup
+  and offers algorithms to reduce the gaps you find.
+description: >-
+  Fairlearn's MetricFrame lets you compute any scikit-learn style metric, such
+  as sensitivity or calibration error, for every subgroup at once and report the
+  differences or ratios between them. Its mitigation module includes
+  reduction-based training methods and threshold post-processing that trade off
+  overall accuracy against fairness constraints. The project began at Microsoft
+  and is now run as a community-driven open-source project, with user guides
+  that stress that fairness is a sociotechnical question rather than a purely
+  technical one.
+healthcare: >-
+  For a clinical prediction model you can use Fairlearn to report sensitivity,
+  specificity or other metrics separately for groups such as sex, age band or
+  hospital site, which is what subgroup analyses in clinical evaluation call
+  for. You still need to add confidence intervals and judge clinical
+  significance yourself, because small subgroups make point estimates unstable.
+url: https://fairlearn.org
+source_code: https://github.com/fairlearn/fairlearn
+developers:
+  - Fairlearn community (originally Microsoft)
+type: technical-library
+format: Python package
+lifecycle: [development, evaluation]
+future_ai: [fairness]
+audiences: [ai-developers, researchers]
+practical:
+  facilitator: not-needed
+  skills: Python, scikit-learn
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: MIT
+  url: https://github.com/fairlearn/fairlearn/blob/main/LICENSE
+  rehost: true
+references:
+  - citation: >-
+      Weerts H, Dudík M, Edgar R, Jalali A, Lutz R, Madaio M. Fairlearn:
+      Assessing and Improving Fairness of AI Systems. Journal of Machine
+      Learning Research. 2023;24(257):1-8.
+    url: https://www.jmlr.org/papers/v24/23-0389.html
+passages:
+  - id: evaluation-fairness-bias-measuring
+    why: >-
+      MetricFrame computes your primary metrics per subgroup and the largest
+      between-group difference in one step, giving you the subgroup estimates
+      this passage asks you to report.
+  - id: development-data-quality-fairness-correction
+    why: >-
+      Its reduction methods add fairness constraints to training and its
+      threshold optimiser adjusts outputs per group, two practical ways to
+      apply bias-aware correction.
+see_also: [aif360, shap]
+last_reviewed: "2026-10-08"

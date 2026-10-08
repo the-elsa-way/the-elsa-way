@@ -39,6 +39,9 @@ Risks to consider:
 - Incorrect data flows (wrong patient matched to result)
 - Misuse outside intended scope
 
+:::{include} ../toolbox/_generated/passages/design-risk-management-identification.md
+:::
+
 ### 2. Risk assessment
 
 For each identified risk, assess:

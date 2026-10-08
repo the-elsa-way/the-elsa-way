@@ -30,6 +30,9 @@ A model card is a standardised document that describes an AI model and is intend
 - **Ethical considerations**: risks and mitigations
 - **Caveats and recommendations**: known limitations and what they mean for use
 
+:::{include} ../toolbox/_generated/passages/development-documentation-model-card.md
+:::
+
 ### Data sheet / data documentation
 
 A data sheet describes a dataset and is intended to accompany dataset releases {cite}`gebru2021datasheets`. Key fields:
@@ -41,6 +44,9 @@ A data sheet describes a dataset and is intended to accompany dataset releases {
 - Uses: for what tasks is this dataset appropriate? What uses should be avoided?
 - Distribution: how is the dataset distributed? Under what licence?
 - Maintenance: who maintains the dataset?
+
+:::{include} ../toolbox/_generated/passages/development-documentation-datasheet.md
+:::
 
 ### Technical documentation (for regulatory purposes)
 
@@ -60,6 +66,9 @@ All code, configuration, data preprocessing scripts, and documentation should be
 - Commit messages that describe why a change was made, not just what changed
 - Tag releases that correspond to model versions
 - Link model versions to the exact data version and code version used to train them
+
+:::{include} ../toolbox/_generated/passages/development-documentation-version-control.md
+:::
 
 ## Reproducibility
 

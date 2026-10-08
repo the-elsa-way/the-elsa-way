@@ -37,6 +37,9 @@ At the design stage, ask:
 - Is the deployment setting accessible to the patients who most need this tool?
 - Are the hardware and connectivity requirements realistic for low-resource settings?
 
+:::{include} ../toolbox/_generated/passages/design-social-impact-equity.md
+:::
+
 ## Environmental impact
 
 Training large AI models has significant energy and carbon costs. Deploying AI systems at scale in healthcare adds computational and infrastructure demands.
@@ -46,6 +49,9 @@ Practices to consider:
 - Use existing pre-trained models and adapt them where possible (transfer learning)
 - Report on the environmental impact of training and operating the AI system
 - Consider federated approaches that reduce data transfer
+
+:::{include} ../toolbox/_generated/passages/design-social-impact-environmental.md
+:::
 
 ## Trust and the patient-clinician relationship
 

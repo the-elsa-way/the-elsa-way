@@ -1,0 +1,67 @@
+id: moral-medtech
+name: Moral Medtech
+summary: >-
+  A cooperative serious game in which patients, clinicians, developers and
+  regulators agree which values a medical AI tool must protect and turn them
+  into design requirements.
+description: >-
+  Moral Medtech is a tabletop game for 3 to 8 players. You play through the
+  development phases of an AI-driven medical technology, using value cards
+  based on the EU requirements for trustworthy AI plus healthcare-specific
+  values such as quality of care and life. In each round the group discusses
+  and weighs the values at stake and ends with shared advice on what the
+  product should offer at that phase. The game draws on Value Sensitive
+  Design and agile methods, and you can replay it at several points during
+  development.
+healthcare: >-
+  Built specifically for AI in healthcare with the Dutch Patient Federation
+  (Patiëntenfederatie Nederland). The developers tested it on eight medtech
+  use cases and report that it helped technical and non-technical
+  stakeholders turn abstract values into concrete requirements.
+url: https://www.hu.nl/onderzoek/projecten/moral-medtech-ethisch-ontwerpspel-voor-de-zorg
+developers:
+  - Hogeschool Utrecht (University of Applied Sciences Utrecht)
+  - Patiëntenfederatie Nederland
+  - Danielle Sent
+  - Mirjam de Haas
+  - Rijk Mercuur
+  - Ildikó Vajda
+type: serious-game
+format: Cooperative tabletop game with value cards
+lifecycle: [design, development]
+future_ai: [general]
+audiences: [ai-developers, healthcare-professionals, patients-communities]
+practical:
+  duration: 60-180 minutes
+  group_size: 3-8
+  facilitator: recommended
+  skills: none
+  cost: on-request
+  languages: [nl]
+maturity: emerging
+license:
+  name: No public licence stated; contact the developers at Hogeschool Utrecht for the game materials
+  url: https://www.hu.nl/onderzoek/projecten/moral-medtech-ethisch-ontwerpspel-voor-de-zorg
+  rehost: false
+references:
+  - citation: >-
+      Sent D, de Haas M, Mercuur R, Vajda I. Moral MedTech: Exploring
+      Ethics-by-Design for Artificial Intelligence in Healthcare via Serious
+      Gaming. Stud Health Technol Inform. 2026;336:544-548.
+    doi: 10.3233/SHTI260230
+passages:
+  - id: design-ethical-review-issues
+    why: >-
+      Playing the game with patients and clinicians surfaces concerns such as
+      autonomy, discrimination and accountability for your specific
+      application and records which ones the group finds most important.
+  - id: design-stakeholder-engagement-when
+    why: >-
+      Because you can replay the game at each development phase, it gives
+      patients, clinicians and developers a recurring, structured moment to
+      weigh values together rather than a one-off consultation.
+see_also: [value-sensitive-design, begeleidingsethiek, altai]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/moral-medtech/
+last_reviewed: "2026-10-08"

@@ -1,0 +1,55 @@
+id: system-usability-scale
+name: System Usability Scale
+full_name: System Usability Scale (SUS)
+summary: >-
+  A ten-item questionnaire that gives you a quick, single score from 0 to 100
+  for how usable people find a system.
+description: >-
+  Each participant rates ten short statements about the system on a
+  five-point agreement scale, straight after using it and before any
+  discussion. The statements alternate between positive and negative wording,
+  so people have to read each one. You convert the answers into one overall
+  score between 0 and 100; the individual items are not meant to be
+  interpreted on their own. Because it is short and widely used, you can
+  compare your score with published benchmarks and track it across design
+  iterations.
+healthcare: >-
+  SUS is widely used to measure usability in digital health and
+  clinical decision support studies. Give it to clinicians or patients after
+  they have used the AI tool on realistic tasks, not after a demonstration.
+url: https://doi.org/10.1201/9781498710411-35
+developers:
+  - John Brooke (Digital Equipment Corporation)
+year: 1996
+type: questionnaire
+format: Ten-item paper or online questionnaire
+lifecycle: [evaluation, deployment]
+future_ai: [usability]
+audiences: [researchers, ai-developers, healthcare-professionals]
+practical:
+  duration: a few minutes per participant
+  facilitator: not-needed
+  skills: none; basic arithmetic to score
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Free to use with acknowledgement of the source; scale © Digital Equipment Corporation 1986
+  url: https://digital.ahrq.gov/sites/default/files/docs/survey/systemusabilityscale%2528sus%2529_comp%255B1%255D.pdf
+  rehost: false
+references:
+  - citation: >-
+      Brooke J. SUS: a 'quick and dirty' usability scale. In: Jordan PW, Thomas
+      B, Weerdmeester BA, McClelland IL, editors. Usability Evaluation in
+      Industry. London: Taylor & Francis; 1996.
+    doi: 10.1201/9781498710411-35
+  - citation: >-
+      Brooke J. SUS: a retrospective. Journal of Usability Studies.
+      2013;8(2).
+passages:
+  - id: evaluation-usability-ux-questionnaires
+    why: >-
+      It is the standard short instrument named in this passage, and its single
+      0-100 score lets you compare clinicians' experience across versions of
+      your tool and against published benchmarks.
+last_reviewed: "2026-10-08"

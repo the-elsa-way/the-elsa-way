@@ -1,0 +1,55 @@
+id: codecarbon
+name: CodeCarbon
+summary: >-
+  An open-source Python package that estimates the electricity use and carbon
+  emissions of your code while it runs, so you can measure and report the
+  footprint of training and running models.
+description: >-
+  You wrap your code in a tracker (or run it through the command-line tool),
+  and CodeCarbon measures or estimates the power drawn by the CPU, GPU and
+  RAM. It then multiplies that energy by the carbon intensity of the
+  electricity grid where the computation runs. Results are saved to a file
+  and can be viewed in a local or online dashboard. It covers compute on
+  hardware you run yourself; it does not account for disk, network or
+  cooling, and it does not track calls to remote generative AI APIs.
+healthcare: >-
+  Useful when a hospital or research group wants to report the environmental
+  cost of training a clinical model, or to compare candidate models on
+  emissions as well as accuracy.
+url: https://codecarbon.io/
+source_code: https://github.com/mlco2/codecarbon
+developers:
+  - Mila
+  - BCG GAMMA
+  - Comet.ml
+  - Haverford College
+  - Code Carbon NGO
+year: 2020
+type: technical-library
+format: Python package with command-line tool and dashboard
+lifecycle: [development, deployment]
+future_ai: [general, traceability]
+audiences: [ai-developers, researchers]
+practical:
+  facilitator: not-needed
+  skills: Python
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: MIT
+  url: https://github.com/mlco2/codecarbon/blob/master/LICENSE
+  rehost: true
+references:
+  - citation: >-
+      Courty B, Schmidt V, Luccioni S, et al. mlco2/codecarbon (software).
+      Zenodo; 2024.
+    doi: 10.5281/zenodo.11171501
+passages:
+  - id: design-social-impact-environmental
+    why: >-
+      It gives you an actual emissions figure for training and running your
+      model, which you need if you plan to report environmental impact or
+      compare energy-saving options such as smaller or distilled models.
+see_also: [mlflow]
+last_reviewed: "2026-10-08"

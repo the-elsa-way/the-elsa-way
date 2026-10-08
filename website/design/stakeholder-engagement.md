@@ -40,6 +40,9 @@ Stakeholder engagement is not a one-off activity at the start of a project. It s
 
 Starting engagement late (for example, only at the usability testing stage) means that fundamental design decisions have already been made without the input of those most affected.
 
+:::{include} ../toolbox/_generated/passages/design-stakeholder-engagement-when.md
+:::
+
 ## Patient and community engagement
 
 Healthcare AI affects patients directly, yet patients are routinely excluded from AI development. This is both an ethical failure and a technical one. Patients can identify:
@@ -59,6 +62,9 @@ Healthcare AI affects patients directly, yet patients are routinely excluded fro
 
 :::{tip}
 When designing patient engagement, consider the burden you are placing on participants. Patients with serious illness may have limited time and energy. Make participation accessible, flexible, and compensated where possible.
+:::
+
+:::{include} ../toolbox/_generated/passages/design-stakeholder-engagement-methods.md
 :::
 
 ## Interdisciplinary team composition

@@ -27,3 +27,10 @@ The ELSA Way is committed to making patient and community perspectives a visible
 ## How to contribute to The ELSA Way
 
 See [Contributing to The ELSA Way](../community-handbook/contributing.md).
+
+## Tools
+
+These tools from the [Toolbox](#toolbox) are a good fit for your role.
+
+:::{include} ../toolbox/_generated/audiences/patients-communities.md
+:::

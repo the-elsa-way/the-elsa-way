@@ -42,6 +42,9 @@ Compare these distributions against the expected distribution in the deployment 
 - **Feature distributions**: are the distributions of input features different across demographic groups in ways that the model might exploit as proxies?
 - **Missing data patterns**: is data more likely to be missing for certain groups? Missing data is rarely missing at random in healthcare.
 
+:::{include} ../toolbox/_generated/passages/development-data-quality-fairness-detection.md
+:::
+
 ## Bias correction techniques
 
 Where bias is identified, technical mitigation measures may include:
@@ -54,4 +57,7 @@ Where bias is identified, technical mitigation measures may include:
 
 :::{warning}
 These techniques can help, but they do not solve the problem if the underlying data collection was fundamentally unrepresentative. Document both the problem and the mitigation, and test whether the mitigation worked during evaluation.
+:::
+
+:::{include} ../toolbox/_generated/passages/development-data-quality-fairness-correction.md
 :::

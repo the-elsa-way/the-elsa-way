@@ -23,6 +23,9 @@ A systematic review of 130 AI studies in medical imaging found that performance 
 
 The strongest validation combines multiple types.
 
+:::{include} ../toolbox/_generated/passages/evaluation-external-validation-types.md
+:::
+
 ## Factors affecting external validity
 
 Document and investigate factors that may cause performance variation across sites:

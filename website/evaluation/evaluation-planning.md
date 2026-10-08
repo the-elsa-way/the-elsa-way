@@ -21,6 +21,9 @@ Pre-specify, in writing, before accessing test data:
 
 Register your evaluation plan (e.g., on OSF or ClinicalTrials.gov) if possible.
 
+:::{include} ../toolbox/_generated/passages/evaluation-evaluation-planning-prespecification.md
+:::
+
 ## Selecting evaluation datasets
 
 :::{admonition} FUTURE-AI

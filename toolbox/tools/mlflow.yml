@@ -1,0 +1,61 @@
+id: mlflow
+name: MLflow
+summary: >-
+  An open-source platform that records what went into each model run and keeps
+  a versioned registry of trained models, so you can trace any deployed model
+  back to its code, data and settings.
+description: >-
+  MLflow Tracking logs the parameters, metrics, code version and output files of
+  every training run, and lets you compare runs in a web interface. The Model
+  Registry stores trained models with version numbers, stages and notes, which
+  gives you a clear record of which model is in use and how it was produced.
+  Newer releases add tracing and evaluation features for applications built on
+  large language models. Databricks launched MLflow in 2018, and it is now a
+  Linux Foundation project; you can run it entirely on your own servers.
+healthcare: >-
+  For a clinical AI system, MLflow can provide part of the audit trail that
+  regulators and hospital governance expect: which data version, code commit
+  and hyperparameters produced the model version that is currently deployed.
+  It does not replace Git or proper data versioning, but it links them to each
+  model.
+url: https://mlflow.org
+source_code: https://github.com/mlflow/mlflow
+developers:
+  - Databricks
+  - Linux Foundation
+year: 2018
+type: technical-library
+format: Python package with tracking server and web UI
+lifecycle: [development, deployment]
+future_ai: [traceability]
+audiences: [ai-developers]
+practical:
+  duration: ongoing
+  facilitator: not-needed
+  skills: Python
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Apache-2.0
+  url: https://github.com/mlflow/mlflow/blob/master/LICENSE.txt
+  rehost: true
+references:
+  - citation: >-
+      Zaharia M, Chen A, Davidson A, Ghodsi A, Hong SA, Konwinski A, et al.
+      Accelerating the Machine Learning Lifecycle with MLflow. IEEE Data
+      Engineering Bulletin. 2018;41(4):39-45.
+    url: https://people.eecs.berkeley.edu/~matei/papers/2018/ieee_mlflow.pdf
+passages:
+  - id: development-documentation-version-control
+    why: >-
+      Each MLflow run records the code commit and settings used, and the
+      registry numbers model versions, which helps you link every model version
+      to the exact code and data behind it.
+  - id: deployment-logging-traceability-what
+    why: >-
+      The model registry gives you a reliable version identifier to store with
+      each logged prediction, so every logged AI output can be traced to the
+      model that produced it.
+see_also: [evidently, model-cards]
+last_reviewed: "2026-10-08"

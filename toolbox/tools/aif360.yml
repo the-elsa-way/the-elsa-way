@@ -1,0 +1,64 @@
+id: aif360
+name: AI Fairness 360
+full_name: AI Fairness 360 (AIF360)
+summary: >-
+  An open-source Python and R toolkit for measuring bias in datasets and models
+  and for trying out algorithms that reduce it before, during or after training.
+description: >-
+  AIF360 bundles a large set of group and individual fairness metrics with more
+  than ten bias mitigation algorithms, such as reweighing, adversarial debiasing
+  and reject option classification. You wrap your data in its dataset classes,
+  compute metrics per protected attribute, and then compare mitigation methods
+  at the pre-processing, in-processing or post-processing stage. IBM Research
+  created it in 2018 and moved it to the LF AI & Data Foundation in 2020.
+  Development has slowed (the latest release, v0.6.1, dates from April 2024),
+  but the repository still receives occasional fixes.
+healthcare: >-
+  In clinical AI you can use AIF360 to check whether labels, features or model
+  predictions differ across groups such as sex, age band or ethnicity, and to
+  test whether a mitigation step narrows that gap. Treat its metrics as a
+  starting point: you still have to decide which disparities are clinically
+  meaningful and which reflect real differences in disease prevalence.
+url: https://github.com/Trusted-AI/AIF360
+source_code: https://github.com/Trusted-AI/AIF360
+developers:
+  - IBM Research
+  - LF AI & Data Foundation
+year: 2018
+type: technical-library
+format: Python and R package
+lifecycle: [development, evaluation]
+future_ai: [fairness]
+audiences: [ai-developers, researchers]
+practical:
+  facilitator: not-needed
+  skills: Python or R, basic machine learning
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Apache-2.0
+  url: https://github.com/Trusted-AI/AIF360/blob/main/LICENSE
+  rehost: true
+references:
+  - citation: >-
+      Bellamy RKE, Dey K, Hind M, Hoffman SC, Houde S, Kannan K, et al. AI
+      Fairness 360: An extensible toolkit for detecting and mitigating
+      algorithmic bias. IBM Journal of Research and Development.
+      2019;63(4/5):4:1-4:15.
+    doi: 10.1147/JRD.2019.2942287
+passages:
+  - id: development-data-quality-fairness-detection
+    why: >-
+      Its dataset metrics let you compare label rates and outcomes across
+      demographic groups in your training data before you train a model.
+  - id: development-data-quality-fairness-correction
+    why: >-
+      It implements reweighing, resampling-style pre-processing and
+      fairness-penalised training, so you can try several of the listed
+      correction techniques on the same data and compare them.
+see_also: [fairlearn, shap]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/ai-fairness-360/
+last_reviewed: "2026-10-08"

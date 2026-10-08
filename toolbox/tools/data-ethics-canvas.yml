@@ -1,0 +1,43 @@
+id: data-ethics-canvas
+name: Data Ethics Canvas
+summary: >-
+  A one-page canvas of questions that helps you spot and manage the ethical
+  issues of a project that collects, shares or uses data, at the start and
+  as the project evolves.
+description: >-
+  The canvas groups its questions into four themes: knowing your data,
+  exploring your impact, planning how you engage with people, and building
+  ethics into your processes. You can fill it in alone or as a team, print it
+  or use the online version, and revisit it as the project changes. The Open
+  Data Institute adapted it from the ADAPT Centre's Ethics Canvas and
+  publishes it with a user guide and translations.
+url: https://theodi.org/insights/tools/the-data-ethics-canvas-2021/
+source_code: https://github.com/theodi/data-ethics-canvas
+developers:
+  - Open Data Institute (ODI)
+type: canvas
+format: Printable canvas with user guide, plus an interactive online version
+lifecycle: [design, development, deployment]
+future_ai: [general, traceability]
+audiences: [ai-developers, policy-managers, researchers]
+practical:
+  facilitator: not-needed
+  skills: none
+  cost: free
+  languages: [en, fr, es, it, de, nl, pt, ja]
+maturity: established
+license:
+  name: CC-BY-SA-4.0
+  url: https://github.com/theodi/data-ethics-canvas
+  rehost: true
+passages:
+  - id: design-data-strategy-minimisation
+    why: >-
+      The questions on your data sources, their limitations and the legal
+      basis for using them help you check that you collect only the data the
+      stated purpose needs.
+see_also: [deda]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/the-data-ethics-canvas-odi/
+last_reviewed: "2026-10-08"

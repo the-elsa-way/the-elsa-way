@@ -16,3 +16,10 @@ This pathway is for clinicians, nurses, allied health professionals, and clinica
 9. [Deployment → Local Validation](../deployment/local-validation.md)
 10. [Deployment → Training and Onboarding](../deployment/training-onboarding.md)
 11. [Deployment → Monitoring and Auditing](../deployment/monitoring-auditing.md)
+
+## Tools
+
+These tools from the [Toolbox](#toolbox) are a good fit for your role.
+
+:::{include} ../toolbox/_generated/audiences/healthcare-professionals.md
+:::

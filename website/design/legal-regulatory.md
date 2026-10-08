@@ -34,6 +34,9 @@ High-risk AI systems must:
 The EU AI Act is a horizontal regulation: it applies on top of, not instead of, sector-specific regulation (MDR/IVDR).
 :::
 
+:::{include} ../toolbox/_generated/passages/design-legal-regulatory-ai-act.md
+:::
+
 ## Medical Device Regulation (MDR/IVDR)
 
 AI systems that are intended to diagnose, monitor, treat, or predict disease may qualify as medical devices under EU MDR (2017/745) {cite}`mdr2017` or IVD devices under IVDR (2017/746) {cite}`ivdr2017`.
@@ -75,3 +78,6 @@ Beyond the EU, key frameworks include:
 - United Kingdom: MHRA AI as a Medical Device guidance; NHS AI and Digital Regulations Service
 - United States: FDA Predetermined Change Control Plans; FDA guidance on AI/ML-based Software as a Medical Device (SaMD)
 - International: WHO Ethics and Governance of AI for Health (2021)
+
+:::{include} ../toolbox/_generated/passages/design-legal-regulatory-country.md
+:::

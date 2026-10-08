@@ -1,0 +1,68 @@
+id: value-sensitive-design
+name: Value Sensitive Design
+summary: >-
+  A design approach, with ready-made methods and card decks, for
+  identifying the people and human values a technology affects and building
+  those values into the design from the start.
+description: >-
+  Value Sensitive Design (VSD) combines three kinds of investigation:
+  conceptual work on which values and stakeholders matter, empirical work
+  with the people involved, and technical work on how design choices support
+  or undermine those values. It explicitly includes indirect stakeholders,
+  people who never use the system but are affected by it. The VSD Lab at the
+  University of Washington publishes toolkits such as the Envisioning Cards,
+  a deck of prompts on stakeholders, time, values, pervasiveness and
+  multi-lifespan effects that you can use in design sessions.
+healthcare: >-
+  The VSD Lab reports that the Envisioning Cards have been used in East
+  Africa to help design national health care systems. VSD is also one of the
+  foundations of the Moral Medtech game for medical AI.
+url: https://vsdesign.org/vsd/
+developers:
+  - Batya Friedman
+  - David G. Hendry
+  - Value Sensitive Design Lab, University of Washington
+year: 1996
+type: framework
+format: Design methodology with printable card decks (Envisioning Cards)
+lifecycle: [design, development]
+future_ai: [general, usability]
+audiences: [ai-developers, researchers]
+practical:
+  facilitator: recommended
+  skills: none for the cards; the full methodology benefits from design or social science experience
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: CC-BY-NC-ND-4.0 (Envisioning Cards)
+  url: https://vsdesign.org/toolkits/envisioningcards/
+  rehost: false
+references:
+  - citation: Friedman B. Value-sensitive design. Interactions. 1996;3(6):16-23.
+    doi: 10.1145/242485.242493
+  - citation: >-
+      Friedman B, Hendry DG. Value Sensitive Design: Shaping Technology with
+      Moral Imagination. Cambridge, MA: MIT Press; 2019.
+    doi: 10.7551/mitpress/7585.001.0001
+  - citation: >-
+      Friedman B, Hendry DG. The Envisioning Cards: a toolkit for catalyzing
+      humanistic and technical imagination. In: Proceedings of CHI '12. ACM;
+      2012. p. 1145-1148.
+    doi: 10.1145/2207676.2208562
+passages:
+  - id: design-stakeholder-engagement-when
+    why: >-
+      VSD treats stakeholder and value analysis as work that continues
+      through the whole design process, and its focus on indirect
+      stakeholders helps you see who to involve before decisions are fixed.
+  - id: design-intended-use-requirements
+    why: >-
+      The Envisioning Cards prompt you to think about roles, contexts of use
+      and long-term effects, which helps you write user requirements that
+      cover more than the clinical function.
+see_also: [moral-medtech, ethical-matrix, begeleidingsethiek]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/value-sensitive-design-workshop/
+last_reviewed: "2026-10-08"

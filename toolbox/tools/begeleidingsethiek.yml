@@ -1,0 +1,74 @@
+id: begeleidingsethiek
+name: Aanpak Begeleidingsethiek
+full_name: Aanpak Begeleidingsethiek (Guidance Ethics Approach)
+summary: >-
+  A facilitated workshop method in which the people affected by a new
+  technology map its effects and values together and agree on concrete
+  actions for the technology, its setting and its users.
+description: >-
+  Instead of asking whether a technology is acceptable, this approach asks how
+  you can guide its use well. A workshop runs in three phases: you describe
+  the technology in its concrete context, the participants name the actors,
+  the effects they expect and the values at stake, and the group then
+  formulates options for action on the technology itself, its environment and
+  its users. A moderator and co-moderator lead the session, and the published
+  manuals cover preparation, running the workshop and follow-up.
+healthcare: >-
+  The Dutch Ministry of Health (VWS) asked ECP to test the approach for AI in
+  care. After pilots at LUMC, Trimbos Institute and SIZA, ECP published a
+  dedicated manual for AI in healthcare, and the developers report use by more
+  than 100 care organisations.
+url: https://begeleidingsethiek.nl/
+developers:
+  - ECP | Platform voor de InformatieSamenleving
+  - Peter-Paul Verbeek
+  - Daniël Tijink
+year: 2019
+type: participatory-method
+format: Moderated dialogue workshop with free manuals
+lifecycle: [design, deployment]
+future_ai: [general, usability]
+audiences: [healthcare-professionals, policy-managers, patients-communities, ai-developers]
+practical:
+  duration: 3-4 hour workshop, plus about 6 weeks of preparation
+  facilitator: required
+  skills: Moderators need a good grasp of the approach; ECP offers moderator training
+  cost: free
+  languages: [nl, en]
+maturity: established
+license:
+  name: CC-BY-SA-4.0 (approach, per the website); the 2019 manual PDF is marked © ECP
+  url: https://begeleidingsethiek.nl/
+  rehost: false
+references:
+  - citation: >-
+      Verbeek PP, Tijink D. Aanpak begeleidingsethiek: een dialoog over
+      technologie met handelingsperspectief. Den Haag: ECP | Platform voor de
+      InformatieSamenleving; 2019.
+    url: https://ecp.nl/wp-content/uploads/2019/11/Aanpak-begeleidingsethiek.pdf
+  - citation: >-
+      Verbeek PP, Tijink D. Guidance ethics approach: an ethical dialogue about
+      technology with perspective on actions. The Hague: ECP | Platform voor
+      de InformatieSamenleving; 2020.
+    url: https://ecp.nl/wp-content/uploads/2020/11/Guidance-ethics-approach.pdf
+  - citation: >-
+      Tijink D, de Jongste A. Handleiding aanpak begeleidingsethiek voor AI in
+      de zorg. Den Haag: ECP, commissioned by the Dutch Ministry of Health,
+      Welfare and Sport.
+    url: https://ecp.nl/wp-content/uploads/2022/04/HandleidingAanpakbegeleidingsethiekvoorAIindezorg.pdf
+passages:
+  - id: design-stakeholder-engagement-when
+    why: >-
+      Because each workshop is about a concrete technology in a concrete
+      setting, you can repeat it at different lifecycle stages to bring
+      affected people in before key decisions are fixed.
+  - id: deployment-clinical-integration-workflow
+    why: >-
+      The workshop asks staff, patients and managers how the AI changes their
+      daily work and produces actions for the workflow, training and
+      organisation around the tool.
+see_also: [value-sensitive-design, moral-medtech, iama]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/aanpak-begeleidingsethiek/
+last_reviewed: "2026-10-08"

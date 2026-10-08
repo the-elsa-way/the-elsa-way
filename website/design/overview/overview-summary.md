@@ -1,35 +1,16 @@
 (design-overview-summary)=
-# Design Phase Summary
+# Design phase summary
 
-The design phase produces the foundations on which all subsequent work rests. Before any data is collected or any model is trained, the following should be established:
+When you finish the design phase, you should have a set of documents that development can build on. The table lists them by topic.
 
-**Problem and scope**
-- A clearly articulated clinical problem with measurable success criteria
-- Defined boundaries: what the AI will and will not do
-- A justification for why AI is the right approach
+| Topic | What you should have |
+|---|---|
+| Problem and scope | A clinical problem with measurable success criteria; the limits of what the tool will do; your reasons for choosing AI |
+| Stakeholders | A stakeholder map; records of engagement activities and what changed because of them; patient representation |
+| Intended use | Clinical settings and the resources in each; user groups and their technical literacy; explainability needs per group; model inputs and outputs |
+| Ethics and law | The right type of review (METC, local review or hospital governance); data governance agreements; the MDR/IVDR class and EU AI Act status; a GDPR lawful basis and Art. 9 condition; a DPIA in progress |
+| Data | Data sources and access agreements in progress; documented sources of data variation; attributes chosen for bias monitoring, with a legal basis |
+| Risk | A risk management file; an initial risk register with likelihood and consequence; planned mitigations |
+| Bias and society | Likely sources of bias; expected effects on staff, equity and the environment |
 
-**Stakeholders**
-- A stakeholder map covering all affected groups
-- Documented engagement activities and their outcomes
-- Patient and community representation
-
-**Intended use**
-- Defined clinical settings (primary care, hospital, remote)
-- Defined user groups and their technical literacy
-- Defined AI model inputs and outputs
-
-**Ethics and law**
-- Ethics committee approval (where required)
-- Data governance agreements
-- Regulatory classification under EU AI Act and MDR/IVDR
-- GDPR compliance plan
-
-**Data**
-- Data sources identified and access agreements in progress
-- Data heterogeneity documented (equipment, sites, protocols)
-- Protected attributes identified for bias monitoring
-
-**Risk**
-- Risk management file initiated
-- Initial risk register with likelihood and consequence assessment
-- Mitigation measures planned for identified risks
+In the fictional sepsis running case used throughout this section, this would mean, for example, a problem statement agreed with ward nurses and internists, a decision on whether the hospital relies on the MDR in-house exemption, and a register that already lists alert fatigue as a risk.

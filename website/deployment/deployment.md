@@ -1,19 +1,19 @@
 (deployment)=
-# Guide for Deployment
+# Guide for deployment
 
-Deployment is the beginning of operation, not the end of the AI lifecycle. Deploying an AI tool into clinical practice introduces new risks, dependencies, and responsibilities that must be planned for and managed continuously.
+On the day an AI tool goes live, the work changes rather than ends. The tool now runs on real patients, inside workflows it can disrupt, on data that will drift away from what it was trained on. Someone has to check that it works on your patients, watch it, log what it does, train the people who use it and answer for it when something goes wrong. The chapters below cover each of those tasks.
 
-FUTURE-AI recommendations mapped to this phase: Un4 (local clinical validity), T3 (quality control), T4 (periodic auditing), T5 (logging system), Us3 (training materials), G5 (comply with AI regulatory requirements), T6 (AI governance).
+FUTURE-AI {cite}`lekadir2025futureai` places these recommendations in the deployment phase: Un4 (show that the tool is clinically valid locally), T3 (check the quality of inputs and outputs), T4 (audit and update the tool periodically), T5 (log how the tool is used), Us3 (provide training), G5 (identify and meet regulatory requirements) and T6 (set up AI governance).
 
 ## Chapters in this section
 
 | Chapter | What you will learn |
 |---|---|
-| [Local Validation](local-validation.md) | Validating the AI at the specific deployment site before going live |
-| [Integration into Clinical Workflows](clinical-integration.md) | Technical and organisational requirements for workflow integration |
-| [Quality Control](quality-control.md) | Mechanisms for continuous quality monitoring of AI inputs and outputs |
-| [Monitoring and Auditing](monitoring-auditing.md) | Detecting performance drift, conducting periodic audits, acting on findings |
-| [Logging and Traceability](logging-traceability.md) | What to log, how to log it, and how to use logs for accountability |
-| [Training and Onboarding](training-onboarding.md) | Preparing users to use the AI safely and effectively |
-| [Regulatory Compliance](regulatory-compliance.md) | Post-market obligations under EU AI Act and MDR/IVDR |
-| [Governance and Accountability](governance-accountability.md) | Establishing institutional governance for AI systems |
+| [Local validation](local-validation.md) | How to check that the tool works at your site before go-live |
+| [Integration into clinical workflows](clinical-integration.md) | The technical and organisational work of fitting the tool into care |
+| [Quality control](quality-control.md) | How to catch bad inputs and implausible outputs while the tool runs |
+| [Monitoring and auditing](monitoring-auditing.md) | How to detect a drop in performance, run audits and act on them |
+| [Logging and traceability](logging-traceability.md) | What to log, how long to keep it and how to use it |
+| [Training and onboarding](training-onboarding.md) | How to prepare staff to use the tool safely, including the AI literacy duty |
+| [Regulatory compliance](regulatory-compliance.md) | Obligations after go-live under the MDR/IVDR and the EU AI Act |
+| [Governance and accountability](governance-accountability.md) | Who owns the tool, who decides about changes and how patients can raise concerns |

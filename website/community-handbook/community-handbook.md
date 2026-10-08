@@ -1,26 +1,19 @@
 (community-handbook)=
-# Community Handbook
+# Community handbook
 
-The ELSA Way is a community-driven resource. It grows as more people contribute, and it improves as those contributions are reviewed, discussed, and refined.
-
-This handbook describes how The ELSA Way is governed, how to contribute, and the standards that maintain quality and consistency across the resource.
+Anyone with a GitHub account can propose a change to The ELSA Way, and every change is reviewed by an editor before it appears on the website. This handbook describes how that works, who decides what, and the writing standards that keep chapters by different authors consistent.
 
 ## Sections
 
-- [Contributing to The ELSA Way](contributing.md): how to propose new content, flag gaps, and submit improvements, from issue to pull request
-- [Style Guide](style-guide.md): writing conventions, formatting standards, and how to use callout boxes and cross-references
-- [Governance](governance.md): the editorial board, decision-making process, and role structure
-- [Triage and Review](triage-review.md): how editors handle issues and pull requests
-- [Code of Conduct](code-of-conduct.md): community standards for respectful collaboration
+- [Contributing to The ELSA Way](contributing.md): how to propose new content, flag gaps and submit improvements, from issue to pull request
+- [Style guide](style-guide.md): how to write, format and cross-reference content
+- [Governance](governance.md): the editorial board, how decisions are made and who does what
+- [Triage and review](triage-review.md): how editors handle issues and pull requests
+- [Code of conduct](code-of-conduct.md): how we expect people to treat each other
+- [Contributors](contributors.md): everyone who has contributed
 
 ## Who can contribute?
 
-Anyone. The ELSA Way is designed for contributions from:
+Anyone can. Researchers can turn their findings into practical guidance. Clinicians can describe what happened when they introduced or evaluated an AI tool. Patients and community members can explain how AI affects their care. Developers can share working examples and tools, and policy makers and ethicists can add expertise on governance and regulation.
 
-- Researchers who want to translate their findings into practical guidance
-- Clinicians with experience implementing or evaluating AI tools
-- Patients and community members with perspectives on how AI affects their care
-- AI developers who want to share working examples and tools
-- Policy makers and ethicists with expertise in governance and regulatory frameworks
-
-You do not need to be a technical expert. The most valuable contributions are often practical case studies, honest accounts of what went wrong, and patient perspectives that developers would not otherwise see.
+You do not need to be a technical expert. Some of the most useful contributions are short case studies, honest accounts of what went wrong, and patient perspectives that developers would not otherwise hear.

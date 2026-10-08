@@ -1,42 +1,40 @@
 (community-code-of-conduct)=
-# Code of Conduct
+# Code of conduct
 
-The ELSA Way is a community resource built on collaboration. We are committed to creating a welcoming and respectful environment for all contributors and community members.
+The ELSA Way is written by people with very different backgrounds: patients, nurses, doctors, developers, researchers and policy makers. This code of conduct sets out how we expect everyone to treat each other, in issues, pull requests, reviews and meetings.
 
 ## Our standards
 
-We expect all community members to:
+We expect you to:
 
-- **Be respectful**: treat all participants with respect, regardless of background, experience level, or perspective
-- **Be constructive**: provide feedback that is specific, actionable, and focused on improving the work, not criticising the person
-- **Be inclusive**: use language that is accessible and welcoming; avoid jargon and acronyms without explanation; make space for non-technical voices
-- **Be honest**: accurately represent your expertise; disclose conflicts of interest; report errors when you find them
-- **Centre patients**: remember that the ultimate purpose of this work is to improve AI for patients; keep patient perspectives central
+- treat every participant with respect, whatever their background, experience or point of view;
+- give feedback that is specific and actionable, and aimed at the work rather than the person;
+- write so that non-specialists can follow you: explain jargon and abbreviations, and leave room for people without a technical background;
+- be honest about your expertise, declare conflicts of interest, and report errors when you find them;
+- remember that the aim of this work is better AI for patients, and keep their perspective central.
 
 ## Unacceptable behaviour
 
-The following behaviours are not tolerated:
+We do not tolerate:
 
-- Harassment, discrimination, or intimidation based on personal characteristics
-- Personal attacks or insults
-- Deliberate misrepresentation of others' views
-- Undisclosed conflicts of interest that bias contributions
-- Plagiarism or copyright infringement
+- harassment, discrimination or intimidation based on personal characteristics;
+- personal attacks or insults;
+- deliberately misrepresenting other people's views;
+- undisclosed conflicts of interest that bias contributions;
+- plagiarism or copyright infringement.
 
 ## Reporting
 
-If you experience or witness behaviour that violates this Code of Conduct, please report it to the editorial board at [contact address to be added]. Reports are confidential and will be investigated promptly.
+If you experience or witness behaviour that breaks this code of conduct, report it to the editorial board. Reports are treated confidentially and investigated promptly.
+
+:::{warning}
+To do: the editorial board will add a private reporting address here. Until then, there is no confidential reporting channel on this page.
+:::
 
 ## Enforcement
 
-Violations of this Code of Conduct may result in:
-
-- A warning and request to change behaviour
-- Temporary or permanent exclusion from the community
-- Removal of contributions
-
-The editorial board has final authority on enforcement decisions.
+If someone breaks this code of conduct, the editorial board may give a warning and ask them to change their behaviour, exclude them from the community temporarily or permanently, or remove their contributions. The editorial board has the final say on enforcement.
 
 ## Acknowledgement
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/) and The Turing Way Code of Conduct.
+This code of conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/) and The Turing Way code of conduct.

@@ -1,7 +1,7 @@
 (design-overview)=
-# Design Overview
+# Design overview
 
-The design phase sets the direction for everything that follows. A well-designed AI project starts with a clear clinical problem, involves the right people from the beginning, and establishes the legal, ethical, and data foundations before development begins.
+The design section has nine chapters, from defining the clinical problem to weighing the tool's effect on society. You can read them in order, but expect to loop back: what you learn about data or regulation often changes the problem statement.
 
 ## Prerequisites
 
@@ -13,12 +13,13 @@ The design phase sets the direction for everything that follows. A well-designed
 
 ## Summary
 
-This section covers nine topics spanning problem definition through risk management. By the end, you should be able to:
+By the end of this section, you should be able to:
 
-- Define a clinically meaningful problem with clear success criteria
-- Map all relevant stakeholders and establish engagement mechanisms
-- Document intended users, clinical settings, and use cases
-- Navigate ethics committee approval and data governance
-- Plan data collection for representativeness and fairness
-- Identify applicable regulatory frameworks
-- Establish a risk management file
+- state a clinical problem with success criteria you can measure
+- map the people affected by the tool and plan how to involve them
+- document intended users, clinical settings, explainability needs and use cases
+- find out which ethical review and data governance steps your project needs
+- plan data collection so that it represents the patients the tool will serve
+- identify the regulatory frameworks that apply and the legal basis for using patient data
+- open a risk management file
+- list likely sources of bias and the social effects of the tool

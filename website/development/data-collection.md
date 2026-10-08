@@ -1,12 +1,12 @@
 (development-data-collection)=
-# Data Collection and Management
+# Data collection and management
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Robustness recommendation 2**: Train with representative real-world data; and **Traceability recommendation 2**: Provide documentation (technical, clinical).
+This chapter supports **Robustness recommendation 2**: train with data that reflects real-world variation; and **Traceability recommendation 2**: document the AI tool, a task that starts here and is completed during evaluation {cite}`lekadir2025futureai`.
 :::
 
-Good data does not happen by accident. Collecting training data that is representative, well-annotated, and properly managed requires deliberate planning, much of which should happen in the design phase. This chapter covers the execution of that plan.
+You planned your data in the design phase ([data strategy](../design/data-strategy.md)). This chapter covers carrying out that plan: getting the data, labelling it, keeping track of it and splitting it for training and testing.
 
 ```{figure} ../figures/data-curation.jpg
 :name: data-curation
@@ -16,54 +16,47 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 
 ## Training data requirements
 
-Training data for healthcare AI should:
+Training data should match the patients the system will see (age, sex, disease severity, other conditions, how the disease presents) and the setting: the equipment, measurement protocols and documentation habits of the wards where it will run. Rare outcomes need enough examples for the model to learn them. And the labels must be right, because a model learns inconsistent labels as faithfully as correct ones.
 
-- **Reflect the target population**: demographics, disease severity, comorbidities, presentation variants
-- **Reflect the target environment**: equipment, acquisition protocols, clinical workflows at the deployment setting
-- **Include sufficient rare cases**: models trained on class-imbalanced data will perform poorly on minority classes
-- **Have accurate labels**: the quality of annotations is as important as the quantity of data
+:::{admonition} Running case: sepsis early warning
+:class: note
+In this fictional example, a hospital extracts several years of electronic health record (EHR) data on adult ward admissions to build a sepsis risk model. Nursing observations turn out to be sparser at night and on some wards, and the laboratory switched to a new lactate assay during the period, so values before and after the switch are not directly comparable. The team records both in the data documentation and asks clinicians for a sepsis label definition that two reviewers can apply to the same record and agree on.
+:::
 
 ## Data collection protocols
 
-For prospective data collection, establish and document:
+For retrospective EHR data, the protocol states which patients, period and variables you extract and how you derive labels. In the Netherlands, research on existing records is usually not subject to the WMO (the Medical Research Involving Human Subjects Act) and goes through the hospital's local review. Health data still needs a lawful basis under GDPR Art. 6 and a condition under Art. 9(2), such as scientific research with safeguards (Art. 9(2)(j), together with Art. 24 of the UAVG, the Dutch GDPR Implementation Act, and Art. 7:458 of the Civil Code, which allows research use without consent under conditions if the patient has not objected) {cite}`gdpr2016`.
 
-- **Inclusion and exclusion criteria**: who is eligible to contribute data
-- **Acquisition protocol**: standardised acquisition settings where possible, or documented variation
-- **Consent process**: what patients are consented for, and how consent is recorded
-- **Annotation protocol**: written guidelines for how each case is labelled, including instructions for ambiguous cases
+For prospective collection, also write down and document:
+
+- Inclusion and exclusion criteria
+- How data is acquired: standard settings where possible, or recorded variation
+- The consent process: what patients agree to and how consent is recorded
+- An annotation protocol with written instructions for labelling each case, including unclear cases
 
 ## Data management
 
-Track data throughout its lifecycle:
+Record where each data point came from (site, date, system or equipment, who entered it). Version your datasets so you know which data trained each model, and keep a catalogue of all datasets. The FAIR principles (data that is findable, accessible, interoperable and reusable) give a structure for this {cite}`wilkinson2016fair`, and in the Netherlands, mapping variables to Nictiz's zibs (standard Dutch health and care information models) makes data easier to combine across hospitals.
 
-- **Data lineage**: record where each data point came from (site, acquisition date, equipment, operator)
-- **Versioning**: use version control for datasets so you know exactly which data was used to train each model
-- **Data catalogue**: maintain a registry of all datasets used, with their properties
-- **Access log**: record who accessed which data and when (required for GDPR {cite}`gdpr2016` compliance)
+Log who accessed which data and when. GDPR Art. 32 requires appropriate security measures without listing specific ones; in Dutch healthcare, NEN 7513 sets out how access to electronic patient records is logged, and NEN 7510 covers information security more broadly.
 
 ## Data splits
 
-Construct train, validation, and test splits carefully:
+Split your data into a training set (to fit the model), a validation set (to compare models and tune settings) and a test set (held back and used once for the final estimate).
 
 :::{warning}
-Data leakage (where information from the test set influences model training) is one of the most common sources of inflated performance in AI research. Common sources include:
-- Multiple scans from the same patient split across train and test
-- Test data from the same site as training data (use held-out site for external validation)
-- Preprocessing statistics (mean, standard deviation) computed on the full dataset before splitting
+Data leakage means information from the test set influences training, so measured performance looks better than it will be in practice. Common causes:
+- Records from the same patient or admission appear in both training and test sets
+- Summary statistics (such as mean and standard deviation used for scaling) are computed on the whole dataset before splitting
+- Inputs recorded after the moment of prediction, or that reflect a clinician's suspicion, are used as predictors
 :::
 
-- **Patient-level splits**: never split at the scan or study level if multiple scans per patient exist
-- **Site-level splits**: include a held-out site for external validation where possible
-- **Stratified splits**: ensure the distribution of key covariates (disease prevalence, demographics) is comparable across splits
+Split at patient level, never at the level of single records or scans. Where possible, keep a separate site or time period for external validation. Stratify the split so that outcome prevalence and key patient characteristics are comparable across sets.
 
 ## Data augmentation
 
-Data augmentation (applying transformations to training data to increase effective sample size and improve model robustness) is standard practice in medical imaging AI. Common augmentations include:
-
-- Geometric: rotation, flipping, cropping, elastic deformation
-- Intensity: brightness, contrast, noise addition
-- Domain-specific: simulating acquisition protocol variations, staining variations
+Data augmentation creates modified copies of training examples so the model sees more of the variation it will meet in practice. In medical imaging this includes rotation, cropping, changes in brightness and contrast, added noise and simulated differences between scanners or stains. For EHR data it can mean simulating missing measurements or the irregular timing of observations.
 
 :::{tip}
-Augmentation should simulate realistic variations the model will encounter in deployment, not arbitrary transformations. Consult with clinicians and imaging scientists about what variations are clinically plausible.
+Simulate variation the model will meet in deployment, and ask clinicians, laboratory staff or imaging scientists which variations are plausible.
 :::

@@ -1,40 +1,17 @@
 (evaluation-overview-summary)=
-# Evaluation Phase Summary
+# Evaluation phase summary
 
-A complete evaluation covers all dimensions of trustworthy AI performance:
+By the end of this phase you should be able to show the following.
 
-**Technical performance**
-- Primary metrics measured on independent held-out test set
-- Performance benchmarked against clinical standard of care
-- Calibration assessed
+| Area | What you have done |
+|---|---|
+| Technical performance | Measured your primary metrics on a held-out test set, compared them with current practice and checked calibration |
+| External validation | Repeated the measurements on data from at least one other site, which shows whether performance carries over to new settings |
+| Fairness | Reported performance for each relevant patient group and judged whether the differences matter clinically |
+| Usability | Tested the tool with representative users and measured acceptance, task time and errors |
+| Clinical utility and safety | Run the tool prospectively in practice (first in silent mode, then in an impact study, with a randomised trial where feasible) and recorded adverse events and near misses |
+| Robustness | Tested performance under realistic variation and, where relevant, deliberate manipulation of inputs |
+| Explainability | Checked that explanations match what the model does and that clinicians understand them |
+| Reporting | Written up the results following the relevant international reporting guideline, including failures and negative findings |
 
-**External and multi-site validation**
-- Performance replicated on external dataset(s) from different site(s)
-- Performance on datasets reflecting cross-setting variation
-
-**Fairness**
-- Performance measured and reported across demographic subgroups
-- Subgroup differences quantified and their clinical significance assessed
-- Bias correction measures evaluated for effectiveness
-
-**Usability**
-- Usability testing conducted with representative users
-- User satisfaction and acceptance measured
-- Task completion time and error rates measured
-
-**Clinical utility and safety**
-- Clinical evaluation plan completed (randomised controlled trial or equivalent)
-- Clinical utility demonstrated (patient outcomes, workflow impact)
-- Safety profile documented (adverse events, near-misses)
-
-**Robustness**
-- Performance tested under simulated real-world variations
-- Performance tested under adversarial conditions (where applicable)
-
-**Explainability**
-- Explanations evaluated for clinical meaningfulness
-- User comprehension of explanations assessed
-
-**Reporting**
-- Results reported according to relevant international standards
-- Negative results and failures reported, not just positive results
+External validation shows that performance transfers to other data. It does not show that patients benefit; only a prospective evaluation in clinical practice can show that.

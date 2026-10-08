@@ -2,8 +2,8 @@ id: system-usability-scale
 name: System Usability Scale
 full_name: System Usability Scale (SUS)
 summary: >-
-  A ten-item questionnaire that gives you a quick, single score from 0 to 100
-  for how usable people find a system.
+  A ten-item questionnaire that produces a single score from 0 to 100 for
+  how usable people find a system.
 description: >-
   Each participant rates ten short statements about the system on a
   five-point agreement scale, straight after using it and before any

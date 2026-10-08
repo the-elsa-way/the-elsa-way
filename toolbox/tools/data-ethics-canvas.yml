@@ -31,11 +31,11 @@ license:
   url: https://github.com/theodi/data-ethics-canvas
   rehost: true
 passages:
-  - id: design-data-strategy-minimisation
+  - id: design-ethical-review-issues
     why: >-
-      The questions on your data sources, their limitations and the legal
-      basis for using them help you check that you collect only the data the
-      stated purpose needs.
+      Its questions on who your project affects, the limitations of your data
+      and how you will be open about its use help you list the ethical issues
+      to raise with an ethics committee.
 see_also: [deda]
 also_listed_in:
   - name: RAAIT toolbox

@@ -1,52 +1,47 @@
 (future-ai-traceability)=
 # Traceability
 
-The traceability principle holds that healthcare AI tools should be developed, validated, deployed, and maintained with transparency and accountability mechanisms throughout their lifecycle. Traceability enables accountability when things go wrong, and they will.
+When a patient comes to harm after an AI-supported decision, someone will ask what the tool showed, which version was running and who acted on it. The traceability principle asks you to document and monitor the tool from development to daily use, so that those questions can be answered {cite}`lekadir2025futureai`.
 
 ## Traceability recommendations
 
-### T1: Implement a risk management process throughout the AI lifecycle
+### T1: Run a risk management process throughout the lifecycle
 
-Risk management is continuous, not a one-time gate. Establish a risk management file from the design phase and update it throughout development, evaluation, and deployment.
+*Research `+`, deployable `++`.* Start a risk management file in design and keep it current: estimate each risk's likelihood and severity, decide on mitigations and check that they work. Risks named in the paper include misuse after too little training, use outside the target population and incorrect input data. For medical devices, ISO 14971 {cite}`iso14971` sets out the process.
 
-**→ See:** [Risk Management Planning](../design/risk-management.md)
+**→ See:** [Risk management planning](../design/risk-management.md)
 
-### T2: Provide documentation (eg, technical, clinical)
+### T2: Provide documentation
 
-Documentation includes: model cards, data sheets, technical documentation for regulatory purposes, clinical documentation (instructions for use, clinical evidence summary).
+*Research `++`, deployable `++`.* Write for each audience: an information leaflet for patients and clinicians, technical documentation for developers and regulators, a publication following a reporting guideline such as TRIPOD+AI {cite}`tripodai2024`, and the risk management file. Model cards {cite}`mitchell2019modelcards` and datasheets {cite}`gebru2021datasheets` are common templates.
 
-**→ See:** [Documentation](../development/documentation.md), [Reporting and Transparency](../evaluation/reporting-transparency.md)
+**→ See:** [Documentation](../development/documentation.md), [Reporting and transparency](../evaluation/reporting-transparency.md)
 
-### T3: Define mechanisms for quality control of AI inputs and outputs
+### T3: Check the quality of inputs and outputs
 
-Implement automated checks on AI inputs (data quality, completeness, range) and outputs (plausibility, consistency).
+*Research `+`, deployable `++`.* Check automatically for missing, out-of-range or wrongly formatted inputs and for implausible outputs, and show users how certain the tool is about each result.
 
-**→ See:** [Quality Control](../deployment/quality-control.md)
+**→ See:** [Quality control](../deployment/quality-control.md)
 
-### T4: Implement a system for periodic auditing and updating
+### T4: Audit and update on a schedule
 
-Establish a periodic audit schedule. Define update procedures and their regulatory implications.
+*Research `+`, deployable `++`.* Decide which data you will re-evaluate on and how often. Audits look for *drift* (changes in the data or in what the outcome means), new biases and falling performance. Under EU law, an update may need a new conformity assessment unless you described it in advance in the technical documentation.
 
-**→ See:** [Monitoring and Auditing](../deployment/monitoring-auditing.md)
+**→ See:** [Monitoring and auditing](../deployment/monitoring-auditing.md)
 
-### T5: Implement a logging system for usage recording
+### T5: Log usage
 
-Log all AI interactions with sufficient detail for audit, investigation, and performance monitoring.
+*Research `+`, deployable `++`.* Record, with privacy safeguards, which data the tool used, what it predicted, what the clinician decided and any problems. The EU AI Act {cite}`euaiact2024` requires automatic logging for high-risk systems, with logs kept for at least six months.
 
-**→ See:** [Logging and Traceability](../deployment/logging-traceability.md)
+**→ See:** [Logging and traceability](../deployment/logging-traceability.md)
 
-### T6: Establish mechanisms for AI governance
+### T6: Set up governance
 
-Assign roles and responsibilities for AI governance. Establish an AI governance committee with clinical, technical, and patient representation.
+*Research `+`, deployable `++`.* Assign roles for risk management, audits, maintenance and supervision, and agree how responsibility for errors is shared between clinicians, hospital and manufacturer, including support for patients harmed by an AI error.
 
-**→ See:** [Governance and Accountability](../deployment/governance-accountability.md)
+**→ See:** [Governance and accountability](../deployment/governance-accountability.md)
 
-## Why traceability matters in healthcare
-
-When an AI-assisted clinical decision leads to patient harm, traceability determines whether the AI was responsible and who should be held accountable. Without logging, documentation, and governance:
-- It may be impossible to establish whether the AI was used in the incident
-- It may be impossible to determine whether the AI performed as validated
-- Accountability defaults to the clinician, regardless of whether the AI malfunctioned
-- Systemic problems may not be identified until many patients have been harmed
-
-Traceability is not bureaucracy. It is the infrastructure of accountability.
+:::{admonition} Running case: sepsis early warning
+:class: note
+This example is fictional. Suppose a ward patient develops septic shock without an alert from the hospital's sepsis model. The logs (T5) show which model version ran and that no score was produced for three hours because a lab feed failed, which the input checks (T3) should have flagged. The hospital can fix the feed, update its risk file (T1) and report the incident through the right channel.
+:::

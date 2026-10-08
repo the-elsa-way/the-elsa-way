@@ -1,5 +1,5 @@
 (toolbox-contributing)=
-# Adding a Tool
+# Adding a tool
 
 Every tool in the [Toolbox](#toolbox) is a small YAML file in the [`toolbox/tools/`](https://github.com/the-elsa-way/the-elsa-way/tree/main/toolbox/tools) folder. A build script turns these files into the tool pages, the overview tables, and the **Tools for this step** boxes in the chapters. You never edit those pages by hand.
 

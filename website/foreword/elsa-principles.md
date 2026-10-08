@@ -1,28 +1,28 @@
 (foreword-elsa-principles)=
-# ELSA Principles
+# ELSA principles
 
-The ELSA Way is rooted in the values of the ELSA AI Lab Northern Netherlands. These values shape how this resource is built, governed, and used.
+The ELSA Way follows the values of the ELSA AI Lab Northern Netherlands. Each value below comes with a commitment you can hold us to.
 
-## Open and collaborative
+## We work in the open
 
-The ELSA Way is built in the open, on GitHub. Anyone can read it, propose changes, flag gaps, or contribute new content. Contributions from researchers, practitioners, developers, and communities across the network are actively sought.
+The book is written on GitHub, where anyone can read the source, suggest a change or report a gap. We actively ask researchers, practitioners, developers and community members across the network to contribute.
 
-## Centred on people
+## We put patients' views in the text
 
-AI in healthcare affects patients most directly, yet patients and communities are often excluded from AI development. Patient perspectives, needs, and concerns are a visible and valued part of the resource: a genuine foundation, not a compliance checkbox.
+Patients feel the effects of healthcare AI most directly and are often left out of its development. We include their perspectives, needs and concerns in the chapters themselves, and the [stakeholder engagement](../design/stakeholder-engagement.md) chapter explains how to involve them in your own project.
 
-## Inclusive
+## We write for every reader
 
-Responsible AI guidance is only useful if it reaches the people who need it. The ELSA Way is designed to be accessible to people with different roles and levels of technical expertise: from data scientists to ward nurses, from ethicists to policy makers.
+Guidance only helps if the people who need it can read it. We write for data scientists and ward nurses, ethicists and policy makers alike, and we explain technical terms the first time they appear.
 
-## Accountable
+## We show who changed what
 
-The ELSA Way is governed transparently: clear roles, contribution guidelines, version history, and an editorial board. When content changes, the change history is visible.
+Roles, contribution guidelines and review steps are set out in the [Community Handbook](../community-handbook/community-handbook.md). Each page's change history is on GitHub: use the GitHub icon at the top of the page.
 
-## Practically useful
+## We make advice usable
 
-Theory without practice is not enough. Every section of The ELSA Way aims to be actionable, offering frameworks, case studies, worked examples, and tools that teams can use immediately rather than aspirational principles they cannot translate into work.
+Each section aims to give you something to do: a method, a worked example or a tool from the [Toolbox](#toolbox). Where we cannot yet do that, we say so.
 
-## A living resource
+## We keep updating
 
-The ELSA Way is a work in progress by design. It grows as we learn, and it improves as more people contribute. The goal is not a finished product, but a resource that stays relevant as AI, healthcare, and the regulatory landscape continue to evolve.
+AI methods, healthcare practice and regulation keep changing, and so does this book. We update chapters when the rules change, when readers point out errors and when projects show us what works.

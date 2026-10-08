@@ -1,12 +1,12 @@
 (design-stakeholder-engagement)=
-# Stakeholder Engagement
+# Stakeholder engagement
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **General recommendation 1**: Engage interdisciplinary stakeholders throughout the AI lifecycle.
+This chapter supports **General recommendation 1** (G1): engage interdisciplinary stakeholders throughout the AI lifecycle.
 :::
 
-Responsible AI in healthcare cannot be built by AI developers alone. Clinical, ethical, legal, and patient perspectives are required inputs for building a system that is safe, fair, usable, and trustworthy.
+A data science team can build a model on its own, but it cannot tell on its own whether nurses will trust the alert, whether patients accept being scored, or whether the hospital lawyer will sign off. Those answers come from other people, and you need them before the design is fixed.
 
 ```{figure} ../figures/participatory-research.jpg
 :name: participatory-research
@@ -16,68 +16,53 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 
 ## Who are the stakeholders?
 
-A stakeholder is anyone who affects or is affected by the AI system. In healthcare AI, this typically includes:
+A stakeholder is anyone who affects or is affected by the AI system. In a hospital project, the list usually includes the groups below.
 
 | Stakeholder group | Role in AI development |
 |---|---|
-| **Clinicians** (doctors, nurses, allied health) | Domain expertise, workflow knowledge, end users |
-| **Patients and communities** | Affected by the system; can identify harms the development team cannot see |
-| **Data managers and IT** | Data access, infrastructure, integration |
-| **Legal and compliance** | Regulatory requirements, liability, contracts |
-| **Ethicists** | Ethical review, identification of value conflicts |
-| **Hospital management** | Procurement, implementation, governance |
-| **Developers and data scientists** | Technical design and development |
-| **Regulators** | Compliance, certification |
+| Clinicians (doctors, nurses, allied health professionals) | Domain knowledge, workflow knowledge; often the end users |
+| Patients and communities | Affected by the system; can spot harms the development team cannot see |
+| Data managers and IT | Data access, infrastructure, integration with the EHR |
+| Data protection officer | Lawful basis, data protection impact assessment, patient rights |
+| Legal and compliance | Regulatory requirements, liability, contracts |
+| Ethicists | Ethical review, value conflicts |
+| Hospital management and board | Funding, procurement, governance, final responsibility |
+| Medical technology or clinical physics | Medical device requirements and safe use of technology |
+| Developers and data scientists | Technical design and development |
+| Regulators | Supervision and certification |
+
+:::{admonition} Running case: sepsis early warning
+:class: note
+In the fictional sepsis project, the stakeholder map showed a gap early on: the team had planned interviews with internists and intensivists but not with ward nurses, who receive most alerts. The rapid response team, the patient advisory panel, the data protection officer (FG) and the medical technology department were added to the core group before the problem statement was finalised.
+:::
 
 ## When to engage
 
-Stakeholder engagement is not a one-off activity at the start of a project. It should happen throughout the lifecycle:
+Plan engagement for every phase. In design, stakeholders help define the problem, the intended use, the data strategy and the ethical questions. In development, they react to model outputs and to prototypes of the interface. In evaluation, they take part in usability tests, judge clinical usefulness and review explanations. In deployment, they receive training, report problems and give feedback on how the tool performs in daily work.
 
-- **Design**: problem definition, intended use, data strategy, ethical review
-- **Development**: feedback on model outputs and human-AI interface prototypes
-- **Evaluation**: usability testing, clinical utility assessment, explainability review
-- **Deployment**: training, monitoring, feedback on real-world performance
-
-Starting engagement late (for example, only at the usability testing stage) means that fundamental design decisions have already been made without the input of those most affected.
+If you first involve clinicians or patients at the usability-testing stage, the problem, the data and the output format have already been chosen without them, and changing those choices is costly.
 
 :::{include} ../toolbox/_generated/passages/design-stakeholder-engagement-when.md
 :::
 
 ## Patient and community engagement
 
-Healthcare AI affects patients directly, yet patients are routinely excluded from AI development. This is both an ethical failure and a technical one. Patients can identify:
-
-- Data attributes relevant to their condition that developers would not know to collect
-- Care contexts and constraints that affect how and whether an AI tool can be used
-- Types of harm or unfairness that clinical evaluations may not capture
-- Whether the stated "benefit" of the AI actually corresponds to what patients value
+Patients are directly affected by healthcare AI, yet they are rarely involved in building it. They can point to data that developers would not think to collect, to care situations that limit how a tool can be used, to kinds of harm or unfairness that clinical evaluation misses, and to whether the promised benefit is one they care about.
 
 ### Methods for patient engagement
 
-- **Patient advisory groups**: established groups of patients with relevant experience who provide ongoing input
-- **Co-design workshops**: structured sessions where patients and developers jointly explore problems and prototype solutions
-- **Participatory design**: patients as active co-designers, not just consultants
-- **Patient interviews**: understanding individual experiences with the disease and the healthcare system
-- **Accessible contribution pathways**: making it easy for patients who are not researchers to contribute to The ELSA Way
+- Patient advisory groups: a standing group of patients with relevant experience who give input over the whole project.
+- Co-design workshops: structured sessions where patients and developers explore the problem and try out early prototypes together.
+- Participatory design: patients take design decisions with the team, rather than only being consulted.
+- Patient interviews: one-to-one conversations about experience with the condition and with care.
 
-:::{tip}
-When designing patient engagement, consider the burden you are placing on participants. Patients with serious illness may have limited time and energy. Make participation accessible, flexible, and compensated where possible.
-:::
+Think about the burden on participants. Patients with serious illness may have little time and energy, so make participation accessible and flexible, and pay people for their time where you can.
 
 :::{include} ../toolbox/_generated/passages/design-stakeholder-engagement-methods.md
 :::
 
 ## Interdisciplinary team composition
 
-The development team should include, or have access to, expertise in:
+The team needs access to clinical expertise in the target domain, data science and machine learning, healthcare law and regulation, medical ethics, human factors and user experience design, and health informatics and data governance. Smaller teams will not have all of these in-house. Record which expertise you consulted from outside, and when, so that reviewers can see who shaped which decision.
 
-- Clinical medicine (specific to the target domain)
-- Data science and machine learning
-- Healthcare law and regulation
-- Medical ethics
-- Human factors and UX design
-- Health informatics and data governance
-
-Smaller teams may not have all of these roles in-house. Document which expertise you consulted externally, and when.
-
-The **Quadruple Helix** model {cite}`vanhilten2025elsascan` (bringing together government, civil society, academia, and industry) offers a useful frame for ensuring that no stakeholder group dominates the design process and that legal, ethical, and social perspectives are structurally represented alongside technical ones.
+The Quadruple Helix model {cite}`carayannis2009quadruple` brings together government, academia, industry and civil society. You can use it as a check that no single group dominates the design and that legal, ethical and social perspectives sit at the table alongside technical ones.

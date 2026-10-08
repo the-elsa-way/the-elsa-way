@@ -54,9 +54,9 @@ references:
 passages:
   - id: evaluation-explainability-assessment-types
     why: >-
-      SHAP is the most widely used way to produce the feature-importance type
-      of explanation listed here, so you can test it against your clinical
-      users' needs.
+      SHAP produces the feature-importance type of explanation listed here;
+      test its output with your clinical users to see whether it meets their
+      needs.
   - id: development-human-ai-interaction-outputs
     why: >-
       Per-patient SHAP values can supply the supporting evidence shown next to

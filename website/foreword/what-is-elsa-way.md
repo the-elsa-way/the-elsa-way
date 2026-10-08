@@ -1,29 +1,30 @@
 (foreword-what-is-elsa-way)=
 # What is The ELSA Way?
 
-The ELSA Way is a publicly accessible website where researchers, developers, healthcare professionals, patients, and community members can find and contribute practical guidance for developing AI responsibly in healthcare.
-
-It is structured around the **AI development lifecycle**: from data collection and model design through to deployment and monitoring. Rather than a static report or a stage-gated checklist, it is an **integrated way of working** that embeds ELSA considerations at every phase.
+The ELSA Way is a public website where researchers, developers, healthcare professionals, patients and community members can find, and add to, practical guidance on developing AI for healthcare responsibly. It follows the AI lifecycle from design and data collection to deployment and monitoring, and at each step it asks what that step means for patients, staff and the law.
 
 ## What ELSA means
 
-**ELSA** stands for **Ethical, Legal, and Societal Aspects** of AI. The ELSA-NN (ELSA AI Lab Northern Netherlands) exists to develop knowledge about responsible AI in healthcare and translate it into practice.
+ELSA stands for the **ethical, legal and societal aspects** of AI. The ELSA AI Lab Northern Netherlands (ELSA-NN) builds knowledge about responsible AI in healthcare and helps put it into practice. In a project, those aspects turn into questions like these:
 
-ELSA considerations include:
-- **Ethical**: Does this AI system respect patient autonomy, dignity, and beneficence? Are potential harms identified and mitigated?
-- **Legal**: Does it comply with GDPR {cite}`gdpr2016`, the EU AI Act {cite}`euaiact2024`, MDR/IVDR {cite}`mdr2017,ivdr2017`, and other applicable regulation? Is liability clearly assigned?
-- **Societal**: Does it widen or narrow health disparities? Does it affect the working conditions of clinicians? Does it have an environmental footprint?
-- **Accessibility**: Is it usable by all intended users, regardless of digital literacy, disability, or language?
+| Aspect | Questions to ask |
+|---|---|
+| Ethical | Does the system respect patients' autonomy and dignity? Which harms could it cause, and how will you prevent or limit them? |
+| Legal | Does it comply with the GDPR {cite}`gdpr2016`, the EU AI Act {cite}`euaiact2024`, the MDR or IVDR {cite}`mdr2017,ivdr2017` and Dutch law such as the WGBO (the Dutch law on the treatment agreement between patient and care provider)? Who is liable when it goes wrong? |
+| Societal | Does it widen or narrow differences in health between groups? How does it change clinicians' work? What is its environmental footprint? Can everyone who needs it use it, whatever their digital skills, disability or language? |
 
-## What it is not
+## What it does not do
 
-The ELSA Way is **not** a certification programme, a checklist to be ticked off at the end of a project, or a substitute for domain-specific legal advice. It is a practical, evolving resource that teams can draw on throughout development.
+The ELSA Way does not certify AI systems, and it does not replace legal advice for your specific case. Use it as a working reference during your project, from the first idea onwards, rather than as a list to tick off at the end.
 
 ## How it is built
 
-The ELSA Way is built through:
-- Research with AI developers and healthcare professionals (surveys, interviews, co-creation workshops)
-- Peer-reviewed publications translated into practical contributions, for example the ELSA Scan {cite}`vanhilten2025elsascan`, a structured 25-question assessment tool for identifying ELSA aspects of AI systems
-- Open collaboration on GitHub
-- Patient and community engagement
-- Connection with other ELSA labs across the Netherlands and beyond
+The content comes from:
+
+- research with AI developers and healthcare professionals (surveys, interviews, co-creation workshops);
+- peer-reviewed publications, turned into practical guidance;
+- open collaboration on GitHub;
+- engagement with patients and communities;
+- exchange with other ELSA labs in the Netherlands and beyond.
+
+We also borrow tools from other fields when they transfer well. The ELSA Scan {cite}`vanhilten2025elsascan`, for example, is a 25-question assessment of ELSA issues that Wageningen University & Research developed for AI in agri-food. Many of its questions are just as relevant to a hospital.

@@ -1,5 +1,5 @@
 (community-triage-review)=
-# Triage and Review
+# Triage and review
 
 This page is for editors. It describes how to handle issues and pull requests so that every contributor, inside or outside the ELSA AI Lab, gets a timely and consistent response. Contributors can read the same process from their side in [Contributing](contributing.md).
 
@@ -22,7 +22,7 @@ When someone comments that they want to work on an accepted issue, assign it to 
 
 1. **Approve the checks for first-time contributors.** Pull requests from forks by first-time contributors wait for approval before GitHub runs any workflow. Look at the changes first: make sure they only touch book content and do not change `.github/workflows/`, the `Makefile` or `scripts/` in unexpected ways. Then click **Approve and run** on the pull request.
 2. **Make sure both checks pass.** **Build book** builds the book (including the Toolbox validation). **Linked issue** requires `Closes #<number>` in the description, or the small-fix box ticked. You can edit the description yourself to add a missing issue link.
-3. **Review against the content standards** in [Contributing](contributing.md) and the [Style Guide](style-guide.md). Use GitHub's suggestion feature for small wording changes so the contributor can accept them with one click.
+3. **Review against the content standards** in [Contributing](contributing.md) and the [Style guide](style-guide.md). Use GitHub's suggestion feature for small wording changes so the contributor can accept them with one click.
 4. **Collect the approvals the review level requires.** A `review: minor` change needs one editor's approval and a `review: significant` change needs two; a `review: major` change needs editorial board consensus, recorded in the issue. Reviewers with a conflict of interest in the topic do not count.
 5. **Squash and merge.** Squash merging keeps one commit per contribution in the history. Make sure the commit message keeps the `Closes #<number>` line, so the issue closes. GitHub credits the contributor as the commit author.
 

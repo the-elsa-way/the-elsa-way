@@ -46,9 +46,8 @@ references:
 passages:
   - id: design-data-strategy-minimisation
     why: >-
-      DEDA's questions on which data you collect and why make your team
-      justify each data source against the project purpose, which is the
-      heart of data minimisation.
+      DEDA asks which data you collect and why, so your team has to justify
+      each data source against the project's purpose before collecting it.
   - id: design-ethical-review-issues
     why: >-
       Working through the poster as a team helps you spot ethical issues such

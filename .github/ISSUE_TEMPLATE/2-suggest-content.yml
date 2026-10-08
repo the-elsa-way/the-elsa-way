@@ -1,0 +1,62 @@
+name: Suggest content
+description: Propose new or improved content, such as an example, a chapter expansion or a new chapter, or flag a gap
+title: "[Content] "
+labels: ["type: content", "status: needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your idea! Opening an issue before you write lets an editor give feedback early, so your time is well spent. Read [How to contribute](https://the-elsa-way.github.io/the-elsa-way/contributing) to see what happens next.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of contribution is this?
+      options:
+        - Clarification of existing text
+        - New example or case study
+        - Gap in the book (missing topic)
+        - Expansion of an existing chapter
+        - New chapter
+        - New section of the book
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where does it belong?
+      description: The chapter or section it relates to, if any.
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you propose?
+      description: Describe the content and the main points it would cover.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it matter for responsible AI in healthcare?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources or experience
+      description: Publications, guidelines or practical experience the content builds on.
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to write it yourself?
+      options:
+        - Yes, I'll write it
+        - Yes, together with others
+        - No, I'm suggesting it for someone else to pick up
+    validations:
+      required: true
+  - type: textarea
+    id: coi
+    attributes:
+      label: Conflicts of interest
+      description: Declare any commercial, professional or financial interest in this topic (see Governance). Write "None" if there are none.
+    validations:
+      required: true

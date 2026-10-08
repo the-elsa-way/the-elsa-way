@@ -184,6 +184,8 @@ project:
           title: Style Guide
         - file: community-handbook/governance.md
           title: Governance
+        - file: community-handbook/triage-review.md
+          title: Triage and Review
         - file: community-handbook/code-of-conduct.md
           title: Code of Conduct
 

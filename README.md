@@ -60,7 +60,7 @@ make clean
 
 ## Contributing
 
-See the [Community Handbook](website/community-handbook/community-handbook.md) for contribution guidelines, style guide, and governance.
+Contributions start with an [issue](https://github.com/the-elsa-way/the-elsa-way/issues/new/choose) and end with a reviewed pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for the short version, and the [Community Handbook](website/community-handbook/community-handbook.md) for the full contribution guide, style guide, and governance.
 
 ## Figures
 

@@ -1,0 +1,38 @@
+name: Report an error
+description: A typo, broken link, factual error or outdated information in the book
+title: "[Error] "
+labels: ["type: correction", "status: needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep The ELSA Way accurate. For a typo or broken link you can also fix it directly with the "Edit this page" button on the website; see [How to contribute](https://the-elsa-way.github.io/the-elsa-way/contributing).
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The link to the page, or its title.
+      placeholder: https://the-elsa-way.github.io/the-elsa-way/fairness-bias
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Quote the text if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested correction
+      description: What should it say instead? Add a source for factual corrections.
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to fix it yourself?
+      options:
+        - Yes, I'll open a pull request
+        - No, I'd like an editor to fix it
+    validations:
+      required: true

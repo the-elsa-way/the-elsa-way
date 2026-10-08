@@ -1,0 +1,44 @@
+name: Check pull request
+
+# Runs on pull requests from branches and from forks. The `pull_request` event
+# gives fork pull requests a read-only token and no secrets, so it is safe for
+# external contributors.
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build book
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Build book
+        run: make ci
+
+  linked-issue:
+    name: Linked issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check that the pull request links an issue
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          if printf '%s' "$PR_BODY" | grep -qiE '(close[sd]?|fix(e[sd])?|resolve[sd]?) +#[0-9]+'; then
+            echo "Linked issue found."
+          elif printf '%s' "$PR_BODY" | grep -qiE '^- \[x\] This is a small fix'; then
+            echo "Marked as a small fix without an issue."
+          else
+            echo "::error::Link the issue this pull request resolves by writing 'Closes #<number>' in the description, or tick 'This is a small fix' for typos and broken links. See https://the-elsa-way.github.io/the-elsa-way/contributing"
+            exit 1
+          fi

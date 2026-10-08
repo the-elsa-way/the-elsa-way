@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: How to contribute
+    url: https://the-elsa-way.github.io/the-elsa-way/contributing
+    about: Read how issues, pull requests and reviews work in The ELSA Way.
+  - name: Code of Conduct
+    url: https://the-elsa-way.github.io/the-elsa-way/code-of-conduct
+    about: The standards of behaviour we expect from everyone in the community.

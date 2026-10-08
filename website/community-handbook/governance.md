@@ -32,6 +32,8 @@ The editorial board is led by WP Integration (ELSA AI Lab Northern Netherlands) 
 | **Domain expert reviewer** | Provides specialist review for chapters in their clinical domain |
 | **Contributor** | Proposes and writes content; responds to review |
 
+The day-to-day process, from a new issue to a merged pull request, is described in [Contributing](contributing.md) for contributors and in [Triage and Review](triage-review.md) for editors. The review labels on GitHub follow the decision levels above.
+
 ## Version history
 
 The ELSA Way uses Git for version control. The complete history of all changes (who changed what, when, and why) is publicly visible in the GitHub repository.

@@ -7,9 +7,10 @@ This handbook describes how The ELSA Way is governed, how to contribute, and the
 
 ## Sections
 
-- [Contributing to The ELSA Way](contributing.md): how to propose new content, flag gaps, and submit improvements
+- [Contributing to The ELSA Way](contributing.md): how to propose new content, flag gaps, and submit improvements, from issue to pull request
 - [Style Guide](style-guide.md): writing conventions, formatting standards, and how to use callout boxes and cross-references
 - [Governance](governance.md): the editorial board, decision-making process, and role structure
+- [Triage and Review](triage-review.md): how editors handle issues and pull requests
 - [Code of Conduct](code-of-conduct.md): community standards for respectful collaboration
 
 ## Who can contribute?

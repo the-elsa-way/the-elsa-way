@@ -6,7 +6,9 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "CC-BY-4.0" }
 dependencies = [
+    "jsonschema>=4.26.0",
     "jupyter-book>=2.1.2",
+    "pyyaml>=6.0.3",
 ]
 
 [dependency-groups]

@@ -58,6 +58,9 @@ An AI tool for early detection of depression in primary care raises questions ab
 For a structured approach to identifying ELSA aspects early in design, the **ELSA Scan** {cite}`vanhilten2025elsascan` offers 25 targeted questions covering ethical, legal, and social considerations. Originally developed and validated for AI in agri-food, the question structure and stakeholder engagement methodology are transferable to other domains including healthcare.
 :::
 
+:::{include} ../toolbox/_generated/passages/design-ethical-review-issues.md
+:::
+
 ## Working with ethics committees
 
 Practical guidance for navigating ethics review:

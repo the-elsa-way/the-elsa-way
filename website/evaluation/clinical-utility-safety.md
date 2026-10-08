@@ -36,6 +36,9 @@ Define a clinical evaluation plan that specifies:
 - **Setting**: which clinical environment is evaluated?
 - **Duration**: over what period?
 
+:::{include} ../toolbox/_generated/passages/evaluation-clinical-utility-safety-plan.md
+:::
+
 ## Evidence pyramid for clinical AI evaluation
 
 | Level | Design | Evidence strength |

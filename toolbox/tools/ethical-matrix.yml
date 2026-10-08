@@ -1,0 +1,69 @@
+id: ethical-matrix
+name: Ethical Matrix
+summary: >-
+  A simple grid that makes you check, for every group affected by a
+  technology, how it touches their wellbeing, autonomy and fairness, so you
+  can weigh the concerns openly.
+description: >-
+  The rows of the matrix list the parties affected by a decision and the
+  columns list three principles: wellbeing, autonomy and fairness. You fill
+  each cell with the specific concern for that party, then discuss and weigh
+  the cells as a group. The method borrows from principle-based medical
+  ethics and was first applied to food and agricultural technologies, but it
+  works for any new technology. It does not give you an answer; it makes the
+  range of concerns and the way you weigh them explicit.
+healthcare: >-
+  Kelly et al. (2023) used an ethical matrix workshop, co-designed with a
+  patient expert, to involve people with multiple sclerosis, radiologists,
+  neurologists and computer scientists in research on AI in radiology.
+url: https://foodethicscouncil.org/resource/ethical-matrix/
+developers:
+  - Ben Mepham (Centre for Applied Bioethics, University of Nottingham)
+  - Food Ethics Council
+year: 1996
+type: framework
+format: Grid for structured group deliberation, with free guide and manual
+lifecycle: [design]
+future_ai: [fairness, general]
+audiences: [researchers, policy-managers, healthcare-professionals, patients-communities]
+practical:
+  facilitator: recommended
+  skills: none
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: No licence stated; free-to-download guide, all rights reserved
+  url: https://foodethicscouncil.org/resource/ethical-matrix/
+  rehost: false
+references:
+  - citation: >-
+      Mepham B. A framework for the ethical analysis of novel foods: the
+      ethical matrix. J Agric Environ Ethics. 2000;12:165-176.
+    doi: 10.1023/A:1009542714497
+  - citation: >-
+      Mepham B, Kaiser M, Thorstensen E, Tomkins S, Millar K. Ethical Matrix
+      Manual. The Hague: LEI; 2006.
+    url: https://edepot.wur.nl/216589
+  - citation: >-
+      Kelly BS, Kirwan A, Quinn MS, et al. The ethical matrix as a method for
+      involving people living with disease and the wider public (PPI) in
+      near-term artificial intelligence research. Radiography.
+      2023;29:S103-S111.
+    doi: 10.1016/j.radi.2023.03.009
+passages:
+  - id: design-ethical-review-issues
+    why: >-
+      Filling in the matrix for patients, clinicians and other parties gives
+      you a structured way to find and document the application-specific
+      issues listed in this section.
+  - id: design-social-impact-equity
+    why: >-
+      The fairness column forces you to ask for each group whether the AI
+      would leave them better or worse off, which is the core equity question
+      at design stage.
+see_also: [value-sensitive-design, begeleidingsethiek, moral-medtech]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/ethical-matrix/
+last_reviewed: "2026-10-08"

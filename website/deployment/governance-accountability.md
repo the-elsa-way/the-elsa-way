@@ -45,6 +45,9 @@ Define roles explicitly before deployment:
 - **Incident reporting system**: a pathway for clinicians and patients to report concerns about AI outputs; routes to both quality/safety and AI system owner
 - **Change management process**: formal review of all proposed model updates, workflow changes, and scope expansions before implementation
 
+:::{include} ../toolbox/_generated/passages/deployment-governance-accountability-structures.md
+:::
+
 ## Accountability under the EU AI Act
 
 The EU AI Act {cite}`euaiact2024` assigns responsibilities to both **providers** (who place AI on the market) and **deployers** (who use AI in a professional context):

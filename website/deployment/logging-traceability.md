@@ -24,6 +24,9 @@ For each AI interaction, log at minimum:
 | Override flag | Whether the clinician overrode the AI recommendation |
 | Version identifier | Which model version was used |
 
+:::{include} ../toolbox/_generated/passages/deployment-logging-traceability-what.md
+:::
+
 ## Logging principles
 
 - **Completeness**: every AI interaction should be logged; logging gaps are a governance failure

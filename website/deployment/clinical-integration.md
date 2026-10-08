@@ -42,6 +42,9 @@ AI integration can disrupt existing workflows in ways that reduce safety:
 
 Address these risks in the integration design, not after deployment.
 
+:::{include} ../toolbox/_generated/passages/deployment-clinical-integration-workflow.md
+:::
+
 ### The go-live process
 Plan the go-live carefully:
 - Staged rollout: start with a limited set of users and cases; expand as confidence grows

@@ -69,3 +69,6 @@ The quality of annotations determines the quality of what the model learns. Plan
 ## Data minimisation
 
 Collect only the data you need for the stated purpose. This is both a GDPR {cite}`gdpr2016` requirement and good practice. More data is not always better. More relevant, representative data is.
+
+:::{include} ../toolbox/_generated/passages/design-data-strategy-minimisation.md
+:::

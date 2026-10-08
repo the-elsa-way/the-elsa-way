@@ -19,6 +19,10 @@ The [Evaluation](../evaluation/evaluation.md) section covers how to plan a rigor
 
 The [Deployment](../deployment/deployment.md) section covers integration into clinical workflows, quality control, monitoring, logging, regulatory compliance, and governance over time.
 
+## If you are looking for a practical tool
+
+The [Toolbox](#toolbox) collects workshop methods, games, impact assessments, reporting guidelines and software libraries, organised by lifecycle phase and FUTURE-AI principle. Inside the chapters, a **Tools for this step** box points to the tools that help with that section.
+
 ## If you are new to responsible AI
 
 Start with the [Pathways](../pathways/pathways.md) section for a curated route through the resource tailored to your role.
@@ -35,6 +39,11 @@ Tips highlight practical actions or tools.
 
 :::{warning}
 Warnings flag common pitfalls or high-stakes considerations.
+:::
+
+:::{admonition} Tools for this step
+:class: seealso
+These boxes list tools from the [Toolbox](#toolbox) that help with the section you are reading.
 :::
 
 :::{admonition} FUTURE-AI

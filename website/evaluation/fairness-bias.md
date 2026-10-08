@@ -56,6 +56,9 @@ Calculate your primary performance metric(s) separately for each subgroup. Repor
 - Statistical tests for significant differences between subgroups
 - Clinical significance assessment: is the magnitude of disparity clinically meaningful?
 
+:::{include} ../toolbox/_generated/passages/evaluation-fairness-bias-measuring.md
+:::
+
 ## Statistical parity difference
 
 A commonly used summary measure: the difference in positive prediction rates (or other metrics) between the best- and worst-performing subgroups. A value of 0 indicates equal performance; values near ±0.1 are generally considered acceptable; values above ±0.2 indicate substantial disparity.

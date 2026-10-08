@@ -15,6 +15,7 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 |---|---|---|
 | **Typo or factual fix** | Correcting errors in existing content | Minimal |
 | **Clarification** | Improving unclear explanations | Minimal |
+| **New tool** | Adding a tool to the [Toolbox](#toolbox) (see [Adding a Tool](#toolbox-contributing)) | Minimal to moderate |
 | **New example or case study** | Adding a worked example to an existing chapter | Minimal to moderate |
 | **Gap flagging** | Identifying missing content (open an Issue) | Minimal |
 | **Chapter expansion** | Adding substantive new content to an existing chapter | Moderate |

@@ -16,6 +16,9 @@ Continuous monitoring tracks AI performance in real-time or near-real-time using
 - **Statistical process control**: treat AI performance as a process and use control charts to detect statistically significant deviations
 - **Drift detection**: statistical tests for changes in the distribution of inputs or outputs (covariate shift, concept drift)
 
+:::{include} ../toolbox/_generated/passages/deployment-monitoring-auditing-continuous.md
+:::
+
 ## Periodic auditing
 
 Continuous monitoring catches sudden failures. Periodic auditing catches gradual drift and systematic issues that are below the threshold of real-time detection:

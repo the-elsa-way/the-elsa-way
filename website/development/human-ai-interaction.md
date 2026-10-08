@@ -28,6 +28,9 @@ Consider what information to present alongside the AI's primary output:
 - **Relevant caveats**: known failure modes; populations where the model has not been validated
 - **Action guidance**: what should the user do with this information?
 
+:::{include} ../toolbox/_generated/passages/development-human-ai-interaction-outputs.md
+:::
+
 ## Avoiding automation bias
 
 Automation bias (the tendency to over-rely on automated recommendations) is documented in clinical settings and can lead to harm. Design interventions include:

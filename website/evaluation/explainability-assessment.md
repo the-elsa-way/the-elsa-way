@@ -27,6 +27,9 @@ Explainability evaluation is not the same as generating explanations. Generating
 
 No single type is universally best. The appropriate method depends on the clinical task, the user, and the deployment context.
 
+:::{include} ../toolbox/_generated/passages/evaluation-explainability-assessment-types.md
+:::
+
 ## Evaluating explanations: technical criteria
 
 - **Faithfulness**: does the explanation accurately reflect what the model actually computed? A saliency map that looks plausible but does not correspond to the model's actual decision pathway is misleading.

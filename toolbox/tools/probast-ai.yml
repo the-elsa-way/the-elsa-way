@@ -1,0 +1,59 @@
+id: probast-ai
+name: PROBAST+AI
+full_name: Prediction model Risk Of Bias ASsessment Tool, updated for AI
+summary: >-
+  A structured tool for judging the quality, risk of bias and applicability of
+  studies that develop or test a clinical prediction model, including AI
+  models.
+description: >-
+  PROBAST+AI walks you through signalling questions in four domains:
+  participants and data sources, predictors, outcome, and analysis. It has
+  two parts: one rates the quality of model development, the other rates the
+  risk of bias of a model evaluation, and both rate whether the study applies
+  to your own question. It updates PROBAST (2019) and covers both regression
+  and AI methods. It was built mainly for
+  systematic reviews, but you can also use it to check your own study design
+  or to appraise a model before you adopt it.
+healthcare: >-
+  Made for diagnostic and prognostic models in clinical care; a useful check
+  before a hospital takes up a published model or a vendor's validation
+  evidence.
+url: https://www.probast.org/
+developers:
+  - PROBAST+AI group (Karel G M Moons, Gary S Collins and colleagues)
+year: 2025
+type: assessment
+format: Checklist of signalling questions with explanatory paper
+lifecycle: [evaluation]
+future_ai: [robustness, fairness, universality]
+audiences: [researchers, ai-developers, healthcare-professionals]
+practical:
+  facilitator: not-needed
+  skills: Research methods and prediction modelling
+  cost: free
+  languages: [en]
+maturity: emerging
+license:
+  name: CC-BY-NC-4.0
+  url: https://www.bmj.com/content/388/bmj-2024-082505
+  rehost: false
+references:
+  - citation: >-
+      Moons KGM, Damen JAA, Kaul T, Hooft L, Andaur Navarro C, Dhiman P, et al.
+      PROBAST+AI: an updated quality, risk of bias, and applicability
+      assessment tool for prediction models using regression or artificial
+      intelligence methods. BMJ. 2025;388:e082505.
+    doi: 10.1136/bmj-2024-082505
+passages:
+  - id: evaluation-external-validation-types
+    why: >-
+      Its questions on participants, setting and outcome help you judge
+      whether a validation study really tests the model on a new population or
+      only looks like it does.
+  - id: evaluation-evaluation-planning-prespecification
+    why: >-
+      Running the questions on your own planned study shows the design and
+      analysis choices that would raise the risk of bias, while you can still
+      change them.
+see_also: [tripod-ai]
+last_reviewed: "2026-10-08"

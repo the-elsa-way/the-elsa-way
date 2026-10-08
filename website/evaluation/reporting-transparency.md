@@ -25,6 +25,9 @@ Use the standard most appropriate for your study design. These are not mutually 
 
 *See {cite}`tripodai2024` (TRIPOD-AI), {cite}`claim2020` (CLAIM), {cite}`consortai2020` (CONSORT-AI / SPIRIT-AI), and {cite}`decideai2022` (DECIDE-AI) for full details.*
 
+:::{include} ../toolbox/_generated/passages/evaluation-reporting-transparency-standards.md
+:::
+
 ## What to report
 
 ### Study design and data

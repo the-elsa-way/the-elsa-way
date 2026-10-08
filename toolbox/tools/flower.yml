@@ -1,0 +1,57 @@
+id: flower
+name: Flower
+summary: >-
+  An open-source Python framework for federated learning, so you can train a
+  model across several sites while patient data stays where it is.
+description: >-
+  With Flower you write a client app that trains on local data and a server app
+  that combines the model updates, using a built-in strategy such as federated
+  averaging or one you write yourself. It works with common machine learning
+  libraries, including PyTorch, TensorFlow, scikit-learn, XGBoost and the
+  medical imaging library MONAI. You can simulate a federation on one machine
+  first and then deploy it across real sites. It also offers add-ons for
+  differential privacy and secure aggregation, which reduce what the server can
+  learn from a single site's updates. Flower started as a research project at
+  the University of Oxford and is now maintained by Flower Labs with an open
+  community.
+healthcare: >-
+  Federated learning suits multi-hospital projects where data-sharing
+  agreements or the GDPR prevent pooling patient records. Note that federated
+  training alone does not make a model private: model updates can still leak
+  information, so combine it with differential privacy or secure aggregation
+  and a security review.
+url: https://flower.ai
+source_code: https://github.com/flwrlabs/flower
+developers:
+  - Flower Labs
+  - University of Oxford (origin)
+year: 2020
+type: technical-library
+format: Python package
+lifecycle: [development]
+future_ai: [universality, robustness]
+audiences: [ai-developers, researchers]
+practical:
+  facilitator: not-needed
+  skills: Python, a machine learning framework such as PyTorch
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Apache-2.0
+  url: https://github.com/flwrlabs/flower/blob/main/LICENSE
+  rehost: true
+references:
+  - citation: >-
+      Beutel DJ, Topal T, Mathur A, Qiu X, Fernandez-Marques J, Gao Y, et al.
+      Flower: A Friendly Federated Learning Research Framework. arXiv
+      preprint arXiv:2007.14390. 2020.
+    doi: 10.48550/arXiv.2007.14390
+passages:
+  - id: development-privacy-security-techniques
+    why: >-
+      Flower gives you a working implementation of federated learning, with
+      optional differential privacy and secure aggregation, so you can test the
+      performance trade-offs this passage warns about.
+see_also: [arx, mlflow]
+last_reviewed: "2026-10-08"

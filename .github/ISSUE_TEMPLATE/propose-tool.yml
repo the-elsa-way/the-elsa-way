@@ -1,0 +1,61 @@
+name: Propose a tool
+description: Suggest a tool for The ELSA Way Toolbox
+title: "[Tool] "
+labels: ["type: tool", "status: needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a tool! An editor will check the facts and licence and add it to the Toolbox.
+        Please describe the tool in your own words; do not paste text from its website.
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Website
+      description: The tool's own home page, maintained by its developers.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it help you do?
+      description: One or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where in The ELSA Way does it help?
+      description: The chapter and section, and why the tool fits there.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of tool
+      options:
+        - Software library
+        - Assessment
+        - Reporting guideline
+        - Participatory method
+        - Serious game
+        - Canvas
+        - Framework
+        - Questionnaire
+        - Other
+  - type: textarea
+    id: practical
+    attributes:
+      label: Practical details
+      description: Time needed, group size, need for a facilitator, cost, languages, licence. Leave out what you don't know.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Experience or evidence
+      description: Have you used it? Is there a publication or known use in healthcare?

@@ -1,0 +1,68 @@
+id: shap
+name: SHAP
+full_name: SHapley Additive exPlanations
+summary: >-
+  A Python library that explains individual predictions by estimating how much
+  each input feature pushed the model's output up or down, based on Shapley
+  values from game theory.
+description: >-
+  SHAP assigns every feature a contribution to a single prediction so that the
+  contributions add up to the difference between that prediction and the
+  average one. You can use fast exact explainers for tree ensembles, or slower
+  model-agnostic and deep learning explainers for other models. The library also
+  produces plots, such as waterfall, beeswarm and dependence plots, that show
+  both single-case explanations and global patterns across a dataset. Keep in
+  mind that SHAP explains the model's behaviour, not the causal effect of a
+  feature on the patient.
+healthcare: >-
+  SHAP has a published clinical use by its own authors: Lundberg and colleagues
+  (2018) used it to explain real-time predictions of hypoxaemia risk during
+  surgery to anaesthesiologists. It works best for tabular data such as lab
+  values and vital signs; for medical images, saliency methods are often
+  easier for clinicians to read.
+url: https://shap.readthedocs.io
+source_code: https://github.com/shap/shap
+developers:
+  - Scott Lundberg
+  - SHAP open-source contributors
+year: 2017
+type: technical-library
+format: Python package
+lifecycle: [development, evaluation]
+future_ai: [explainability]
+audiences: [ai-developers, researchers]
+practical:
+  facilitator: not-needed
+  skills: Python, basic machine learning
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: MIT
+  url: https://github.com/shap/shap/blob/main/LICENSE
+  rehost: true
+references:
+  - citation: >-
+      Lundberg SM, Lee SI. A Unified Approach to Interpreting Model Predictions.
+      Advances in Neural Information Processing Systems 30 (NIPS 2017). 2017.
+    url: https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html
+  - citation: >-
+      Lundberg SM, Nair B, Vavilala MS, Horibe M, Eisses MJ, Adams T, et al.
+      Explainable machine-learning predictions for the prevention of hypoxaemia
+      during surgery. Nature Biomedical Engineering. 2018;2(10):749-760.
+    doi: 10.1038/s41551-018-0304-0
+passages:
+  - id: evaluation-explainability-assessment-types
+    why: >-
+      SHAP is the most widely used way to produce the feature-importance type
+      of explanation listed here, so you can test it against your clinical
+      users' needs.
+  - id: development-human-ai-interaction-outputs
+    why: >-
+      Per-patient SHAP values can supply the supporting evidence shown next to
+      a model's output, telling clinicians which inputs drove that prediction.
+see_also: [aif360, fairlearn]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/shap/
+last_reviewed: "2026-10-08"

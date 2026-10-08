@@ -1,0 +1,58 @@
+id: ai-impact-assessment
+name: AI Impact Assessment
+full_name: AI Impact Assessment (AIIA) of the Dutch Ministry of Infrastructure and Water Management
+summary: >-
+  A question set that walks a multidisciplinary team through the purpose,
+  impact, technical design, data and risks of an AI system, so you can decide
+  whether to use it and account for that decision.
+description: >-
+  The AIIA has two parts. In Part A you describe what the system is for and
+  what effects it may have, including on fundamental rights and
+  sustainability, and then decide whether using it is justified. In Part B you
+  check the design and use: bias, accuracy, reliability, reproducibility,
+  explainability, data governance, risk management and accountability.
+  Mandatory questions are marked separately from optional ones, and a short
+  quick-scan route supports an early go/no-go decision. Version 2.0 (December
+  2024) adds appendices on AI Act risk classes, questions for high-risk
+  systems, and points to consider for generative AI, and is linked to the IAMA
+  so that most projects do not need both.
+healthcare: >-
+  The AIIA was made for a Dutch ministry rather than for health care, but its
+  structure suits clinical AI projects, and the high-risk appendix is directly
+  relevant because most clinical AI falls in that class under the AI Act.
+url: https://www.government.nl/documents/2023/03/02/ai-impact-assessment
+developers:
+  - Dutch Ministry of Infrastructure and Water Management (ILT IDlab, RWS Datalab and Office of the CIO)
+year: 2022
+type: assessment
+format: Question-based assessment document (PDF) with a fill-in template
+lifecycle: [design, development, deployment]
+future_ai: [robustness, traceability, general]
+audiences: [policy-managers, ai-developers]
+practical:
+  duration: ongoing; revisit at each project phase
+  facilitator: recommended
+  skills: none; some sections need a data scientist or legal expert
+  cost: free
+  languages: [nl, en]
+maturity: established
+license:
+  name: No licence stated in the document; Government.nl offers its website content under CC0
+  url: https://www.government.nl/copyright
+  rehost: false
+passages:
+  - id: design-risk-management-identification
+    why: >-
+      Its questions on bias, accuracy, reliability, data quality and security
+      give your interdisciplinary team a ready checklist for listing risks
+      before development starts.
+  - id: deployment-governance-accountability-structures
+    why: >-
+      It assigns chapters to named roles and produces a written record of each
+      decision, which gives a governance committee something concrete to review
+      and sign off.
+see_also: [iama, algoritmekader, altai]
+also_listed_in:
+  - name: RAAIT toolbox
+    url: https://raait.nl/tools/ai-impact-assessment-rijksoverheid/
+last_reviewed: "2026-10-08"

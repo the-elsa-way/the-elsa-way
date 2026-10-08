@@ -23,3 +23,10 @@ This pathway is for hospital managers, procurement officers, health technology a
 - **MDR/IVDR** {cite}`mdr2017,ivdr2017`: Medical Device Regulation / In Vitro Diagnostic Regulation; applicable to many AI diagnostic tools
 - **GDPR** {cite}`gdpr2016`: General Data Protection Regulation; governs use of patient data
 - **ISO 14971** {cite}`iso14971`: Risk management for medical devices
+
+## Tools
+
+These tools from the [Toolbox](#toolbox) are a good fit for your role.
+
+:::{include} ../toolbox/_generated/audiences/policy-managers.md
+:::

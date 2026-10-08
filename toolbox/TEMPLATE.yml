@@ -1,0 +1,48 @@
+# Copy this file to toolbox/tools/<id>.yml and fill it in.
+# The schema (toolbox/schema.json) defines every field; run `make toolbox`
+# from the repository root to validate your entry and regenerate the pages.
+#
+# Write every text field in your own words. Do not copy descriptions from the
+# tool's website or from other catalogues: link to them instead.
+
+id: example-tool                # must equal the file name
+name: Example Tool
+full_name: The Example Tool for Responsible AI   # optional
+summary: >-
+  One sentence saying what the tool helps you do.
+description: >-
+  One or two short paragraphs explaining what the tool is, how you use it and
+  what you get out of it.
+healthcare: >-
+  Optional. How the tool applies to healthcare AI, or published healthcare uses.
+url: https://example.org/tool
+source_code: https://github.com/example/tool    # optional
+developers:
+  - Example University
+year: 2024                      # optional
+type: participatory-method      # technical-library | assessment | reporting-guideline | participatory-method | serious-game | canvas | framework | questionnaire
+format: Workshop with printable worksheets
+lifecycle: [design]             # design | development | evaluation | deployment
+future_ai: [general]            # fairness | universality | traceability | usability | robustness | explainability | general (max 3)
+audiences: [ai-developers]      # ai-developers | healthcare-professionals | patients-communities | researchers | policy-managers
+practical:
+  duration: 2 hours             # optional
+  group_size: 4-10              # optional
+  facilitator: recommended      # required | recommended | not-needed
+  skills: none                  # optional
+  cost: free                    # free | paid | freemium | on-request
+  languages: [en]
+maturity: emerging              # established | emerging
+license:
+  name: CC-BY-4.0               # SPDX id where possible
+  url: https://example.org/license
+  rehost: false                 # true only if we may copy its materials into this repo
+references:                     # optional
+  - citation: Author A, Author B. Title. Journal. 2024.
+    doi: 10.1234/example
+passages:                       # where the tool is recommended in the book
+  - id: design-stakeholder-engagement-methods
+    why: One sentence on how the tool helps with this passage.
+see_also: []                    # optional: ids of related tools
+also_listed_in: []              # optional: [{name: ..., url: ...}]
+last_reviewed: 2026-10-08

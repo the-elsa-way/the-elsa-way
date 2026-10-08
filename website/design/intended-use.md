@@ -30,6 +30,9 @@ User requirements go beyond the clinical function to describe what users actuall
 - **Interface requirements**: What information must be presented? In what format? On what device?
 - **Language and accessibility**: What languages do users work in? Are there accessibility requirements?
 
+:::{include} ../toolbox/_generated/passages/design-intended-use-requirements.md
+:::
+
 ## Defining clinical settings and cross-setting variations
 
 :::{admonition} FUTURE-AI

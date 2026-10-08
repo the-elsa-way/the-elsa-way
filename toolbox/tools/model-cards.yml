@@ -1,0 +1,57 @@
+id: model-cards
+name: Model Cards
+full_name: Model Cards for Model Reporting
+summary: >-
+  A short, structured document that travels with a trained model and tells
+  readers what it is for, how it was tested and where it performs worse.
+description: >-
+  A model card is a few pages of standard headings that you fill in for each
+  model you release: details of the model, its intended and out-of-scope uses,
+  the factors that may affect its behaviour, the metrics you chose, the
+  training and evaluation data, results broken down by subgroup, ethical
+  considerations, and caveats. The format was proposed by researchers at
+  Google in 2018 and has since become a common way to publish models, for
+  example on model-sharing platforms. You can write one in plain Markdown; no
+  special software is needed.
+healthcare: >-
+  For a clinical model, the subgroup results and the out-of-scope uses are the
+  parts readers need most: report performance by age, sex, ethnicity, site and
+  device where you can, and say plainly which patients and settings the model
+  was never tested on.
+url: https://arxiv.org/abs/1810.03993
+developers:
+  - Margaret Mitchell
+  - Timnit Gebru
+  - Google
+year: 2018
+type: reporting-guideline
+format: Documentation template (paper with example cards)
+lifecycle: [development, evaluation, deployment]
+future_ai: [traceability, fairness]
+audiences: [ai-developers, researchers]
+practical:
+  duration: a few hours per model, updated with each release
+  facilitator: not-needed
+  skills: Familiarity with the model and its evaluation results
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Paper copyright ACM; arXiv preprint under the arXiv non-exclusive distribution licence
+  url: http://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  rehost: false
+references:
+  - citation: >-
+      Mitchell M, Wu S, Zaldivar A, Barnes P, Vasserman L, Hutchinson B,
+      Spitzer E, Raji ID, Gebru T. Model cards for model reporting. In:
+      Proceedings of the Conference on Fairness, Accountability, and
+      Transparency (FAT* '19). ACM; 2019. p. 220-229.
+    doi: 10.1145/3287560.3287596
+    url: https://arxiv.org/abs/1810.03993
+passages:
+  - id: development-documentation-model-card
+    why: >-
+      This is the original model card proposal, so you can use its headings and
+      worked examples to fill in each of the fields this section lists.
+see_also: [datasheets-for-datasets, tripod-ai]
+last_reviewed: "2026-10-08"

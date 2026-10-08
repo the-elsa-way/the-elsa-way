@@ -1,0 +1,62 @@
+id: spirit-ai
+name: SPIRIT-AI
+full_name: Standard Protocol Items, Recommendations for Interventional Trials, Artificial Intelligence extension
+summary: >-
+  An extension of the SPIRIT checklist that tells you what to put in a
+  clinical trial protocol when the intervention includes AI.
+description: >-
+  SPIRIT-AI adds 15 AI-specific items to the SPIRIT checklist for trial
+  protocols. They ask you to state, before the trial starts, what the AI
+  intervention is and what skills people need to use it, the setting it will
+  be built into, how its input and output data will be handled, how people
+  will interact with it, and how you will analyse its errors. It is the protocol companion to
+  CONSORT-AI: plan with SPIRIT-AI, then report with CONSORT-AI. Both were
+  published in 2020 in several journals, including Nature Medicine and The
+  BMJ.
+healthcare: >-
+  Designed for interventional clinical trials of AI, so it fits directly when
+  you write a protocol for a prospective trial of a clinical AI system.
+url: https://www.equator-network.org/reporting-guidelines/spirit-artificial-intelligence/
+developers:
+  - SPIRIT-AI and CONSORT-AI Working Group
+year: 2020
+type: reporting-guideline
+format: Checklist extension with explanatory paper
+lifecycle: [evaluation]
+future_ai: [traceability, general]
+audiences: [researchers, healthcare-professionals]
+practical:
+  facilitator: not-needed
+  skills: Clinical trial methods
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: CC-BY-4.0
+  url: https://www.bmj.com/content/370/bmj.m3210
+  rehost: true
+references:
+  - citation: >-
+      Cruz Rivera S, Liu X, Chan AW, Denniston AK, Calvert MJ; SPIRIT-AI and
+      CONSORT-AI Working Group. Guidelines for clinical trial protocols for
+      interventions involving artificial intelligence: the SPIRIT-AI
+      extension. Nature Medicine. 2020;26:1351-1363.
+    doi: 10.1038/s41591-020-1037-7
+  - citation: >-
+      Cruz Rivera S, Liu X, Chan AW, Denniston AK, Calvert MJ; SPIRIT-AI and
+      CONSORT-AI Working Group. Guidelines for clinical trial protocols for
+      interventions involving artificial intelligence: the SPIRIT-AI
+      extension. BMJ. 2020;370:m3210.
+    doi: 10.1136/bmj.m3210
+passages:
+  - id: evaluation-evaluation-planning-prespecification
+    why: >-
+      When your evaluation is a trial, this checklist turns pre-specification
+      into a concrete protocol that covers the AI-specific choices as well as
+      the usual trial design.
+  - id: evaluation-reporting-transparency-standards
+    why: >-
+      Use it for the protocol of a randomised trial of AI, the planning
+      counterpart to CONSORT-AI in this table.
+see_also: [consort-ai, decide-ai]
+last_reviewed: "2026-10-08"

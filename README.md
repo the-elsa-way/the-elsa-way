@@ -21,6 +21,7 @@ website/
 ├── evaluation/        Validation, fairness, usability, reporting
 ├── deployment/        Clinical integration, monitoring, governance
 ├── future-ai/         FUTURE-AI principles mapped to chapters
+├── toolbox/           Toolbox intro and contribution guide (tool pages are generated)
 └── community-handbook/ Contributing, governance, style guide
 ```
 
@@ -57,6 +58,12 @@ make strict
 ```bash
 make clean
 ```
+
+All commands run from the repository root.
+
+### Toolbox
+
+The Toolbox is generated from one YAML file per tool in `toolbox/tools/`, validated against `toolbox/schema.json`. `make toolbox` validates the files and generates the tool pages and the "Tools for this step" boxes in the chapters; every build target runs it first. See [Adding a Tool](website/toolbox/contributing-tools.md).
 
 ## Contributing
 

@@ -39,6 +39,9 @@ Standardised instruments for measuring usability and acceptance:
 
 Apply these questionnaires after realistic task performance, not after a demo.
 
+:::{include} ../toolbox/_generated/passages/evaluation-usability-ux-questionnaires.md
+:::
+
 ### Task performance metrics
 
 Measure objective task performance with and without the AI:

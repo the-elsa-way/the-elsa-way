@@ -1,0 +1,59 @@
+id: datasheets-for-datasets
+name: Datasheets for Datasets
+summary: >-
+  A set of questions you answer about a dataset, from why it was made to how it
+  is maintained, so others can judge whether it suits their purpose.
+description: >-
+  Datasheets for Datasets gives you a list of questions grouped by stage of a
+  dataset's life: motivation, composition, collection, preprocessing and
+  labelling, uses, distribution, and maintenance. You answer them in prose
+  when you create or release a dataset, ideally while the work is still in
+  progress so that the questions also shape your choices. The result is a
+  document that helps people who reuse the data spot gaps, sampling problems
+  and uses the data was never meant for. It was first posted in 2018 and
+  published in Communications of the ACM in 2021.
+healthcare: >-
+  For clinical data, the questions on consent, sensitive attributes, who is
+  missing from the data and how labels were assigned are especially useful;
+  you may want to add fields for coding systems, care setting and the time
+  window of data collection.
+url: https://arxiv.org/abs/1803.09010
+developers:
+  - Timnit Gebru
+  - Jamie Morgenstern
+  - Briana Vecchione
+  - Jennifer Wortman Vaughan
+  - Hanna Wallach
+  - Hal Daumé III
+  - Kate Crawford
+year: 2018
+type: reporting-guideline
+format: Question list for dataset documentation
+lifecycle: [design, development]
+future_ai: [traceability, fairness]
+audiences: [ai-developers, researchers]
+practical:
+  duration: a few hours per dataset, updated when the data changes
+  facilitator: not-needed
+  skills: Knowledge of how the dataset was collected and processed
+  cost: free
+  languages: [en]
+maturity: established
+license:
+  name: Paper copyright ACM; arXiv preprint under the arXiv non-exclusive distribution licence
+  url: http://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  rehost: false
+references:
+  - citation: >-
+      Gebru T, Morgenstern J, Vecchione B, Vaughan JW, Wallach H, Daumé III H,
+      Crawford K. Datasheets for datasets. Communications of the ACM.
+      2021;64(12):86-92.
+    doi: 10.1145/3458723
+    url: https://arxiv.org/abs/1803.09010
+passages:
+  - id: development-documentation-datasheet
+    why: >-
+      The section's headings follow this paper, which gives you the full list
+      of questions to answer under each one.
+see_also: [model-cards]
+last_reviewed: "2026-10-08"

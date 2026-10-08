@@ -1,46 +1,34 @@
 (future-ai-explainability)=
 # Explainability
 
-The explainability principle holds that healthcare AI tools should provide clinically meaningful information about the logic behind their decisions. Explainability is the basis for appropriate trust, clinical oversight, and patient rights.
+Many machine learning models are "black boxes": even their builders cannot read off why a given patient got a given score. The explainability principle asks that a healthcare AI tool gives clinically meaningful information about the logic behind its outputs, so that users understand what it can and cannot do and can step in when needed {cite}`lekadir2025futureai`.
 
 ## Explainability recommendations
 
 ### E1: Define the need and requirements for explainability with end users
 
-Explainability is not always necessary. A tool that segments an organ for surgical planning may need explainability differently than one that recommends treatment. Define, with end users, what explanations are needed and what form they should take.
+*Research `++`, deployable `++`.* Decide with clinicians, technicians and patients whether the tool needs explanations at all. The paper contrasts two cases:
 
-Not necessary: AI-enabled image segmentation tool where the output (the segmentation) is itself interpretable
-Critical: AI-enabled diagnosis recommendation where the basis for the recommendation affects clinical trust and patient communication
+- A tool that outlines an organ on a scan may need none, because the user can see the outline and judge it.
+- A tool that suggests a diagnosis does need one, because clinicians must weigh the suggestion and discuss it with the patient.
 
-**→ See:** [Design → Intended Use and User Requirements](../design/intended-use.md)
+If explanations are needed, agree what they are for, which method suits that purpose, and which limitations to watch, such as users trusting the tool too much.
+
+**→ See:** [Intended use and user requirements](../design/intended-use.md)
 
 ### E2: Evaluate explainability with end users
 
-Generate explanations and evaluate whether they are clinically meaningful, accurate, and useful to users.
+*Research `+`, deployable `+`.* First check with computational methods that the explanations are correct. Then test with end users whether they improve satisfaction, confidence and clinical performance, and record where explanations make no clinical sense, shift with small amounts of noise or raise confidence in wrong outputs.
 
-**→ See:** [Explainability Assessment](../evaluation/explainability-assessment.md)
+**→ See:** [Explainability assessment](../evaluation/explainability-assessment.md)
 
-## Types of explainability
+## Kinds of explanation
 
-**Local vs. global**
-- Local: explains a specific output for a specific case ("why did the AI flag this scan?")
-- Global: explains the model's general behaviour ("what features does the AI typically rely on?")
+A *local* explanation covers one output ("why did this patient get a high score?"); a *global* one describes the model's overall behaviour ("which inputs matter most?"). Some models, such as logistic regression or small decision trees, are interpretable by design. For complex models, *post-hoc* methods produce an explanation after the fact: SHAP and LIME estimate how much each input pushed a particular prediction up or down, and saliency maps highlight the image regions that most affected the output. A clinician needs the clinical features behind a score, a patient a plain account of what it means for their care, and a regulator documentation of the model's logic and validation.
 
-**Post-hoc vs. intrinsic**
-- Post-hoc: explanations generated after the model produces its output (SHAP, LIME, saliency maps)
-- Intrinsic: models that are inherently interpretable (logistic regression, decision trees)
+Post-hoc explanations are approximations of what the model does. A saliency map can highlight a region that predicts the outcome statistically without causing the disease, and SHAP values can change after a small change in input. Present explanations as an aid to judgement and say what they cannot show.
 
-**Audience-appropriate**
-- Clinician: technical explanation of model reasoning, linked to clinical features
-- Patient: accessible explanation of what the AI said and why it matters
-- Regulator: documentation of model logic and validation evidence
-
-## The limits of current explainability methods
-
-Current explainability methods have real limitations for healthcare use:
-
-- Saliency maps may highlight regions that are statistically predictive but not causally related to disease
-- SHAP values can be unstable, and small changes in input can produce large changes in explanation
-- No explanation method fully captures the complexity of a deep learning model
-
-Explanations should be communicated with appropriate humility: as an aid to understanding, not a guarantee of correctness.
+:::{admonition} Running case: sepsis early warning
+:class: note
+This example is fictional. When a hospital's sepsis model raises an alert, nurses and physicians want to know why before they go to the bedside. Under E1 they agree that each alert lists the three inputs that raised the score most (for example rising heart rate, falling blood pressure, high lactate) and when each was measured. Under E2 the team checks whether this helps clinicians decide faster, and whether it makes them accept alerts they would otherwise have questioned.
+:::

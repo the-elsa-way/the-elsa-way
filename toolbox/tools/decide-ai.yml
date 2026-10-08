@@ -55,13 +55,9 @@ passages:
       If you cannot yet justify a full trial, the checklist helps you plan a
       smaller first clinical study that still collects the safety, usability
       and workflow evidence a later trial will need.
-  - id: deployment-clinical-integration-workflow
-    why: >-
-      Its items on how the tool was actually used and fitted into care give
-      you a structured way to record workflow problems during early roll-out.
   - id: evaluation-reporting-transparency-standards
     why: >-
-      Use it to report early-stage clinical evaluations, the gap between
-      model validation and a randomised trial.
+      Use it to report early clinical evaluations: the first studies with
+      real users, between model validation and a randomised trial.
 see_also: [consort-ai, spirit-ai, system-usability-scale]
 last_reviewed: "2026-10-08"

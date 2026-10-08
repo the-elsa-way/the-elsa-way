@@ -12,8 +12,8 @@ description: >-
   a transformation that meets privacy models you choose, such as k-anonymity,
   l-diversity, t-closeness or differential privacy, while keeping as much data
   utility as possible. Its graphical interface shows the estimated
-  re-identification risk before and after anonymisation, so you can document
-  why the output is safe to share. ARX grew out of medical informatics research
+  re-identification risk before and after anonymisation, which helps you
+  document why the output is safe to share. ARX grew out of medical informatics research
   at the Technical University of Munich and is now developed together with the
   Berlin Institute of Health at Charité.
 healthcare: >-

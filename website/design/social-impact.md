@@ -1,12 +1,12 @@
 (design-social-impact)=
-# Social and Societal Impact
+# Social and societal impact
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **General recommendation 7**: Investigate and address social and societal issues.
+This chapter supports **General recommendation 7** (G7): investigate and address social and societal issues.
 :::
 
-AI in healthcare affects more than individual patients. It affects clinicians, healthcare systems, communities, and society. These broader impacts should be considered at the design stage, before technical choices are made that are difficult to reverse.
+A sepsis alert that fires every hour changes a nurse's shift, the rapid response team's workload and what patients experience on the ward. Effects like these reach beyond the individual patient, and some depend on choices you make in design, such as where the tool runs and who receives its output.
 
 ```{figure} ../figures/science-society.jpg
 :name: science-society
@@ -16,49 +16,31 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 
 ## Workforce and professional identity
 
-AI tools that automate or assist clinical tasks will change the work of healthcare professionals. This may be beneficial (reducing cognitive load, eliminating repetitive tasks) or harmful (de-skilling, job displacement, erosion of professional judgment).
+AI tools that take over or assist clinical tasks change the work of the people who did them. Sometimes that helps: less repetitive work, less to keep in mind at once. Sometimes it harms: clinicians lose skills they no longer practise, roles disappear, or professional judgement gives way to the score.
 
-Consider:
-- Which tasks does the AI automate, partially automate, or augment?
-- Will deployment reduce the number of roles performing this task?
-- Could sustained AI assistance lead to de-skilling in the underlying clinical competency?
-- How should training and education adapt if AI handles certain tasks routinely?
+Ask which tasks the tool automates fully, partly or not at all. Ask whether it will reduce the number of people doing a task, whether long-term use could erode the underlying clinical skill, and how training should change if the tool handles some tasks routinely. Involving clinicians and their professional bodies early brings these concerns out while you can still act on them, for example by designing the tool to support clinical reasoning rather than replace it.
 
-Engaging clinicians and their professional bodies early can surface concerns and shape design decisions, for example designing the AI to support rather than replace clinical reasoning.
+:::{admonition} Running case: sepsis early warning
+:class: note
+In the fictional sepsis project, ward nurses raised two concerns: that alerts would add to an already high workload, and that newer nurses might stop learning to recognise deterioration themselves. The team set a maximum number of alerts per nurse per shift as a design requirement, and the hospital's training staff planned to keep teaching clinical recognition of sepsis alongside training on the tool.
+:::
 
 ## Health equity
 
-AI can widen or narrow health disparities. If a tool works better for patients who are well-represented in its training data (often patients in high-income settings, majority ethnic groups, patients with standard presentations), deploying it broadly will provide greater benefit to the already-advantaged.
+AI can widen or narrow differences in health between groups. A tool that works best for patients who are well represented in its training data gives the most benefit to people who are already better served. A tool designed and tested with diverse patients, and available where the need is greatest, can help close gaps.
 
-Conversely, AI that is carefully designed for diverse populations, that is accessible in low-resource settings, and that is evaluated for equity can actively reduce health disparities.
-
-At the design stage, ask:
-- Who will benefit most from this AI? Who might be disadvantaged?
-- Is the deployment setting accessible to the patients who most need this tool?
-- Are the hardware and connectivity requirements realistic for low-resource settings?
+At the design stage, ask who will benefit most and who might lose out. Check whether the setting where the tool will run is one that the patients who need it most can reach, and whether the hardware and connectivity it requires are realistic in less well-resourced settings.
 
 :::{include} ../toolbox/_generated/passages/design-social-impact-equity.md
 :::
 
 ## Environmental impact
 
-Training large AI models has significant energy and carbon costs. Deploying AI systems at scale in healthcare adds computational and infrastructure demands.
-
-Practices to consider:
-- Use energy-efficient training methods (model pruning, quantisation, knowledge distillation)
-- Use existing pre-trained models and adapt them where possible (transfer learning)
-- Report on the environmental impact of training and operating the AI system
-- Consider federated approaches that reduce data transfer
+Training large models uses a lot of energy, and running AI across a healthcare system adds computing and infrastructure demand. You can reduce this by using smaller or compressed models (techniques such as pruning, quantisation and knowledge distillation), by adapting an existing pre-trained model instead of training from scratch, and by preferring approaches that move less data. Measure and report the energy use of training and running the tool so that others can compare.
 
 :::{include} ../toolbox/_generated/passages/design-social-impact-environmental.md
 :::
 
 ## Trust and the patient-clinician relationship
 
-Patients trust clinicians. The introduction of AI into that relationship raises questions about transparency, consent, and the nature of the care received:
-
-- Should patients be informed when AI is involved in their care? (Generally: yes)
-- Does the presence of AI change the patient-clinician interaction in ways patients value or find concerning?
-- Is the AI disclosed to patients in a way they can understand?
-
-These questions are particularly acute for AI used in mental health, oncology, and other areas where the quality of the patient-clinician relationship is itself therapeutic.
+Patients trust their clinicians, and bringing AI into that relationship raises questions about openness, consent and the kind of care people receive. In most cases patients should be told when AI is involved in their care, in words they can understand. Ask patients whether the tool changes their contact with clinicians in ways they value or find worrying. These questions weigh more heavily in mental health care, oncology and other fields where the relationship itself is part of the treatment.

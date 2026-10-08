@@ -1,12 +1,12 @@
 (design-bias-sources)=
-# Identifying Sources of Bias
+# Identifying sources of bias
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Fairness recommendation 1**: Define any potential sources of bias from an early stage; and **Fairness recommendation 2**: Collect information on individuals' and data attributes.
+This chapter supports **Fairness recommendation 1** (F1): define potential sources of bias from an early stage. It also prepares **Fairness recommendation 2** (F2), collecting information on individual and data attributes, which you carry out during development.
 :::
 
-Bias in AI systems does not arrive suddenly at evaluation. It is baked in at design, through choices about data, labels, and problem framing. Identifying potential bias sources at the design stage is the most cost-effective way to address them.
+Bias enters an AI system through choices about data, labels and the question the model answers, long before anyone measures performance. Finding likely sources at the design stage costs less than correcting a trained model.
 
 ```{figure} ../figures/ai-fairness.jpg
 :name: ai-fairness
@@ -17,50 +17,41 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 ## Types of bias in healthcare AI
 
 ### Historical bias
-Medical data encodes historical clinical practices. If doctors historically under-diagnosed a condition in women, a model trained on historical data will replicate that under-diagnosis. Historical bias in labels is particularly insidious because the training signal itself is wrong.
+Medical records reflect how care was given in the past. If a condition was under-diagnosed in women, a model trained on those records learns to under-diagnose it too. Because the bias sits in the labels, the model can look accurate when you test it against the same kind of records.
 
 ### Representation bias
-Datasets under-represent certain groups: ethnic minorities, elderly patients, patients with disabilities, patients from low-income settings, rare disease variants. A model trained on such data will perform worse for these groups.
+Some groups are under-represented in most datasets: ethnic minorities, older patients, patients with disabilities, patients from low-income areas and people with rare variants of a disease. A model sees fewer examples from these groups and often performs worse for them.
 
 ### Measurement bias
-Different equipment, protocols, and operators produce different data. A model trained predominantly on data from high-field MRI scanners will perform poorly on low-field scans, not because of patient characteristics but because of measurement differences.
+Equipment, protocols and staff produce different data. A model trained mostly on high-field MRI scans may do poorly on low-field scans because of the measurement, not the patients. In EHR data, the same applies to how often and how carefully observations are recorded.
 
 ### Labelling bias
-Annotation reflects the knowledge, experience, and biases of the annotators. If annotators are predominantly from one clinical culture or demographic, their labels may not generalise.
+Labels reflect the knowledge and habits of the people who make them. If all annotators come from one hospital or one specialty, their labels may not match practice elsewhere.
 
 ### Proxy bias
-An AI may learn to use proxies for protected attributes (postcode as a proxy for ethnicity; imaging artefacts as a proxy for equipment type). This can produce discriminatory outcomes even without explicit use of protected attributes.
+A model can pick up a stand-in for a sensitive attribute, such as postcode standing in for ethnicity or income, or an image artefact standing in for the type of scanner. It can then discriminate even though the attribute itself was never an input.
 
 ## Identifying bias sources in your project
 
-Work through the following questions at design time:
+Work through these questions at design time, with clinicians and patients in the room.
 
-**Data**
-- Which demographic groups are likely to be underrepresented in your training data?
-- Are there equipment, protocol, or site differences that will create systematic performance differences?
-- Are there temporal trends in the data that may create distribution shift?
+| Area | Questions |
+|---|---|
+| Data | Which groups are likely to be under-represented? Will differences in equipment, protocols or sites cause systematic differences in performance? Are there trends over time that could cause distribution shift (a change in the data the model sees after training)? |
+| Labels | Who annotated the data, and do they reflect the range of clinical practice? How well do annotators agree? Is the reference standard itself shaped by past bias? |
+| Problem framing | Do any inputs correlate with sensitive attributes? Could the model use proxies? Is the outcome you predict a fair measure for all groups? (Predicting healthcare use, for example, can reflect access to care rather than need.) |
 
-**Labels**
-- Who annotated the data? Are they representative of the diversity of clinical practice?
-- What is the inter-rater agreement? Where disagreement is high, labels are uncertain.
-- Is the "gold standard" itself affected by historical clinical bias?
+:::{admonition} Running case: sepsis early warning
+:class: note
+In the fictional sepsis project, the measurement question mattered most. Patients on wards that record vital signs less often, or patients admitted at night, have fewer observations in the EHR. A model may score them as lower risk simply because less is known about them. The team wrote this down as a bias source and planned to compare performance by ward and by time of day.
+:::
 
-**Problem framing**
-- Are any features that correlate with protected attributes included in the input?
-- Could the model use proxies for protected attributes to make predictions?
-- Is the outcome you are predicting equitable across groups? (e.g., predicting healthcare utilisation may reflect access barriers, not health need)
+## Attributes to monitor for bias
 
-## Protected attributes
+Decide which attributes you need to check performance across groups. Common ones are age, sex and gender, ethnicity, socioeconomic status and disability. Some of these are protected grounds under equal-treatment law. Others are not protected themselves but can act as proxies: geographic location, for instance, can stand in for ethnicity, income or access to care, and is worth recording for that reason.
 
-Document the protected attributes relevant to your application. These typically include:
-- Age, sex, gender
-- Ethnicity, race
-- Socioeconomic status
-- Disability
-- Geographic location (as a proxy for resource availability)
-
-These attributes should be recorded where possible so that bias can be monitored during evaluation and deployment.
+Record these attributes where you can, so that bias can be measured in evaluation and monitored after deployment.
 
 :::{warning}
-In some jurisdictions, collecting certain protected attributes requires specific consent and legal basis. Check with your data governance team before adding these fields.
+Under the GDPR, data on health, ethnic origin and some other attributes is special category data (Art. 9) everywhere in the EU, and you need an Art. 9(2) condition as well as an Art. 6 lawful basis to process it. For high-risk AI systems, Art. 10(5) of the EU AI Act {cite}`euaiact2024` allows providers, as an exception, to process special category data to detect and correct bias, under strict safeguards. Agree the legal basis with your data protection officer before you add these fields.
 :::

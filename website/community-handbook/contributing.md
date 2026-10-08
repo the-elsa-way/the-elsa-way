@@ -1,7 +1,7 @@
 (community-contributing)=
 # Contributing to The ELSA Way
 
-The ELSA Way is hosted on GitHub, and contributions are managed through the standard GitHub workflow. This page describes how to contribute, from small fixes to new chapters.
+The ELSA Way lives in a public GitHub repository, and every change to it goes through GitHub's issue and pull request workflow. This page explains how to take part, from fixing a typo to proposing a new chapter.
 
 ```{figure} ../figures/contributing.jpg
 :name: contributing
@@ -11,20 +11,20 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 
 ## Types of contribution
 
-| Type | Description | Skill required |
+| Type | What it involves | Effort |
 |---|---|---|
-| **Typo or factual fix** | Correcting errors in existing content | Minimal |
-| **Clarification** | Improving unclear explanations | Minimal |
-| **New tool** | Adding a tool to the [Toolbox](#toolbox) (see [Adding a Tool](#toolbox-contributing)) | Minimal to moderate |
-| **New example or case study** | Adding a worked example to an existing chapter | Minimal to moderate |
-| **Gap flagging** | Identifying missing content (open an Issue) | Minimal |
-| **Chapter expansion** | Adding substantive new content to an existing chapter | Moderate |
-| **New chapter** | Proposing and writing an entirely new chapter | Moderate to substantial |
-| **New section** | Proposing a new major section of the book | Substantial, requires editorial board discussion |
+| Typo or factual fix | Correcting an error in existing content | Small |
+| Clarification | Rewriting an explanation that is hard to follow | Small |
+| Gap | Pointing out missing content by opening an issue | Small |
+| New tool | Adding a tool to the [Toolbox](#toolbox) (see [Adding a tool](#toolbox-contributing)) | Small to moderate |
+| New example or case study | Adding a worked example to an existing chapter | Small to moderate |
+| Chapter expansion | Adding substantial new content to an existing chapter | Moderate |
+| New chapter | Proposing and writing a new chapter | Moderate to large |
+| New section | Proposing a new major part of the book | Large; needs editorial board discussion |
 
 ## How contributions work
 
-Every contribution follows the same path: **issue → pull request → review → merge**. An issue is where an idea or problem is discussed and agreed on; a pull request is the change itself. Anyone with a GitHub account can take part, whether or not you belong to the ELSA AI Lab: you do not need permission to start.
+Every contribution follows the same path: **issue → pull request → review → merge**. An issue is where an idea or problem is discussed and agreed; a pull request is the change itself. Anyone with a GitHub account can take part, whether or not you belong to the ELSA AI Lab, and you do not need permission to start.
 
 ```{mermaid}
 flowchart LR
@@ -45,16 +45,16 @@ flowchart LR
 
 | Form | Use it for |
 |---|---|
-| **Report an error** | Typos, broken links, factual errors, outdated information |
-| **Suggest content** | Clarifications, examples, gaps, chapter expansions, new chapters |
-| **Website or build problem** | Something wrong with the site itself or with building the book |
-| **Question or other** | Anything else |
+| Report an error | Typos, broken links, factual errors, outdated information |
+| Suggest content | Clarifications, examples, gaps, chapter expansions, new chapters |
+| Website or build problem | Something wrong with the site itself or with building the book |
+| Question or other | Anything else |
 
-Check first whether an [open issue](https://github.com/the-elsa-way/the-elsa-way/issues) already covers your idea; if so, add a comment there instead.
+Check first whether an [open issue](https://github.com/the-elsa-way/the-elsa-way/issues) already covers your idea. If one does, add a comment there instead. If you have a commercial, professional or financial interest in the topic, declare it in the **Conflicts of interest** field of the Suggest content form (see [Governance](governance.md)).
 
 ### 2. Wait for triage
 
-An editor reads every new issue and labels it (see [Labels](#contributing-labels)). The issue is then either:
+An editor reads every new issue and labels it (see [Labels](#contributing-labels)). The issue is then:
 
 - **accepted**, with a review level that says how many editors must approve the change;
 - **waiting for information**, with a question for you; or
@@ -64,19 +64,19 @@ For a new chapter or section, the editorial board discusses the proposal before 
 
 ### 3. Pick up an accepted issue
 
-Comment on the issue that you would like to work on it. An editor assigns it to you and labels it `status: in progress`, so nobody duplicates your work. Issues labelled `good first issue` are a good place to start; `help wanted` marks issues the editors would especially like help with.
+Comment on the issue that you would like to work on it. An editor assigns it to you and labels it `status: in progress`, so nobody duplicates your work. Issues labelled `good first issue` are a good place to start, and `help wanted` marks issues the editors would especially like help with.
 
 If you can no longer work on an issue, say so in a comment so someone else can pick it up.
 
 ### 4. Make the change
 
-**On the website (small changes).** Click the edit (pencil) button at the top of any page. GitHub opens the source file, creates your own copy of the repository (a _fork_) if you need one, and lets you propose the change as a pull request, all in the browser.
+For a small change, use the website. Click the edit (pencil) button at the top of any page. GitHub opens the source file, creates your own copy of the repository (a _fork_) if you need one, and lets you propose the change as a pull request, all in the browser.
 
-**On your computer (larger changes).**
+For a larger change, work on your computer:
 
 1. [Fork the repository](https://github.com/the-elsa-way/the-elsa-way/fork) and clone your fork. Members of the repository can create a branch in the main repository instead.
 2. Create a branch with a short descriptive name, for example `fix-fairness-typo` or `add-sepsis-case-study`.
-3. Write your content following the [Style Guide](style-guide.md).
+3. Write your content following the [Style guide](style-guide.md).
 4. Preview the book locally with `make serve` (see the [README](https://github.com/the-elsa-way/the-elsa-way#readme) for setup).
 5. Commit and push to your fork or branch.
 
@@ -90,7 +90,7 @@ Open a pull request against the `main` branch. The pull request form asks you to
 
 Small fixes such as typos and broken links do not need an issue: tick **This is a small fix** instead.
 
-Two automatic checks run on every pull request: **Build book** builds the whole book, and **Linked issue** checks that you linked an issue or marked the change as a small fix. If a check fails, click **Details** to see why. If this is your first contribution, an editor must approve the checks before they run; this is a GitHub safety measure for all public repositories.
+Two automatic checks run on every pull request. **Build book** builds the whole book, and **Linked issue** checks that you linked an issue or marked the change as a small fix. If a check fails, click **Details** to see why. On your first contribution, an editor must approve the checks before they run; GitHub requires this for all public repositories.
 
 ### 6. Review and merge
 
@@ -102,7 +102,7 @@ Editors review your pull request according to its review level:
 | `review: significant` | New sections within existing chapters | Two editors |
 | `review: major` | New chapters, structural changes | Editorial board consensus |
 
-Reviewers may suggest changes. Push new commits to the same branch to update your pull request; there is no need to open a new one. Once approved, an editor merges the pull request and the website updates within a few minutes.
+Reviewers may suggest changes. Push new commits to the same branch to update your pull request; you do not need to open a new one. Once your pull request is approved, an editor merges it and the website updates within a few minutes.
 
 (contributing-labels)=
 ### Labels
@@ -119,24 +119,18 @@ Reviewers may suggest changes. Push new commits to the same branch to update you
 
 ## Content standards
 
-All contributions must:
+Editors check every contribution against these criteria:
 
-- Be relevant to responsible AI in healthcare
-- Be accurate: claims must be supported by evidence or experience
-- Be practical: contributions should be actionable, not purely theoretical
-- Follow the [Style Guide](style-guide.md)
-- Respect the [Code of Conduct](code-of-conduct.md)
-- Not reproduce copyrighted material without appropriate licensing
+- It is about responsible AI in healthcare.
+- Its claims are supported by a source or by stated experience.
+- A reader can act on it.
+- It follows the [Style guide](style-guide.md) and the [Code of conduct](code-of-conduct.md).
+- It does not reproduce copyrighted material without permission or a suitable licence.
 
 ## Attribution
 
-All contributors are acknowledged in The ELSA Way. When you make a pull request, add your name to the contributors list.
+Everyone who contributes is listed on the [Contributors](contributors.md) page. Add your name there in the same pull request as your contribution.
 
-## Non-GitHub contributions
+## Contributing without GitHub
 
-If GitHub is not accessible to you, you can contribute by:
-- Emailing the editorial board with your suggestion or content
-- Participating in co-creation workshops (announced on the website)
-- Joining the community forum discussions
-
-The ELSA Way is committed to accessible contribution pathways for all.
+If you cannot or prefer not to use GitHub, you can send your suggestion or text to the editorial board. Contact details will be added to this page once the editorial board is in place. When co-creation workshops are announced on this website, you can also contribute there.

@@ -1,43 +1,39 @@
 (future-ai-universality)=
 # Universality
 
-The universality principle holds that healthcare AI tools should generalise to new clinical settings, equipment, and user populations beyond the setting where they were developed.
+A model built on one hospital's data learns that hospital's patients, devices and habits of recording. The universality principle asks that a healthcare AI tool also works outside the setting where it was built: for new patients, new users and, where relevant, new sites {cite}`lekadir2025futureai`. How far it needs to travel depends on where you intend to use it.
 
 ## Universality recommendations
 
-### Un1: Define intended clinical settings and cross-setting variations
+### Un1: Define the intended clinical settings and how they differ
 
-At the design stage, explicitly define:
-- The clinical settings the AI is intended for
-- The range of equipment and protocols expected at those settings
-- Resource requirements (connectivity, computing, staff skills)
+*Research `++`, deployable `++`.* During design, write down where the tool will be used: hospital wards, primary care, home care, one country or several. Then note what differs between those settings and could get in the way, such as end users, clinical definitions, equipment and IT infrastructure.
 
-Document cross-setting variations that may affect performance.
-
-**→ See:** [Intended Use and User Requirements](../design/intended-use.md)
+**→ See:** [Intended use and user requirements](../design/intended-use.md)
 
 ### Un2: Use community-defined standards
 
-Adopting interoperability standards reduces barriers to cross-setting deployment:
-- Clinical terminologies: SNOMED-CT, LOINC, ICD
-- Imaging: DICOM, BI-RADS
-- Data: HL7 FHIR, HL7 Level Seven (HL7.7)
-- Evaluation: validated metrics criteria (see Maier-Hein et al., Topf et al.)
+*Research `+`, deployable `+`.* Build on standards that others already use, so that your tool can read data from other systems and others can check your work. Examples are disease definitions from medical societies, terminologies such as SNOMED CT, data models such as OMOP, and interface standards such as DICOM for images and HL7 FHIR for exchanging health records. In the Netherlands, Nictiz maintains the zibs (Dutch health and care information models) and their FHIR profiles.
 
-### Un3: Use external datasets and/or multiple sites
+**→ See:** [Intended use and user requirements](../design/intended-use.md), [Clinical integration](../deployment/clinical-integration.md)
 
-Validate performance on data from at least one external site, different from the training site. Multi-site validation is the minimum standard for claiming generalisability.
+### Un3: Evaluate with external datasets and/or multiple sites
 
-**→ See:** [External and Multi-Site Validation](../evaluation/external-validation.md)
+*Research `++`, deployable `++`.* Test the model on data it never saw during training, from a different source. Unless the tool is meant for a single centre, the paper also asks for clinical evaluation at several sites. If performance drops, try methods that adapt the model to the new setting and test them in turn.
+
+**→ See:** [External and multi-site validation](../evaluation/external-validation.md)
 
 ### Un4: Evaluate and demonstrate local clinical validity
 
-Before deploying at a new site, perform local validation on a representative sample of local patients with locally obtained ground truth.
+*Research `+`, deployable `++`.* Each new site has its own population, equipment, workflow and users. Before you rely on the tool there, test it on local data and check that it fits the local workflow. If it performs worse, recalibrate it (adjust its risk estimates to match local outcome rates) and test again.
 
-**→ See:** [Local Validation](../deployment/local-validation.md)
+**→ See:** [Local validation](../deployment/local-validation.md)
 
-## The generalisability problem
+## Why performance drops at a new site
 
-Healthcare AI has a well-documented generalisability problem: models frequently perform substantially worse in external validation than in internal validation. The causes are understood (overfit to training site characteristics, non-representative training data, distribution shift), but addressing them requires deliberate effort at every phase of development.
+The main cause is *distribution shift*: the data at the new site differ from the training data, for example in patient mix, lab equipment or documentation habits. A model can also *overfit*, learning quirks of the training site that do not hold elsewhere. You design against both with representative data and standard formats, test with external data, and check again at each site and over time.
 
-Universality is not achieved at a single point. It requires designing for generalisability (representative data, standard formats), validating generalisability (external, multi-site validation), and then monitoring it in deployment (local validation, drift detection).
+:::{admonition} Running case: sepsis early warning
+:class: note
+This example is fictional. The hospital develops its sepsis model on its own retrospective records, then validates it on data from a second hospital (Un3). Suppose the second hospital uses a different lab analyser and records observations less often. The team then checks calibration there (whether a predicted 20% risk means about 20 in 100 such patients develop sepsis) before anyone discusses sharing the tool. Before go-live on its own wards, it runs the model in silent mode, producing scores that no one acts on, to confirm local validity (Un4).
+:::

@@ -43,12 +43,12 @@ references:
 passages:
   - id: evaluation-reporting-transparency-standards
     why: >-
-      Use this checklist when your study develops or validates a prediction
-      model, the most common design among the standards in this table.
+      Use this checklist when your study develops or externally validates a
+      prediction model, which covers most published clinical AI studies.
   - id: evaluation-evaluation-planning-prespecification
     why: >-
       Reading the checklist before you start shows which analysis choices,
       such as subgroups and performance measures, you will later have to
-      justify, so you can fix them in advance.
+      justify. Decide them in advance.
 see_also: [probast-ai, model-cards, consort-ai]
 last_reviewed: "2026-10-08"

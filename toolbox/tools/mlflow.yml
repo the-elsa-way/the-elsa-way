@@ -2,13 +2,13 @@ id: mlflow
 name: MLflow
 summary: >-
   An open-source platform that records what went into each model run and keeps
-  a versioned registry of trained models, so you can trace any deployed model
-  back to its code, data and settings.
+  a versioned registry of trained models, which lets you trace any deployed
+  model back to its code, data and settings.
 description: >-
   MLflow Tracking logs the parameters, metrics, code version and output files of
   every training run, and lets you compare runs in a web interface. The Model
   Registry stores trained models with version numbers, stages and notes, which
-  gives you a clear record of which model is in use and how it was produced.
+  records which model is in use and how it was produced.
   Newer releases add tracing and evaluation features for applications built on
   large language models. Databricks launched MLflow in 2018, and it is now a
   Linux Foundation project; you can run it entirely on your own servers.
@@ -54,8 +54,7 @@ passages:
       to the exact code and data behind it.
   - id: deployment-logging-traceability-what
     why: >-
-      The model registry gives you a reliable version identifier to store with
-      each logged prediction, so every logged AI output can be traced to the
-      model that produced it.
+      Store the registry's version identifier with each logged prediction, and
+      every logged AI output can be traced to the model that produced it.
 see_also: [evidently, model-cards]
 last_reviewed: "2026-10-08"

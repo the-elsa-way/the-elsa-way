@@ -1,7 +1,7 @@
 (foreword-ai-lifecycle)=
-# The AI Lifecycle in Healthcare
+# The AI lifecycle in healthcare
 
-The ELSA Way is structured around a cyclical AI development lifecycle with four interconnected phases:
+The ELSA Way divides the life of a healthcare AI tool into four phases that repeat: design, development, evaluation and deployment.
 
 ```{figure} ../figures/ai-lifecycle.svg
 :name: ai-lifecycle
@@ -12,27 +12,30 @@ The AI development lifecycle as used in The ELSA Way.
 ## The four phases
 
 ### 1. Design
-*Stakeholders: Doctors, ethicists, legal experts, patients*
+*Key people: clinicians, patients, ethicists, legal experts*
 
-The design phase is where problems are scoped, stakeholders engaged, and foundations laid. Key activities include defining the clinical need, identifying intended users, planning data collection, conducting ethical review, and establishing a risk management process. Mistakes made here (wrong problem definition, excluded stakeholders, underrepresented populations in planned datasets) propagate through the entire lifecycle.
+In design you define the clinical need and the intended users, plan the data, arrange ethical and legal review and start a risk management process. Mistakes made here, such as solving the wrong problem, leaving out a group of users or planning a dataset that misses part of the patient population, carry through every later phase.
 
 ### 2. Development
-*Stakeholders: Developers, data scientists, researchers*
+*Key people: developers, data scientists, researchers*
 
-The development phase covers building the AI system: collecting and curating data, training models, implementing privacy and security measures, and designing the human-AI interface. ELSA considerations here include checking that training data is representative and fairly labelled, implementing privacy-preserving techniques, and documenting all design decisions for traceability.
+Development is where you collect and curate data, train models, put privacy and security measures in place and design how users will work with the tool. You check that the training data represent the patients the tool is meant for and are labelled consistently, and you record design decisions so that others can trace them later.
 
 ### 3. Evaluation
-*Stakeholders: Clinicians, patients, ethicists*
+*Key people: clinicians, patients, researchers, ethicists*
 
-Evaluation goes beyond measuring accuracy on a held-out test set. It encompasses external validation on independent datasets and clinical sites, fairness assessment across demographic subgroups, usability testing with real end users, clinical utility and safety trials, robustness to real-world data variations, and explainability evaluation. Reporting should follow established guidelines such as TRIPOD-AI {cite}`tripodai2024`.
+A first estimate of performance comes from a *held-out test set*, data kept apart from training and used once at the end. Evaluation goes further: you validate the tool on data from other hospitals, compare performance across patient groups, test usability with real users, study clinical benefit and safety, and check how it copes with messy real-world data and whether its explanations help. Report the results using a guideline such as TRIPOD+AI {cite}`tripodai2024`.
 
 ### 4. Deployment
-*Stakeholders: Hospitals, policy makers, regulators*
+*Key people: hospital management, IT, clinicians, regulators*
 
-Deployment is not the end of the process. It is the beginning of operation. This phase covers integration into existing clinical workflows, quality control mechanisms, continuous monitoring for performance drift, periodic auditing, logging, staff training, regulatory compliance (MDR/IVDR {cite}`mdr2017`, EU AI Act {cite}`euaiact2024`), and governance structures that assign accountability.
+Deployment starts the tool's working life. It covers integration into clinical work, checks on inputs and outputs, monitoring for falling performance, periodic audits, logging, staff training, compliance with the MDR or IVDR {cite}`mdr2017` and the EU AI Act {cite}`euaiact2024`, and governance that makes clear who is accountable.
 
-## Why a cycle, not a waterfall
+## Why a cycle
 
-The lifecycle is **iterative**. Findings from evaluation feed back into design and development. Monitoring in deployment identifies new risks that trigger re-evaluation. Patient feedback at deployment can reshape the problem definition in the next design iteration.
+Each phase feeds the others. Evaluation results send you back to design or development. Monitoring after go-live reveals new risks that call for a new evaluation. Feedback from patients and staff can change how you define the problem in the next round.
 
-Real-world evidence gathered during deployment is often the most valuable, and the most underused, input for improving AI systems in healthcare.
+:::{admonition} Running case: sepsis early warning
+:class: note
+This example is fictional. A regional hospital in the Northern Netherlands wants to detect sepsis earlier on its adult wards. In design, it involves ward nurses, internists, the rapid response team and a patient advisory panel. In development, its data scientists and a university partner train a model on the hospital's own past records. In evaluation, they validate it on data from a second hospital and run it silently on live data. In deployment, alerts go to ward nurses and the physician on call, and monitoring shows whether performance holds after changes such as a new lab assay.
+:::

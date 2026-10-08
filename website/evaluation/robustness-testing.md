@@ -1,12 +1,12 @@
 (evaluation-robustness-testing)=
-# Robustness Testing
+# Robustness testing
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Robustness recommendation 3**: Evaluate and optimise robustness against real-world variations.
+This chapter supports **Robustness recommendation 3** (R3): evaluate robustness against the variation the tool will meet in real use, and improve it where needed {cite}`lekadir2025futureai`.
 :::
 
-Robustness is the ability of an AI model to maintain reliable performance under the variations it will encounter in real-world deployment. Evaluating robustness means actively testing the limits of the model, not just measuring performance on typical examples.
+When a hospital replaces its lab analyser or changes how nurses record observations in the EHR, the numbers a model receives change, even though the patients have not. A robust model keeps performing acceptably through such changes. Robustness testing looks for the conditions under which performance drops, instead of measuring it only on typical cases.
 
 ```{figure} ../figures/reproducible-pipeline.jpg
 :name: reproducible-pipeline
@@ -16,63 +16,33 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 
 ## Sources of real-world variation
 
-### Acquisition variation
-- Scanner manufacturer and model changes
-- Protocol changes (field strength, sequence, contrast dose)
-- Image reconstruction algorithm updates
-- Operator experience differences
+A change in the data a model receives compared with its training data is called distribution shift. It has four main sources.
 
-### Patient population variation
-- Disease severity distribution (deployment population may differ from training population)
-- Comorbidities not represented in training data
-- Rare disease subtypes
-- Edge cases: unusual presentations, artefacts, incidental findings
+**Measurement variation.** For imaging this means scanner make and model, acquisition protocol, reconstruction software and operator experience. For EHR-based models it means lab analysers and assays, monitoring devices, and how often and how completely staff record observations.
 
-### Temporal variation (data drift)
-Models trained on historical data may degrade as clinical practice evolves:
-- Changes in clinical coding practices
-- New treatment protocols affecting disease presentation
-- Changes in population health (e.g., post-pandemic comorbidity shifts)
-- Software updates to acquisition equipment
+**Patient variation.** The deployment population may be sicker or healthier than the training population, have comorbidities that were rare in the training data, or include rare subtypes and unusual presentations.
 
-### Adversarial variation
-- Synthetic data designed to fool the model
-- Corrupted inputs (noise, artefacts)
-- Adversarial patches in medical images
+**Change over time (data drift).** Clinical practice changes. Coding rules, treatment protocols, EHR forms and the health of the population all shift, and a model trained on older data can slowly lose accuracy.
+
+**Deliberate manipulation.** Inputs can be altered on purpose to change the output (adversarial attacks), or be corrupted by noise and artefacts. This matters most for image models and for tools whose outputs affect money or access to care.
+
+:::{admonition} Running case: sepsis early warning
+:class: note
+In the fictional sepsis case, the team knows that the hospital plans to switch to a new lactate assay next year. It tests the model on a period from the second hospital, which already uses that assay, and on simulated data where lactate values are shifted by the expected difference between the two assays.
+:::
 
 ## Testing for robustness
 
-### Real-world variation testing
-Apply the same evaluation metrics across data collected under different conditions:
+You can test robustness in three complementary ways.
 
-- Performance by scanner type/manufacturer
-- Performance by acquisition protocol variant
-- Performance by acquisition site
-- Performance in cases with known data quality issues
-
-### Simulated variation testing
-Systematically simulate variations to test robustness:
-
-- Add calibrated noise to inputs
-- Apply domain-specific augmentations (slice thickness changes, contrast variations)
-- Test on images from different temporal periods
-
-### Stress testing
-Test performance on challenging edge cases:
-
-- Cases near the decision boundary
-- Rare disease presentations
-- Worst-case acquisition conditions
-- Missing or partially available inputs
+1. **Real-world variation.** Compute your metrics separately for data collected under different conditions: per site, per device or assay, per period, per ward, and for records with known data quality problems.
+2. **Simulated variation.** Change inputs on purpose and watch the output: add realistic noise, shift lab values, remove observations to mimic sparse recording, or for images change slice thickness or contrast.
+3. **Stress testing.** Look at the hardest cases: patients near the alert threshold, rare presentations, the worst realistic data conditions, and records with missing inputs.
 
 ## Robustness metrics
 
-Beyond standard performance metrics, assess:
-
-- **Performance variance** across conditions (low variance = more robust)
-- **Performance floor**: what is the worst-case performance under realistic variation?
-- **Graceful degradation**: does performance degrade smoothly or catastrophically?
+Alongside the usual performance metrics, report how much performance varies across conditions (less variation means a more robust model), the worst performance you observed under realistic variation, and whether performance falls gradually or suddenly as conditions get worse. A sudden fall is more dangerous, because users get no warning.
 
 ## Reporting
 
-Report performance across all tested conditions, including conditions where robustness is limited. Clinicians and procurement decision-makers need this information to understand where the AI can and cannot be trusted.
+Report performance for every condition you tested, including those where the model did poorly. Clinicians and the people who decide on purchase or deployment need this to know where the tool can be relied on and where it cannot. The same results also tell you what to watch for when you [monitor the tool after deployment](../deployment/monitoring-auditing.md).

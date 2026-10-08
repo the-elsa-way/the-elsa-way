@@ -4,7 +4,7 @@ summary: >-
   A set of questions you answer about a dataset, from why it was made to how it
   is maintained, so others can judge whether it suits their purpose.
 description: >-
-  Datasheets for Datasets gives you a list of questions grouped by stage of a
+  Datasheets for Datasets is a list of questions grouped by stage of a
   dataset's life: motivation, composition, collection, preprocessing and
   labelling, uses, distribution, and maintenance. You answer them in prose
   when you create or release a dataset, ideally while the work is still in
@@ -53,7 +53,7 @@ references:
 passages:
   - id: development-documentation-datasheet
     why: >-
-      The section's headings follow this paper, which gives you the full list
-      of questions to answer under each one.
+      The section's headings follow this paper, which lists the questions to
+      answer under each one.
 see_also: [model-cards]
 last_reviewed: "2026-10-08"

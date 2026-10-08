@@ -1,49 +1,49 @@
 (deployment-monitoring-auditing)=
-# Monitoring and Auditing
+# Monitoring and auditing
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Traceability recommendation 4**: Implement a system for periodic auditing and updating.
+This chapter supports **Traceability recommendation 4** {cite}`lekadir2025futureai`: audit the tool periodically and update it when needed.
 :::
 
-Monitoring and auditing are the mechanisms by which problems with a deployed AI system are detected and corrected. Without them, a model that has degraded (because the patient population has changed, because equipment has been upgraded, or because clinical practice has evolved) continues to be used as if it still performs as validated.
+Models degrade without anyone touching them. The patient population changes, a lab switches to a new assay, the EHR gets a new form, clinical practice moves on. Without monitoring and audits, the tool keeps being used as if it still performs as it did at validation.
+
+:::{admonition} Running case: sepsis early warning
+:class: note
+In this book's fictional running case, the hospital's lab replaces the analyser it uses for lactate, a blood value the sepsis model relies on. The new assay reports slightly different values. The model's alert rate rises within a week, and the monitoring dashboard flags it before nurses start to complain about extra alerts.
+:::
 
 ## Continuous performance monitoring
 
-Continuous monitoring tracks AI performance in real-time or near-real-time using available data:
+The true outcome (did the patient have sepsis?) often becomes known only days later. In the meantime, use proxy metrics: indicators you can measure straight away that move with performance, such as how often clinicians override the AI, how often an alert leads to action, or how often patients are escalated.
 
-- **Proxy metrics**: where ground truth is not immediately available, use proxy indicators (radiologist override rate, downstream clinical decision rate, escalation rate)
-- **Statistical process control**: treat AI performance as a process and use control charts to detect statistically significant deviations
-- **Drift detection**: statistical tests for changes in the distribution of inputs or outputs (covariate shift, concept drift)
+Statistical process control, a method from manufacturing, helps you tell real change from noise. You plot a metric over time on a control chart with limits based on its normal variation and investigate when it crosses them. Drift detection uses statistical tests to spot changes in the data. Covariate shift is a change in the inputs (for example, older patients or a new assay); concept drift is a change in how inputs relate to the outcome (for example, a new treatment that changes how sepsis develops).
 
 :::{include} ../toolbox/_generated/passages/deployment-monitoring-auditing-continuous.md
 :::
 
 ## Periodic auditing
 
-Continuous monitoring catches sudden failures. Periodic auditing catches gradual drift and systematic issues that are below the threshold of real-time detection:
+Continuous monitoring catches sudden failures; periodic audits catch slow drift and systematic problems that stay below the alert thresholds. Choose the frequency based on risk, for example once or twice a year, and more often for high-stakes tools or settings that change quickly.
 
-- **Frequency**: biannual or annual is typical for most applications; higher frequency for high-stakes or rapidly evolving domains
-- **Scope**: re-evaluate performance on a representative sample of recent cases against a ground truth standard
-- **Dimensions**: include all evaluation dimensions: technical performance, fairness across subgroups, usability
-- **Comparison**: compare audit results against baseline performance at deployment and against the pre-specified minimum thresholds
+In each audit, compare the AI's outputs with the true outcome on a representative sample of recent cases. Look at every dimension you evaluated before go-live, including technical performance, fairness across patient groups and usability. Then compare the results with the performance measured at go-live and with the minimum thresholds you set in advance.
 
 ## Acting on monitoring and audit findings
 
-Monitoring and auditing are only useful if findings lead to action. Define in advance:
+Monitoring is only useful if findings lead to action, so decide in advance:
 
-- **Alert thresholds**: at what level of performance degradation is escalation required?
-- **Escalation pathways**: who is notified? What is the decision tree?
-- **Response options**: recalibration, model update, deployment suspension, investigation
-- **Update procedures**: how are model updates validated and deployed? What regulatory implications do updates have?
+- how much degradation triggers escalation
+- who is notified, and how they decide what to do
+- which responses are available (recalibration, model update, suspending the tool, further investigation)
+- how updates are validated and released, and what that means for regulatory status
 
-Audit reports should be shared with clinical stakeholders, not only technical teams, so that accountability is maintained.
+Share audit reports with clinical staff and management as well as the technical team, so that the people accountable for the tool see the results.
 
 ## Reporting on model updates
 
-When the model is updated (retrained, fine-tuned, or recalibrated):
-- Document what changed and why
-- Re-evaluate performance on the standard evaluation suite
-- Update the model card
-- Assess whether the update requires regulatory review
-- Communicate the update to users
+When you retrain, fine-tune or recalibrate the model:
+- record what changed and why
+- re-run the standard evaluation
+- update the model card, the short document that describes the model's intended use and performance {cite}`mitchell2019modelcards`
+- check whether the update needs regulatory review
+- tell users what changed and what it means for them

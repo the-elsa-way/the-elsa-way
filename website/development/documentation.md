@@ -3,10 +3,10 @@
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Traceability recommendation 2**: Provide documentation (eg, technical, clinical).
+This chapter supports **Traceability recommendation 2**: document the AI tool, technically and clinically. FUTURE-AI completes this documentation in the evaluation phase; you start it during development {cite}`lekadir2025futureai`.
 :::
 
-Documentation is the foundation of traceability and accountability. An AI system that cannot be documented cannot be audited, reproduced, or safely updated. It will not satisfy regulatory requirements, and it cannot be trusted by clinicians or patients.
+Six months after training, someone will ask which data version the model saw, why a variable was dropped, or how the decision threshold was chosen. An auditor, a Notified Body (the independent organisation that assesses medical devices for CE marking) or a clinician investigating an incident needs the same answers. If you write them down while you work, you can give them; if you reconstruct them later, you will miss things.
 
 ```{figure} ../figures/documentation.jpg
 :name: documentation
@@ -18,63 +18,47 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 
 ### Model card
 
-A model card is a standardised document that describes an AI model and is intended to be shared alongside the model {cite}`mitchell2019modelcards`. Key fields:
+A model card is a short, standard document that describes a model and travels with it {cite}`mitchell2019modelcards`. It covers:
 
-- **Model details**: architecture, version, training date, contact information
-- **Intended use**: primary use case, intended users, out-of-scope uses
-- **Factors**: population, environmental, and technical factors affecting performance
-- **Metrics**: evaluation metrics and their values across population subgroups
-- **Training data**: description of training data, including diversity and limitations
-- **Evaluation data**: description of evaluation data
-- **Quantitative analyses**: performance disaggregated by key subgroups
-- **Ethical considerations**: risks and mitigations
-- **Caveats and recommendations**: known limitations and what they mean for use
+- Model details: architecture, version, training date, contact
+- Intended use: main use, intended users, uses that are out of scope
+- Factors: patient, environmental and technical factors that affect performance
+- Metrics: which performance measures you report and why
+- Training and evaluation data: what they contain, how diverse they are, their limitations
+- Quantitative analyses: performance broken down by relevant subgroups
+- Ethical considerations: risks and how you address them
+- Caveats and recommendations: known limitations and what they mean in practice
 
 :::{include} ../toolbox/_generated/passages/development-documentation-model-card.md
 :::
 
-### Data sheet / data documentation
+### Datasheet for the data
 
-A data sheet describes a dataset and is intended to accompany dataset releases {cite}`gebru2021datasheets`. Key fields:
-
-- Motivation: why was this dataset created?
-- Composition: what does the dataset contain? How was it collected?
-- Collection process: how were data and labels collected?
-- Preprocessing: what preprocessing was applied?
-- Uses: for what tasks is this dataset appropriate? What uses should be avoided?
-- Distribution: how is the dataset distributed? Under what licence?
-- Maintenance: who maintains the dataset?
+A datasheet does for a dataset what a model card does for a model {cite}`gebru2021datasheets`. It answers why the dataset was created, what it contains, how data and labels were collected, what preprocessing was applied, which uses are appropriate and which are not, how it is distributed and under what licence, and who maintains it.
 
 :::{include} ../toolbox/_generated/passages/development-documentation-datasheet.md
 :::
 
-### Technical documentation (for regulatory purposes)
+### Technical documentation for regulators
 
-Under EU AI Act and MDR/IVDR, high-risk AI systems require formal technical documentation:
+If your system is a medical device, the MDR requires technical documentation (Annex II) before CE marking {cite}`mdr2017`. If it is also a high-risk AI system under the EU AI Act, Art. 11 and Annex IV add AI-specific content {cite}`euaiact2024`. Both expect, among other things:
 
-- General description of the system and its intended purpose
-- Description of system components and their interaction
-- Training and testing methodology
+- A general description of the system and its intended purpose
+- Its components and how they interact
+- How the model was trained and tested, and on which data
 - Validation results
 - Risk management documentation
 - Instructions for use
 
+A model card and datasheet do not replace this, but most of their content feeds into it.
+
 ## Version control
 
-All code, configuration, data preprocessing scripts, and documentation should be under version control. Use a standard system (Git) and follow good practices:
-
-- Commit messages that describe why a change was made, not just what changed
-- Tag releases that correspond to model versions
-- Link model versions to the exact data version and code version used to train them
+Keep code, configuration, preprocessing scripts and documentation under version control, using a standard system such as Git. Write commit messages that explain why a change was made as well as what changed. Tag each release that corresponds to a model version, and record for every model version the exact data version and code version used to train it.
 
 :::{include} ../toolbox/_generated/passages/development-documentation-version-control.md
 :::
 
 ## Reproducibility
 
-A model is reproducible if someone else can train it from scratch and get the same result. To achieve this:
-
-- Fix and document random seeds
-- Document the hardware environment (GPU type, driver versions, library versions)
-- Implement the full preprocessing pipeline as code, not manual steps
-- Pin all dependencies (use a lockfile)
+A model is reproducible when someone else can retrain it from your records and get the same or very close results. Write the full preprocessing pipeline as code, with no manual steps. Pin every dependency in a lockfile and record the hardware and software environment (processor or GPU type, driver and library versions). Fix and record random seeds. On GPUs, seeds alone do not guarantee identical results, because some operations are non-deterministic; enable your framework's deterministic settings if you need exact repeats, or accept results that are close to identical and say so.

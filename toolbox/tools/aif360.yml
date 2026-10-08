@@ -55,8 +55,8 @@ passages:
   - id: development-data-quality-fairness-correction
     why: >-
       It implements reweighing, resampling-style pre-processing and
-      fairness-penalised training, so you can try several of the listed
-      correction techniques on the same data and compare them.
+      fairness-penalised training: try several of the listed correction
+      techniques on the same data and compare them.
 see_also: [fairlearn, shap]
 also_listed_in:
   - name: RAAIT toolbox

@@ -1,52 +1,45 @@
 (development-human-ai-interaction)=
-# Human-AI Interaction Design
+# Human-AI interaction design
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Usability recommendation 2**: Establish mechanisms for human-AI interactions and oversight.
+This chapter supports **Usability recommendation 2**: build mechanisms for human-AI interaction and human oversight {cite}`lekadir2025futureai`.
 :::
 
-How the AI presents its outputs to users is as important as the outputs themselves. Poor human-AI interaction design can negate the benefits of a well-performing model, and can introduce new harms such as automation bias or alert fatigue.
+A well-performing model can still do harm if its output reaches the wrong person, at the wrong moment, in a form that is easy to misread. Interaction design decides whether clinicians notice the output, understand it and feel free to disagree with it.
 
 ## Principles of human-AI interaction in healthcare
 
-**Transparency**: users should know when AI is involved, what the AI is doing, and what the AI's limitations are. Presenting AI outputs as if they were clinical facts, without indicating uncertainty or the basis for the recommendation, is misleading.
+:::{admonition} Running case: sepsis early warning
+:class: note
+This is a fictional example used throughout the book. When the hospital's sepsis score crosses a threshold, the system alerts the ward nurse and the physician on call. The alert shows the score, the three observations that contributed most, and when vital signs were last measured. The nurse can mark the alert as "assessed, no action" or "escalated", with an optional comment, and both choices are logged. If too few observations were recorded in recent hours, the alert says so instead of showing a score.
+:::
 
-**Human oversight**: the AI should support clinical judgment, not replace it. Design must include clear mechanisms for clinicians to review, override, and report errors in AI outputs.
-
-**Appropriate trust calibration**: the goal is not maximum trust in the AI but correctly calibrated trust. Users should trust the AI when it is right and doubt it when it is wrong. This requires transparent communication of the AI's performance characteristics and uncertainty.
-
-**Minimal disruption to workflow**: the best AI tool is one that clinicians use. If using the AI adds significant time or complexity to the workflow, adoption will be low and benefit will be limited.
+The case shows four principles at work. Users should know when AI is involved, what it does and where it is weak; showing a score as if it were a lab result, with no sign of its basis or uncertainty, misleads them. Clinicians stay responsible for decisions, so the design must let them review the output, override it and report errors, as the "assessed, no action" button does. Trust should match performance: you want nurses to act on the score when it is right and to question it when, for example, it is based on old observations. That requires showing what the model does and does not know. Finally, the tool has to fit the workflow. An alert that adds several clicks to every patient round, or fires so often that staff stop reading it (alert fatigue), will be ignored.
 
 ## Designing AI outputs for clinical use
 
-Consider what information to present alongside the AI's primary output:
+Decide with users what to show alongside the main output:
 
-- **The primary output**: the diagnosis, segmentation, score, or recommendation
-- **Confidence or uncertainty**: how confident is the AI in this output?
-- **Supporting evidence**: what in the input led to this output? (explainability)
-- **Relevant caveats**: known failure modes; populations where the model has not been validated
-- **Action guidance**: what should the user do with this information?
+- The main output: the score, classification, segmentation or recommendation
+- Confidence or uncertainty: how sure the system is about this case
+- Supporting evidence: what in the input led to this output (see [explainability](../evaluation/explainability-assessment.md))
+- Caveats: known failure modes, and patient groups for whom the model has not been validated
+- Action guidance: what the user is expected to do with this information, according to the local protocol
 
 :::{include} ../toolbox/_generated/passages/development-human-ai-interaction-outputs.md
 :::
 
 ## Avoiding automation bias
 
-Automation bias (the tendency to over-rely on automated recommendations) is documented in clinical settings and can lead to harm. Design interventions include:
+Automation bias is the tendency to follow an automated suggestion even when other information points the other way, or to miss a problem because the system did not flag it. A systematic review of clinical decision support found it in a range of clinical tasks and identified design factors that make it more or less likely {cite}`goddard2012automation`. The opposite also happens: staff learn to dismiss alerts that are often wrong. Design measures include:
 
-- Requiring users to record their own assessment before seeing the AI output
-- Framing AI outputs as suggestions, not decisions
-- Making it easy to override and report errors
-- Including in training materials discussion of when the AI is likely to be wrong
-- Avoid presenting AI outputs in ways that mimic authoritative clinical reporting
+- Asking users to record their own assessment before they see the AI output, where the workflow allows it
+- Presenting the output as a suggestion, not a decision
+- Making it easy to override the output and report errors
+- Explaining in training when the system is likely to be wrong
+- Avoiding layouts that make the output look like an authoritative clinical report
 
 ## Prototype and test
 
-Human-AI interaction design should be tested with representative users before finalisation:
-
-- Paper prototypes and cognitive walkthroughs at early stages
-- Usability testing with clinicians performing realistic tasks
-- Iterative refinement based on user feedback
-
-See [Usability and User Experience](../evaluation/usability-ux.md) for evaluation methods.
+Test the interaction with representative users before you finalise it. Start with paper prototypes and cognitive walkthroughs (stepping through a task with a user and asking what they expect at each point), then run usability tests in which clinicians perform realistic tasks, and adjust the design after each round. See [usability and user experience](../evaluation/usability-ux.md) for evaluation methods.

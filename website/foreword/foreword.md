@@ -1,13 +1,11 @@
 (foreword)=
 # Foreword
 
-The ELSA Way is the main output of the ELSA AI Lab Northern Netherlands (ELSA-NN) WP Integration working package. It exists because there is a gap: the people who build AI in healthcare want to do it responsibly, but practical, accessible guidance has been hard to find.
+The ELSA Way is the main output of the WP Integration work package of the ELSA AI Lab Northern Netherlands (ELSA-NN). We started it because the people who build AI for healthcare often want to do it responsibly, yet struggle to find guidance they can apply on a Monday morning.
 
-This handbook gathers what we have learned through research with AI developers and healthcare professionals, through co-creation workshops, through peer-reviewed publications, and through conversations with patients and communities, and turns it into something usable.
+The handbook collects what we learned from research with AI developers and healthcare professionals, from co-creation workshops, from peer-reviewed publications and from conversations with patients and communities. We wrote it down so that a project team can act on it.
 
-It is built in the open, on GitHub, so that anyone can propose additions, flag gaps, or contribute new content. An editorial board ensures quality and consistency.
-
-The ELSA Way is a work in progress, and that is by design.
+The book is written in the open on GitHub, where anyone can suggest additions or point out gaps. How content is reviewed and who decides is described in [Governance](../community-handbook/governance.md). Expect some chapters to be thinner than others: we add to them as projects and readers teach us more.
 
 *WP Leaders: Claudine Lamoth, Hilbrand Oldenhuis*
 *WP Members: Sophie de Klerk, Steven Warmelink, Patrícia Pita Ferreira, Mirjam Plantinga*

@@ -1,36 +1,35 @@
 (pathways-patients-communities)=
-# Pathway: Patients and Communities
+# Pathway: Patients and communities
 
-This pathway is for patients, carers, patient advocates, and community members who want to understand how AI in healthcare is built and how to have a voice in it.
-
-You do not need any technical background to use this pathway.
+This pathway is for patients, carers, patient advocates and community members who want to understand how AI in healthcare is built and how to have a say in it. You do not need a technical background. Where the pages below use technical terms, they explain them.
 
 ## Why your perspective matters
 
-AI in healthcare is built by people who often do not have your experience of illness, care, and the healthcare system. When AI systems are built without patient input, they can:
-- Be tested on populations that do not represent you
-- Make decisions based on data that does not capture what matters to you
-- Be deployed in ways that disrupt the care you rely on
-- Encode historical biases in the healthcare system
+The people who build AI tools for healthcare often have no personal experience of the illness, the treatment or the waiting room. An AI tool learns from past patient records, and those records can leave groups out. If few people like you were in the data, the tool may work less well for you. Records also show what was measured, which is not always what matters to patients: a tool can predict a lab value well and still miss the symptom that worried you most. Past unfairness in care, such as one group being referred less often, can end up built into the tool. And a tool that works on paper can still disrupt the care you rely on, for example when staff spend time answering alerts instead of talking with you.
 
-The ELSA Way is committed to making patient and community perspectives a visible and valued part of how AI is built.
+Patients and carers can spot these problems early, before a tool reaches the ward.
+
+:::{admonition} Running case: sepsis early warning
+:class: note
+In the fictional case used throughout this book, a hospital builds a tool that warns nurses when a patient on the ward may be developing sepsis, a life-threatening reaction to an infection. The hospital's patient advisory panel can ask questions such as: who gets told when the alert goes off, will a nurse still check on me in person, and does the tool work as well at night, when fewer measurements are taken?
+:::
 
 ## Suggested reading
 
 1. [What is The ELSA Way?](../foreword/what-is-elsa-way.md)
-2. [The AI Lifecycle in Healthcare](../foreword/ai-lifecycle.md) (understanding the stages where you can contribute)
-3. [Design → Stakeholder Engagement](../design/stakeholder-engagement.md) (how to be included from the start)
-4. [Evaluation → Usability and User Experience](../evaluation/usability-ux.md) (what user testing involves)
-5. [Evaluation → Clinical Utility and Safety](../evaluation/clinical-utility-safety.md) (what "safe" means for an AI tool)
-6. [FUTURE-AI → Fairness](../future-ai/fairness.md) (why AI systems can treat different groups differently)
+2. [The AI lifecycle in healthcare](../foreword/ai-lifecycle.md), which shows the stages where you can take part
+3. [Design: stakeholder engagement](../design/stakeholder-engagement.md), on how patients can be involved from the start
+4. [Evaluation: usability and user experience](../evaluation/usability-ux.md), on what testing a tool with its users involves
+5. [Evaluation: clinical utility and safety](../evaluation/clinical-utility-safety.md), on what "safe" means for an AI tool
+6. [FUTURE-AI: fairness](../future-ai/fairness.md), on why AI tools can work better for some groups than for others
 
 ## How to contribute to The ELSA Way
 
-See [Contributing to The ELSA Way](../community-handbook/contributing.md).
+Your experience can improve this book too. You can point out a page that is hard to follow, or suggest an example from your own care. [Contributing to The ELSA Way](../community-handbook/contributing.md) explains how, including options if you do not use GitHub.
 
 ## Tools
 
-These tools from the [Toolbox](#toolbox) are a good fit for your role.
+These tools from the [Toolbox](#toolbox) suit your role.
 
 :::{include} ../toolbox/_generated/audiences/patients-communities.md
 :::

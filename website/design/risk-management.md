@@ -1,12 +1,12 @@
 (design-risk-management)=
-# Risk Management Planning
+# Risk management planning
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Traceability recommendation 1**: Implement a risk management process throughout the AI lifecycle.
+This chapter supports **Traceability recommendation 1** (T1): implement a risk management process throughout the AI lifecycle.
 :::
 
-Risk management in healthcare AI is a continuous process that begins at design and persists through deployment, not a one-time gate at the end. ISO 14971 {cite}`iso14971` provides the standard framework.
+ISO 14971 {cite}`iso14971` is the standard for risk management of medical devices, and the MDR and, for high-risk systems, the EU AI Act (Art. 9) {cite}`euaiact2024` both expect a risk management system that runs from design until the tool is withdrawn. You open the risk management file now and keep adding to it in every later phase.
 
 ```{figure} ../figures/error-management.jpg
 :name: error-management
@@ -16,59 +16,42 @@ The Turing Way Community. This illustration is created by Scriberia with The Tur
 
 ## What is a risk in healthcare AI?
 
-A risk is a combination of the probability of harm occurring and the severity of that harm if it does. In healthcare AI, harms may be:
-
-- **Clinical**: incorrect diagnosis leading to missed treatment; false alarms causing unnecessary procedures
-- **Fairness-related**: worse performance for a patient subgroup leading to inequitable care
-- **Privacy**: re-identification of patients from AI outputs or model inversion attacks
-- **Operational**: AI failure or unavailability disrupting clinical workflows
-- **Systemic**: over-reliance on AI leading to de-skilling of clinicians; automation bias
+A risk combines how likely a harm is and how severe it would be. Harms from healthcare AI come in several kinds. Clinical harm follows from a wrong output: a missed diagnosis delays treatment, a false alarm leads to unnecessary tests. Fairness harm arises when the tool works worse for one group of patients. Privacy harm includes re-identifying patients from model outputs. Operational harm happens when the tool fails or is unavailable and disrupts care. And some harms build up slowly across the system, such as clinicians losing skills, or trusting the tool too much (automation bias).
 
 ## The risk management process
 
 ### 1. Risk identification
 
-Identify all possible clinical, technical, ethical, and societal risks. Do this with the full interdisciplinary team: developers will identify technical risks, clinicians will identify workflow risks, and ethicists and patients will identify risks developers may not see.
+List the clinical, technical, ethical and societal risks with the full interdisciplinary team. Developers see technical risks, clinicians see workflow risks, and ethicists and patients see risks that neither group would raise. Common entries are:
 
-Risks to consider:
-- Bias against under-represented subgroups
-- Low generalisation to new sites or equipment
-- Data drift over time (model trained on 2020 data may degrade on 2026 data)
-- Lack of acceptance by end users
-- Sensitivity to noisy or adversarial inputs
-- Incorrect data flows (wrong patient matched to result)
-- Misuse outside intended scope
+- worse performance for under-represented groups
+- poor performance at new sites or with new equipment
+- drift: the data changes over time, so a model trained on older data performs worse on new patients
+- users not accepting the tool
+- sensitivity to noisy or manipulated inputs
+- data errors, such as a result linked to the wrong patient
+- use outside the intended scope
+
+:::{admonition} Running case: sepsis early warning
+:class: note
+The fictional sepsis team's first register included alert fatigue (nurses ignoring alerts because there are too many), lower performance for patients with fewer recorded observations, for example at night or on some wards, drift after the planned change in lactate assay or a change in EHR documentation, and nurses either over-relying on the score or ignoring it. The ward nurses added the first and last items; the developers had not listed them.
+:::
 
 :::{include} ../toolbox/_generated/passages/design-risk-management-identification.md
 :::
 
 ### 2. Risk assessment
 
-For each identified risk, assess:
-- **Likelihood**: very unlikely / possible / likely / almost certain
-- **Consequence**: negligible / minor / moderate / severe / catastrophic
-- **Risk level**: the combination of likelihood and consequence
+Rate each risk for likelihood (for example very unlikely, possible, likely, almost certain) and for consequence (negligible, minor, moderate, severe, catastrophic). The combination gives the risk level and the order in which you address risks. Agree the scales and what counts as acceptable before you start rating.
 
 ### 3. Risk mitigation
 
-For each risk above an acceptable threshold, define mitigation measures:
-
-- **During development**: data augmentation, bias correction techniques, robustness testing
-- **At deployment**: warnings in the UI, user training, mandatory human oversight for certain outputs
-- **Post-deployment**: monitoring alerts, audit triggers, incident reporting mechanisms
+For each risk above the acceptable level, decide how to reduce it and at which stage. During development, that can mean more representative data, bias correction or robustness testing. At deployment, it can mean warnings in the interface, user training, or required human review of certain outputs. After deployment, it means monitoring with alert thresholds, audit triggers and a route for reporting incidents.
 
 ### 4. Risk monitoring
 
-Establish mechanisms to detect new risks that emerge after deployment:
-- Performance monitoring dashboards
-- Incident reporting pathways for clinicians and patients
-- Periodic re-assessment of the risk register
+New risks will appear once the tool is in use. Plan how you will find them: a performance dashboard, a simple way for clinicians and patients to report problems, and a date for reviewing the register.
 
 ## The risk management file
 
-Document everything in a risk management file (required under ISO 14971 and EU AI Act {cite}`euaiact2024`):
-- Risk identification log
-- Risk assessment matrix
-- Mitigation measures and their rationale
-- Residual risk assessment
-- Evidence that mitigation measures are effective
+ISO 14971, the MDR and, for high-risk systems, the EU AI Act all require you to document the process. The risk management file holds the risk identification log, the risk assessment matrix, the mitigation measures with their rationale, the assessment of residual risk (what remains after mitigation) and the evidence that the mitigations work.

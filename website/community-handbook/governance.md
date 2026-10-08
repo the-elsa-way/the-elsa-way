@@ -1,45 +1,41 @@
 (community-governance)=
 # Governance
 
-The ELSA Way is governed transparently, with clear roles, contribution guidelines, version history, and an editorial board that maintains quality and consistency.
+An editorial board decides what goes into The ELSA Way. Every change is made in public on GitHub, so you can see who changed what, when and why.
 
 ## Editorial board
 
-The editorial board is responsible for:
+The editorial board is being formed. It is led by WP Integration of the ELSA AI Lab Northern Netherlands and will include people with clinical, research, ethics and patient or community backgrounds. Members will be listed here once confirmed.
 
-- Reviewing and approving contributions to The ELSA Way
-- Maintaining the quality, consistency, and accuracy of the content
-- Deciding on structural changes to the resource
-- Ensuring patient and community perspectives are represented
-- Resolving disputes about content
-
-The editorial board is led by WP Integration (ELSA AI Lab Northern Netherlands) and includes representatives from clinical, research, ethics, and community perspectives.
+The board reviews and approves contributions, and keeps the content accurate and consistent. It decides on changes to the structure of the book and settles disputes about content. It also checks that patient and community perspectives are represented.
 
 ## Decision-making
 
-- **Minor changes** (typo fixes, clarifications, small additions): approved by a single editor
-- **Significant additions** (new sections within existing chapters): reviewed by two editors
-- **Major changes** (new chapters, structural changes): discussed at editorial board meeting; consensus required
-- **Contested changes**: escalated to editorial board; community comment period of two weeks
+How a change is decided depends on its size:
+
+| Change | Examples | Decision |
+|---|---|---|
+| Minor | Typo fixes, clarifications, small additions | One editor approves |
+| Significant | New sections within existing chapters | Two editors approve |
+| Major | New chapters, structural changes | Discussed at an editorial board meeting; consensus required |
+| Contested | Any change on which editors or contributors disagree | Escalated to the editorial board, with a two-week period for community comment |
 
 ## Roles
 
 | Role | Responsibilities |
 |---|---|
-| **Editor** | Reviews pull requests; approves minor to significant changes |
-| **Senior editor** | Reviews major changes; participates in editorial board decisions |
-| **Patient/community representative** | Ensures patient perspectives are reflected; reviews content accessibility |
-| **Domain expert reviewer** | Provides specialist review for chapters in their clinical domain |
-| **Contributor** | Proposes and writes content; responds to review |
+| Editor | Reviews pull requests; approves minor and significant changes |
+| Senior editor | Reviews major changes; takes part in editorial board decisions |
+| Patient or community representative | Makes sure patient perspectives are reflected; reviews whether content is accessible to non-specialists |
+| Domain expert reviewer | Gives specialist review of chapters in their clinical field |
+| Contributor | Proposes and writes content; responds to review |
 
-The day-to-day process, from a new issue to a merged pull request, is described in [Contributing](contributing.md) for contributors and in [Triage and Review](triage-review.md) for editors. The review labels on GitHub follow the decision levels above.
+[Contributing](contributing.md) describes the day-to-day process from a contributor's side, from a new issue to a merged pull request, and [Triage and review](triage-review.md) describes it from an editor's side. The review labels on GitHub follow the decision levels above.
 
 ## Version history
 
-The ELSA Way uses Git for version control. The complete history of all changes (who changed what, when, and why) is publicly visible in the GitHub repository.
-
-When significant updates are made to a chapter, the change is logged in the chapter's revision history section (at the bottom of the page) with a brief description of what changed and why.
+The ELSA Way uses Git for version control, and the repository on GitHub is public. Each page's full change history is on GitHub. Significant changes are described in the pull request that made them.
 
 ## Conflict of interest
 
-Editors and contributors must declare relevant conflicts of interest (commercial, professional, financial). Declarations are recorded and visible. Contributors with conflicts of interest in a topic area are excluded from reviewing contributions on that topic.
+Contributors and editors declare any commercial, professional or financial interest in the topic they work on. Contributors do this in the issue: the **Suggest content** form has a field for it, so the declaration is public in the issue. Editors declare theirs when they review. Anyone with a conflict of interest in a topic does not review contributions on that topic.

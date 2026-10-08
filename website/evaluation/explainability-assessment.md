@@ -1,60 +1,59 @@
 (evaluation-explainability-assessment)=
-# Explainability Assessment
+# Explainability assessment
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Explainability recommendation 2**: Evaluate explainability with end users (eg, correctness, impact on users).
+This chapter supports **Explainability recommendation 2** (E2): evaluate explanations with end users, for example whether they are correct and how they affect users' decisions {cite}`lekadir2025futureai`.
 :::
 
-Explainability evaluation is not the same as generating explanations. Generating a saliency map or feature importance score is straightforward. Evaluating whether those explanations are clinically meaningful, accurate, and useful to real users is harder, and more important.
+Producing a heat map or a list of the most important features takes a few lines of code. Finding out whether that explanation reflects what the model did, and whether it helps a nurse or doctor decide better, takes a study. This chapter is about that study.
 
 ## Why explainability matters in healthcare
 
-- Clinicians need to assess whether to trust an AI output. An explanation that matches clinical reasoning provides evidence that the AI is using the right features; one that does not may signal a spurious correlation.
-- Patients have a right to understand decisions that affect their care, including AI-assisted decisions.
-- Regulators increasingly require explanations for high-risk AI decisions.
-- Explanations can help identify failure modes: if the AI flags lung cancer based on a scanner artefact rather than a nodule, a faithful explanation will reveal this.
+Explanations serve several groups. Clinicians use them to decide whether to trust an output: if the explanation matches clinical reasoning, that is some evidence the model uses sensible information; if it does not, the model may rely on a spurious pattern. Developers use them to find failure modes. If a lung model flags cancer because of a scanner artefact rather than a nodule, a faithful explanation will show this.
+
+Patients and the law have a stake too. Under the GDPR, people must receive meaningful information about the logic involved in automated decisions about them (Arts. 13 to 15) {cite}`gdpr2016`. Under the EU AI Act, providers of high-risk systems must give deployers enough information to interpret the output (Art. 13), and people affected by decisions based on certain high-risk systems listed in Annex III have a right to an explanation (Art. 86) {cite}`euaiact2024`.
 
 ## Types of explanation
 
-| Type | Examples | Best for |
+| Type | Examples | Suited to |
 |---|---|---|
-| **Feature importance** | SHAP values, LIME, attention weights | Tabular/structured data; understanding which inputs matter |
-| **Saliency maps** | Grad-CAM, integrated gradients | Medical imaging; which regions of the image influenced the output |
-| **Counterfactuals** | "If X had been Y, the output would be Z" | Explaining what would change the decision |
-| **Example-based** | "This case is similar to these training examples" | Clinical analogy reasoning |
-| **Natural language** | Text explanation of AI reasoning | Patient-facing explanations; clinical reports |
+| Feature importance | SHAP values, LIME, attention weights | Tabular data such as EHR values: which inputs pushed the score up or down |
+| Saliency maps | Grad-CAM, integrated gradients | Images: which regions influenced the output |
+| Counterfactuals | "If the lactate had been normal, the score would have been below the threshold" | Showing what would change the result |
+| Example-based | "This patient resembles these earlier patients" | Reasoning by analogy with known cases |
+| Natural language | A written explanation of the output | Patient information and clinical reports |
 
-No single type is universally best. The appropriate method depends on the clinical task, the user, and the deployment context.
+SHAP (SHapley Additive exPlanations) and LIME (Local Interpretable Model-agnostic Explanations) estimate how much each input contributed to one prediction. Grad-CAM and integrated gradients do something similar for image pixels and show the result as a heat map. Which type works best depends on the clinical task, the user and the setting.
+
+:::{admonition} Running case: sepsis early warning
+:class: note
+In the fictional sepsis case, ward nurses asked during design (E1) for the three main reasons behind each alert. The team shows SHAP-based contributions such as "respiratory rate up 8 per minute since the last measurement". In evaluation it checks whether these reasons match the model and whether nurses act differently because of them.
+:::
 
 :::{include} ../toolbox/_generated/passages/evaluation-explainability-assessment-types.md
 :::
 
 ## Evaluating explanations: technical criteria
 
-- **Faithfulness**: does the explanation accurately reflect what the model actually computed? A saliency map that looks plausible but does not correspond to the model's actual decision pathway is misleading.
-- **Completeness**: does the explanation capture all the relevant factors?
-- **Stability**: does the same input produce the same explanation? (Instability is a sign of unreliable explanations)
-- **Sensitivity**: do explanations change appropriately when the input changes in ways that should matter?
+Start with four technical checks. Faithfulness asks whether the explanation reflects what the model computed; a heat map that looks plausible but does not match the model's actual decision process misleads users. Completeness asks whether the explanation covers all the factors that drove the output. Stability asks whether similar inputs get similar explanations: if two almost identical patients receive very different reasons, the explanations are unreliable. Sensitivity asks whether the explanation changes when the input changes in ways that should matter.
 
 ## Evaluating explanations: user studies
 
-Technical correctness is necessary but not sufficient. Explanations must also be useful to users:
+An explanation can pass every technical check and still not help users. Test with clinical end users in realistic scenarios:
 
-- **Comprehension**: do users understand what the explanation is telling them?
-- **Trust calibration**: do explanations help users trust correct outputs and doubt incorrect ones, or do they increase over-reliance regardless of correctness?
-- **Decision quality**: do users who receive explanations make better clinical decisions than those who do not?
-- **Workload**: do explanations add unacceptable cognitive load?
-
-User studies with realistic clinical scenarios are required to answer these questions.
+- **Comprehension**: do users understand what the explanation tells them?
+- **Trust calibration**: do explanations help users trust correct outputs and doubt incorrect ones, or do they increase reliance whatever the output?
+- **Decision quality**: do users with explanations make better decisions than users without them?
+- **Workload**: do explanations add more mental effort than users can afford in their work?
 
 ## Avoiding misleading explanations
 
 :::{warning}
-Poorly designed explanations can actively harm clinical decision-making:
-- Explanations that look plausible but are not faithful to the model can create unjustified confidence
-- Complex explanations that users cannot interpret add cognitive load without benefit
-- Explanations that highlight irrelevant features can mislead clinical reasoning
+Poorly designed explanations can harm clinical decisions:
+- explanations that look plausible but do not reflect the model can create unjustified confidence;
+- complex explanations that users cannot read add workload without benefit;
+- explanations that highlight irrelevant features can steer clinical reasoning in the wrong direction.
 :::
 
-Test explanations for both accuracy and the actual impact they have on clinical decision quality, not just for whether they look reasonable.
+Judge an explanation on two things: whether it is faithful to the model, and how it changes clinicians' decisions, rather than on how reasonable it looks.

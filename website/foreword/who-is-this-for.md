@@ -1,34 +1,34 @@
 (foreword-who-is-this-for)=
-# Who This Is For
+# Who this is for
 
-The ELSA Way is written for everyone involved in building and using AI in healthcare. Responsible AI is not the job of one role. It requires collaboration across disciplines, institutions, and communities.
+A sepsis alert on a ward involves a data scientist who trained the model, a nurse who receives the alert, a manager who bought or approved it and a patient whose care changes. The ELSA Way is written for all of them, because no single role can make AI in healthcare work responsibly on its own.
 
 ## AI developers and data scientists
 
-You are building the technical systems. The ELSA Way helps you move beyond optimising accuracy metrics to building systems that are fair, robust, explainable, and fit for clinical use. It offers practical guidance on data management, privacy, bias mitigation, uncertainty quantification, documentation, and preparing for clinical validation.
+You build the technical system. The ELSA Way helps you look past accuracy figures to whether your system is fair, robust, explainable and fit for clinical use. It covers data management, privacy, bias mitigation, uncertainty estimates, documentation and preparing for clinical validation.
 
-**Start with:** [Design → Problem Definition](../design/problem-definition.md), [Development](../development/development.md)
+**Start with:** [Problem definition](../design/problem-definition.md), [Development](../development/development.md)
 
 ## Healthcare professionals
 
-You are the domain experts and often the end users. The ELSA Way helps you understand what questions to ask when evaluating an AI tool, how to assess clinical utility and safety, and how to contribute your clinical knowledge to AI development processes. You do not need to be a data scientist to contribute meaningfully.
+You know the clinical domain and you are often the end user. The ELSA Way shows which questions to ask about an AI tool, how to judge its clinical value and safety, and how to bring your clinical knowledge into its development. You do not need to be a data scientist to contribute.
 
-**Start with:** [Evaluation → Usability and User Experience](../evaluation/usability-ux.md), [Pathways for Healthcare Professionals](../pathways/pathways-healthcare-professionals.md)
+**Start with:** [Usability and user experience](../evaluation/usability-ux.md), [Pathway for healthcare professionals](../pathways/pathways-healthcare-professionals.md)
 
 ## Researchers
 
-You are studying, validating, or publishing AI systems in clinical settings. The ELSA Way guides rigorous evaluation design, multi-site validation, bias reporting, and alignment with international reporting standards.
+You study, validate or publish AI systems in clinical settings. The ELSA Way helps you design evaluations, validate across sites, report bias and follow international reporting guidelines.
 
-**Start with:** [Evaluation](../evaluation/evaluation.md), [FUTURE-AI Principles](../future-ai/future-ai.md)
+**Start with:** [Evaluation](../evaluation/evaluation.md), [FUTURE-AI principles](../future-ai/future-ai.md)
 
 ## Policy makers and managers
 
-You are responsible for procurement, governance, and institutional adoption of AI. The ELSA Way helps you ask the right questions of vendors, establish governance frameworks, and make sure that AI systems in your institution are monitored and held accountable.
+You decide on procurement, governance and adoption of AI in your organisation. The ELSA Way helps you question vendors, set up governance and make sure AI systems in your organisation are monitored and someone answers for them.
 
-**Start with:** [Deployment → Governance and Accountability](../deployment/governance-accountability.md), [Pathways for Policy Makers and Managers](../pathways/pathways-policy-managers.md)
+**Start with:** [Governance and accountability](../deployment/governance-accountability.md), [Pathway for policy makers and managers](../pathways/pathways-policy-managers.md)
 
 ## Patients and communities
 
-You are most directly affected by AI in healthcare, yet often least involved in its development. The ELSA Way provides accessible entry points for understanding how AI is built and used, and explains how you can contribute your perspectives and experiences.
+AI in healthcare affects you most directly, yet you are often the least involved in building it. The ELSA Way explains in plain language how AI tools are built and used, and how you can bring in your experiences and views.
 
-**Start with:** [Pathways for Patients and Communities](../pathways/pathways-patients-communities.md), [Design → Stakeholder Engagement](../design/stakeholder-engagement.md)
+**Start with:** [Pathway for patients and communities](../pathways/pathways-patients-communities.md), [Stakeholder engagement](../design/stakeholder-engagement.md)

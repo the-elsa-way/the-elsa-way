@@ -59,9 +59,9 @@ passages:
       issues listed in this section.
   - id: design-social-impact-equity
     why: >-
-      The fairness column forces you to ask for each group whether the AI
-      would leave them better or worse off, which is the core equity question
-      at design stage.
+      The fairness column asks, for each group, whether the AI would leave
+      them better or worse off, which shows early where inequities could
+      arise.
 see_also: [value-sensitive-design, begeleidingsethiek, moral-medtech]
 also_listed_in:
   - name: RAAIT toolbox

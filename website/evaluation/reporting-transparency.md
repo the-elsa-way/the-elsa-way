@@ -1,70 +1,54 @@
 (evaluation-reporting-transparency)=
-# Reporting and Transparency
+# Reporting and transparency
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Traceability recommendation 2**: Document AI tool including evaluations.
+This chapter supports **Traceability recommendation 2** (T2): document the AI tool throughout its lifecycle, including the results of its evaluations {cite}`lekadir2025futureai`.
 :::
 
-Transparent reporting of AI evaluation results is both a scientific obligation and a safety requirement. Selective reporting (publishing only favourable results, chosen metrics, or favourable subgroup analyses) leads to overestimation of AI performance, failed deployment, and patient harm.
+If a team publishes only its best metric, its most favourable subgroups or its successful sites, readers overestimate how well the model works. Hospitals then buy or deploy tools that fail, and patients bear the cost. Complete reporting lets others judge your results and lets the next team avoid your mistakes.
 
-## International reporting standards
+## International reporting guidelines
 
-Several reporting standards have been developed specifically for healthcare AI:
+Reporting guidelines are checklists that tell you what a paper or report on a given kind of study must contain. Several exist for healthcare AI:
 
-| Standard | Scope |
+| Guideline | Use it for |
 |---|---|
-| **TRIPOD-AI** | Clinical prediction models using ML/AI |
-| **CLAIM** | AI studies in medical imaging (checklist) |
-| **CONSORT-AI** | Randomised controlled trials involving AI |
-| **SPIRIT-AI** | Protocols for RCTs involving AI |
-| **DECIDE-AI** | Early-stage clinical evaluation of decision support AI |
-| **PROBAST-AI** | Risk of bias assessment for prediction model studies |
+| TRIPOD+AI {cite}`tripodai2024` | Studies that develop or validate prediction models, including those using machine learning |
+| CLAIM {cite}`claim2020`, updated in 2024 {cite}`claim2024` | AI studies in medical imaging |
+| STARD-AI {cite}`stardai2025` | Diagnostic accuracy studies of AI |
+| DECIDE-AI {cite}`decideai2022` | Early live clinical evaluation of AI decision support |
+| SPIRIT-AI {cite}`spiritai2020` | Protocols for randomised trials of AI interventions |
+| CONSORT-AI {cite}`consortai2020` | Reports of randomised trials of AI interventions |
 
-Use the standard most appropriate for your study design. These are not mutually exclusive: TRIPOD-AI and CLAIM may both be applicable to an imaging prediction study.
+Choose by study design. Several can apply at once: an imaging study that develops a prediction model may need both TRIPOD+AI and CLAIM. For the fictional sepsis model from this book's running case, the development and external validation follow TRIPOD+AI, and the silent-mode and early live evaluation follow DECIDE-AI.
 
-*See {cite}`tripodai2024` (TRIPOD-AI), {cite}`claim2020` (CLAIM), {cite}`consortai2020` (CONSORT-AI / SPIRIT-AI), and {cite}`decideai2022` (DECIDE-AI) for full details.*
+:::{note}
+PROBAST+AI is often mentioned alongside these guidelines but has a different purpose. It is a tool for assessing the risk of bias and the applicability of prediction model studies. Reviewers use it to judge published studies, and you can use it to check your own design before you start.
+:::
 
 :::{include} ../toolbox/_generated/passages/evaluation-reporting-transparency-standards.md
 :::
 
 ## What to report
 
-### Study design and data
-- Full description of training, validation, and test datasets
-- Sample sizes for all datasets, including subgroups
-- Data collection dates and sites
-- Inclusion and exclusion criteria
+For **study design and data**, describe the training, validation and test datasets, their sizes (including per subgroup), the collection dates and sites, and the inclusion and exclusion criteria.
 
-### Model
-- Model architecture, with enough detail for replication
-- Training procedure, hyperparameters, and selection strategy
-- Software versions and computational environment
+For **the model**, give enough detail on the architecture, training procedure, hyperparameters (settings chosen before training), model selection, software versions and computing environment for someone else to reproduce it.
 
-### Performance
-- Primary and secondary metrics with confidence intervals
-- Calibration plots and calibration metrics
-- Subgroup performance (disaggregated by pre-specified attributes)
-- Comparison against benchmark
+For **performance**, report primary and secondary metrics with confidence intervals, calibration plots and measures, performance per pre-specified subgroup, and the comparison with your comparator.
 
-### Limitations
-- Known failure modes
-- Populations where validation has not been conducted
-- Data limitations (missing attributes, historical biases)
-- Generalisability limitations
+For **limitations**, name known failure modes, populations in which the model has not been validated, data limitations such as missing attributes or historical bias, and limits on generalisability.
 
 ## Negative results
 
-AI research has a strong publication bias towards positive results. Negative results (models that do not work as hoped, evaluations that reveal unexpected failure modes) are equally scientifically valuable and may prevent other teams from making the same mistakes.
-
-Report negative results alongside positive ones. If submitting to a journal, consider venues that publish negative results, or use preprint servers for rapid dissemination of findings that may not meet publication criteria.
+Journals publish positive results more readily than negative ones, and AI research is no exception. A model that did not work as hoped, or an evaluation that exposed an unexpected failure, is still useful to others working on the same problem. Report negative results alongside positive ones. If a journal will not take them, consider journals that publish negative results or a preprint server.
 
 ## Study registration
 
-Pre-register your evaluation study where possible:
+Register your evaluation study before you start, where you can:
 
-- Clinical trials: ClinicalTrials.gov
-- Observational studies: OSF.io, ISRCTN
-- AI model evaluation: OSF.io
+- clinical trials: ClinicalTrials.gov or another registry in the WHO network, such as ISRCTN;
+- observational studies and model evaluations: OSF or ISRCTN.
 
-Pre-registration makes it possible to distinguish confirmatory from exploratory analyses and reduces the risk of post-hoc outcome switching.
+Registration makes it possible to tell planned (confirmatory) analyses from exploratory ones, and makes it harder to switch outcomes after seeing the results.

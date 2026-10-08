@@ -2,7 +2,7 @@ id: codecarbon
 name: CodeCarbon
 summary: >-
   An open-source Python package that estimates the electricity use and carbon
-  emissions of your code while it runs, so you can measure and report the
+  emissions of your code while it runs, for measuring and reporting the
   footprint of training and running models.
 description: >-
   You wrap your code in a tracker (or run it through the command-line tool),
@@ -48,8 +48,7 @@ references:
 passages:
   - id: design-social-impact-environmental
     why: >-
-      It gives you an actual emissions figure for training and running your
-      model, which you need if you plan to report environmental impact or
+      It measures the emissions of training and running your model, which you need if you plan to report environmental impact or
       compare energy-saving options such as smaller or distilled models.
 see_also: [mlflow]
 last_reviewed: "2026-10-08"

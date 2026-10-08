@@ -51,7 +51,7 @@ references:
 passages:
   - id: development-documentation-model-card
     why: >-
-      This is the original model card proposal, so you can use its headings and
-      worked examples to fill in each of the fields this section lists.
+      The original model card proposal; its headings and worked examples show
+      how to fill in each field this section lists.
 see_also: [datasheets-for-datasets, tripod-ai]
 last_reviewed: "2026-10-08"

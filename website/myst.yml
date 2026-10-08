@@ -1,7 +1,7 @@
 version: 1
 project:
   title: The ELSA Way
-  description: A community-driven handbook for developing ethical, legal, social, and accessible AI systems across every phase of the healthcare AI lifecycle.
+  description: A community-driven handbook for building AI for healthcare with attention to its ethical, legal and societal aspects, through every phase of the AI lifecycle.
   thumbnail: figures/logo_elsa-nn.png
   authors:
     - name: The ELSA Way Community
@@ -21,31 +21,31 @@ project:
         - file: foreword/what-is-elsa-way.md
           title: What is The ELSA Way?
         - file: foreword/how-to-use.md
-          title: How to Use This Resource
+          title: How to use this resource
         - file: foreword/ai-lifecycle.md
-          title: The AI Lifecycle in Healthcare
+          title: The AI lifecycle in healthcare
         - file: foreword/elsa-principles.md
-          title: ELSA Principles
+          title: ELSA principles
         - file: foreword/future-ai.md
-          title: The FUTURE-AI Framework
+          title: The FUTURE-AI framework
         - file: foreword/who-is-this-for.md
-          title: Who This Is For
+          title: Who this is for
         - file: foreword/cite.md
-          title: How to Cite
+          title: How to cite
 
     # ===== Pathways ===============================================================
     - file: pathways/pathways.md
       children:
         - file: pathways/pathways-ai-developers.md
-          title: AI Developers
+          title: AI developers
         - file: pathways/pathways-healthcare-professionals.md
-          title: Healthcare Professionals
+          title: Healthcare professionals
         - file: pathways/pathways-patients-communities.md
-          title: Patients and Communities
+          title: Patients and communities
         - file: pathways/pathways-researchers.md
           title: Researchers
         - file: pathways/pathways-policy-managers.md
-          title: Policy Makers and Managers
+          title: Policy makers and managers
 
     # ===== Design ================================================================
     - file: design/design.md
@@ -58,23 +58,23 @@ project:
             - file: design/overview/overview-checklist.md
               title: Checklist
         - file: design/problem-definition.md
-          title: Problem Definition and Scoping
+          title: Problem definition and scoping
         - file: design/stakeholder-engagement.md
-          title: Stakeholder Engagement
+          title: Stakeholder engagement
         - file: design/intended-use.md
-          title: Intended Use and User Requirements
+          title: Intended use and user requirements
         - file: design/ethical-review.md
-          title: Ethical Review and Approval
+          title: Ethical review and approval
         - file: design/data-strategy.md
-          title: Data Strategy
+          title: Data strategy
         - file: design/legal-regulatory.md
-          title: Legal and Regulatory Considerations
+          title: Legal and regulatory considerations
         - file: design/risk-management.md
-          title: Risk Management Planning
+          title: Risk management planning
         - file: design/bias-sources.md
-          title: Identifying Sources of Bias
+          title: Identifying sources of bias
         - file: design/social-impact.md
-          title: Social and Societal Impact
+          title: Social and societal impact
 
     # ===== Development ===========================================================
     - file: development/development.md
@@ -87,19 +87,19 @@ project:
             - file: development/overview/overview-checklist.md
               title: Checklist
         - file: development/data-collection.md
-          title: Data Collection and Management
+          title: Data collection and management
         - file: development/data-quality-fairness.md
-          title: Data Quality and Fairness
+          title: Data quality and fairness
         - file: development/privacy-security.md
-          title: Privacy and Security
+          title: Privacy and security
         - file: development/model-development.md
-          title: Model Development
+          title: Model development
         - file: development/human-ai-interaction.md
-          title: Human-AI Interaction Design
+          title: Human-AI interaction design
         - file: development/documentation.md
           title: Documentation
         - file: development/addressing-ai-risks.md
-          title: Addressing AI Risks
+          title: Addressing AI risks
 
     # ===== Evaluation ============================================================
     - file: evaluation/evaluation.md
@@ -112,21 +112,21 @@ project:
             - file: evaluation/overview/overview-checklist.md
               title: Checklist
         - file: evaluation/evaluation-planning.md
-          title: Evaluation Planning
+          title: Evaluation planning
         - file: evaluation/external-validation.md
-          title: External and Multi-Site Validation
+          title: External and multi-site validation
         - file: evaluation/fairness-bias.md
-          title: Fairness and Bias Assessment
+          title: Fairness and bias assessment
         - file: evaluation/usability-ux.md
-          title: Usability and User Experience
+          title: Usability and user experience
         - file: evaluation/clinical-utility-safety.md
-          title: Clinical Utility and Safety
+          title: Clinical utility and safety
         - file: evaluation/robustness-testing.md
-          title: Robustness Testing
+          title: Robustness testing
         - file: evaluation/explainability-assessment.md
-          title: Explainability Assessment
+          title: Explainability assessment
         - file: evaluation/reporting-transparency.md
-          title: Reporting and Transparency
+          title: Reporting and transparency
 
     # ===== Deployment ============================================================
     - file: deployment/deployment.md
@@ -139,29 +139,29 @@ project:
             - file: deployment/overview/overview-checklist.md
               title: Checklist
         - file: deployment/local-validation.md
-          title: Local Validation
+          title: Local validation
         - file: deployment/clinical-integration.md
-          title: Integration into Clinical Workflows
+          title: Integration into clinical workflows
         - file: deployment/quality-control.md
-          title: Quality Control
+          title: Quality control
         - file: deployment/monitoring-auditing.md
-          title: Monitoring and Auditing
+          title: Monitoring and auditing
         - file: deployment/logging-traceability.md
-          title: Logging and Traceability
+          title: Logging and traceability
         - file: deployment/training-onboarding.md
-          title: Training and Onboarding
+          title: Training and onboarding
         - file: deployment/regulatory-compliance.md
-          title: Regulatory Compliance
+          title: Regulatory compliance
         - file: deployment/governance-accountability.md
-          title: Governance and Accountability
+          title: Governance and accountability
 
     # ===== Toolbox ===============================================================
     # Tool pages are generated from toolbox/tools/*.yml by `make toolbox`.
     - file: toolbox/toolbox.md
       children:
         - file: toolbox/contributing-tools.md
-          title: Adding a Tool
-        - title: All Tools
+          title: Adding a tool
+        - title: All tools
           children:
             - pattern: toolbox/tools/*.md
 
@@ -183,7 +183,7 @@ project:
         - file: future-ai/explainability.md
           title: Explainability
         - file: future-ai/general-recommendations.md
-          title: General Recommendations
+          title: General recommendations
 
     # ===== Community Handbook ====================================================
     - file: community-handbook/community-handbook.md
@@ -191,13 +191,15 @@ project:
         - file: community-handbook/contributing.md
           title: Contributing to The ELSA Way
         - file: community-handbook/style-guide.md
-          title: Style Guide
+          title: Style guide
         - file: community-handbook/governance.md
           title: Governance
         - file: community-handbook/triage-review.md
-          title: Triage and Review
+          title: Triage and review
         - file: community-handbook/code-of-conduct.md
-          title: Code of Conduct
+          title: Code of conduct
+        - file: community-handbook/contributors.md
+          title: Contributors
 
 site:
   template: book-theme

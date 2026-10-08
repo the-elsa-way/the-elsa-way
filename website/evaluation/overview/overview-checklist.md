@@ -1,48 +1,48 @@
 (evaluation-overview-checklist)=
-# Evaluation Phase Checklist
+# Evaluation phase checklist
 
 ## Evaluation planning
-- [ ] Evaluation plan pre-specified (before looking at test data)
+- [ ] Evaluation plan written down before you look at the test data
 - [ ] Primary metric and success threshold defined
-- [ ] Subgroups for fairness analysis pre-specified
-- [ ] Comparison benchmark defined (standard of care, previous AI, clinical rule)
+- [ ] Subgroups for the fairness analysis listed in advance
+- [ ] Comparator defined (current practice, an existing score or an earlier model)
 
 ## Technical performance
-- [ ] Primary metrics measured on independent test set
-- [ ] Calibration assessed and reported
-- [ ] Confidence intervals reported (not just point estimates)
-- [ ] Performance compared to benchmark
+- [ ] Primary metrics measured on a held-out test set
+- [ ] Calibration (agreement between predicted and observed risk) assessed and reported
+- [ ] Confidence intervals reported alongside point estimates
+- [ ] Performance compared with the comparator
 
 ## External validation
-- [ ] Tested on at least one external dataset (different site, if possible)
-- [ ] Performance variation across sites documented
-- [ ] Known sources of performance variation reported
+- [ ] Tested on at least one external dataset, preferably from another hospital
+- [ ] Differences in performance between sites documented
+- [ ] Known causes of those differences reported
 
 ## Fairness
-- [ ] Performance disaggregated by age, sex, and other relevant protected attributes
-- [ ] Statistical significance of subgroup differences assessed
-- [ ] Clinical significance of subgroup differences assessed
-- [ ] Bias correction measures evaluated
+- [ ] Performance reported separately by age, sex and other relevant patient characteristics
+- [ ] Uncertainty of subgroup differences reported (confidence intervals)
+- [ ] Clinical relevance of subgroup differences assessed
+- [ ] Effect of any bias correction evaluated
 
 ## Usability
-- [ ] Usability testing conducted with representative users (≥5 per user group)
-- [ ] User satisfaction and acceptance measured (validated questionnaire)
-- [ ] Task performance measured (with and without AI)
+- [ ] Usability tested with representative users from each user group
+- [ ] Satisfaction and acceptance measured with a validated questionnaire
+- [ ] Task performance measured with and without the AI
 
 ## Clinical utility
-- [ ] Clinical evaluation plan completed
-- [ ] Benefit to patients demonstrated or quantified
-- [ ] Safety profile assessed (adverse events, automation bias incidents)
+- [ ] Prospective evaluation in practice planned or completed (silent mode, then an impact study)
+- [ ] Benefit to patients measured
+- [ ] Safety assessed (adverse events, cases of over-reliance on the AI)
 
 ## Robustness
-- [ ] Performance tested under real-world input variations
+- [ ] Performance tested under realistic variation in input data
 - [ ] Performance on edge cases documented
 
 ## Explainability
-- [ ] Explanations evaluated for accuracy and faithfulness to model
+- [ ] Explanations checked for faithfulness to the model
 - [ ] Explanations evaluated with clinical end users
 
 ## Reporting
-- [ ] Results written up according to applicable reporting standard (TRIPOD-AI, CLAIM, etc.)
-- [ ] Study registered (if applicable)
-- [ ] Negative results reported alongside positive
+- [ ] Results written up following the relevant reporting guideline (TRIPOD+AI, CLAIM, STARD-AI and so on)
+- [ ] Study registered, where applicable
+- [ ] Negative results reported alongside positive ones

@@ -1,66 +1,68 @@
 (future-ai-overview)=
-# FUTURE-AI Overview
+# FUTURE-AI overview
+
+FUTURE-AI has 30 recommendations: three for fairness, four for universality, six for traceability, five for usability, three for robustness, two for explainability and seven general ones {cite}`lekadir2025futureai`. The paper's step-by-step guide (its Tables 3 to 6 and Figure 3) places each recommendation in the lifecycle phase where you first act on it. This page follows that placement. It is the reference list that the rest of The ELSA Way links to.
+
+## How to read the tables
+
+Each recommendation has a code: a letter for the principle and a number. The book uses **Un** for universality and **Us** for usability, as the paper's Figure 3 does, so the two never clash. The summaries are our own short wording; the paper's Table 2 has the official text.
+
+The two compliance columns show how strongly the consortium recommends each item for two kinds of tool. A *research* tool is a proof of concept built and tested in a research setting. A *deployable* tool is meant for use in routine care. `+` means recommended and `++` means highly recommended. For a deployable tool, 26 of the 30 recommendations are `++`; the four that stay at `+` are F2, Un2, E2 and G7.
+
+The phase shows where the work starts, not where it ends. G1 (stakeholders) and T1 (risk management) explicitly run through the whole lifecycle, and choices you make in design come back when you evaluate and monitor the tool.
 
 ## The 30 recommendations by lifecycle phase
 
-The following table maps all 30 FUTURE-AI recommendations to the lifecycle phase where they are primarily addressed in The ELSA Way.
+### Design
 
-### Design phase
+| Code | What it asks of you | Research | Deployable | Covered in |
+|---|---|---|---|---|
+| G1 | Involve clinicians, patients, ethicists, legal experts, data managers and other disciplines from the start, and keep them involved | ++ | ++ | [Stakeholder engagement](../design/stakeholder-engagement.md) |
+| Us1 | Write down early who will use the tool, for what task, and what they need from it | ++ | ++ | [Intended use](../design/intended-use.md) |
+| Un1 | Name the clinical settings the tool is meant for and how those settings differ | ++ | ++ | [Intended use](../design/intended-use.md) |
+| Un2 | Build on standards the community already uses: clinical definitions, terminologies, data and interface standards | + | + | [Intended use](../design/intended-use.md), [Clinical integration](../deployment/clinical-integration.md) |
+| R1 | List the ways real-world data can vary: equipment, protocols, operators, artefacts, context | ++ | ++ | [Data strategy](../design/data-strategy.md) |
+| F1 | Identify early where bias could come from: patient attributes, factors specific to the application, and human bias in labelling and curation | ++ | ++ | [Sources of bias](../design/bias-sources.md) |
+| E1 | Decide with end users whether explanations are needed and, if so, what they are for | ++ | ++ | [Intended use](../design/intended-use.md) |
+| T1 | Set up a risk management process that runs for the tool's whole life | + | ++ | [Risk management](../design/risk-management.md) |
+| G6 | Look for the ethical issues specific to this application and address them | + | ++ | [Ethical review](../design/ethical-review.md) |
+| G7 | Look at effects on society, work and the environment and address them | + | + | [Social and societal impact](../design/social-impact.md) |
 
-| ID | Recommendation | Principle |
-|---|---|---|
-| G1 | Engage interdisciplinary stakeholders throughout the AI lifecycle | General |
-| Us1 | Define intended use and user requirements from an early stage | Usability |
-| Un1 | Define intended clinical settings and cross-setting variations | Universality |
-| Un2 | Use community-defined standards (eg, clinical definitions, technical standards) | Universality |
-| F1 | Define all sources of data heterogeneity | Fairness |
-| F2 | Collect information on individuals' and data attributes | Fairness |
-| E1 | Define the need and requirements for explainability with end users | Explainability |
-| G6 | Investigate and address application-specific ethical issues | General |
-| G7 | Investigate and address social and societal issues | General |
-| T1 | Implement a risk management process throughout the AI lifecycle | Traceability |
+### Development
 
-### Development phase
+| Code | What it asks of you | Research | Deployable | Covered in |
+|---|---|---|---|---|
+| R2 | Train on real-world data that represents the variation you listed under R1 | ++ | ++ | [Data collection](../development/data-collection.md) |
+| F2 | Record attributes of patients (such as sex, age, ethnicity) and of the data (such as site and device) so that you can check for bias later | + | + | [Data collection](../development/data-collection.md), [Data quality and fairness](../development/data-quality-fairness.md) |
+| G2 | Protect the privacy and security of the data and the tool | ++ | ++ | [Privacy and security](../development/privacy-security.md) |
+| G3 | Build in measures against the risks found during design | ++ | ++ | [Addressing AI risks](../development/addressing-ai-risks.md) |
+| Us2 | Design how users work with the tool, check its inputs and outputs, and overrule it | + | ++ | [Human-AI interaction](../development/human-ai-interaction.md) |
 
-| ID | Recommendation | Principle |
-|---|---|---|
-| R2 | Train with representative real-world data | Robustness |
-| F2 | Collect data on individuals' and data attributes | Fairness |
-| G2 | Implement measures for data privacy and security | General |
-| G3 | Implement measures to address identified AI risks | General |
-| Us2 | Establish mechanisms for human-AI interactions and oversight | Usability |
+### Evaluation
 
-### Evaluation phase
+| Code | What it asks of you | Research | Deployable | Covered in |
+|---|---|---|---|---|
+| G4 | Plan the evaluation before you run it: test data, metrics and what you compare against | ++ | ++ | [Evaluation planning](../evaluation/evaluation-planning.md) |
+| Un3 | Test on external datasets, at more than one site, or both | ++ | ++ | [External validation](../evaluation/external-validation.md) |
+| F3 | Measure bias between groups and, where needed, correct it and check that the correction works | + | ++ | [Fairness and bias assessment](../evaluation/fairness-bias.md) |
+| Us4 | Test user experience and acceptance with end users who did not help build the tool | + | ++ | [Usability and user experience](../evaluation/usability-ux.md) |
+| Us5 | Show clinical utility and safety: effectiveness, harm, and costs against benefits | + | ++ | [Clinical utility and safety](../evaluation/clinical-utility-safety.md) |
+| R3 | Test performance under realistic variation in the data and improve it where it fails | ++ | ++ | [Robustness testing](../evaluation/robustness-testing.md) |
+| E2 | Check with end users that the explanations are correct and help them | + | + | [Explainability assessment](../evaluation/explainability-assessment.md) |
+| T2 | Document the tool, its data and its evaluation results for each audience | ++ | ++ | [Documentation](../development/documentation.md), [Reporting and transparency](../evaluation/reporting-transparency.md) |
 
-| ID | Recommendation | Principle |
-|---|---|---|
-| G4 | Define an adequate evaluation plan | General |
-| Un3 | Evaluate using external datasets and/or multiple sites | Universality |
-| Un4 | Evaluate and demonstrate local clinical validity | Universality |
-| F3 | Evaluate fairness and bias correction measures | Fairness |
-| Us4 | Evaluate user experience and acceptance with diverse users | Usability |
-| Us5 | Evaluate clinical utility and safety | Usability |
-| R3 | Evaluate and optimise robustness against real-world variations | Robustness |
-| E2 | Evaluate explainability with end users | Explainability |
-| T2 | Document AI tool including evaluations | Traceability |
+### Deployment
 
-### Deployment phase
+| Code | What it asks of you | Research | Deployable | Covered in |
+|---|---|---|---|---|
+| Un4 | Show that the tool works on local patients and fits local workflows before you rely on it | + | ++ | [Local validation](../deployment/local-validation.md) |
+| T3 | Check inputs and outputs while the tool runs: missing or out-of-range values, implausible results | + | ++ | [Quality control](../deployment/quality-control.md) |
+| T4 | Audit the tool on a schedule and update it when performance or data change | + | ++ | [Monitoring and auditing](../deployment/monitoring-auditing.md) |
+| T5 | Log how the tool is used: data accessed, predictions, clinical decisions and problems | + | ++ | [Logging and traceability](../deployment/logging-traceability.md) |
+| Us3 | Give users training materials and sessions | + | ++ | [Training and onboarding](../deployment/training-onboarding.md) |
+| G5 | Find out which laws apply and comply with them | + | ++ | [Legal and regulatory considerations](../design/legal-regulatory.md), [Regulatory compliance](../deployment/regulatory-compliance.md) |
+| T6 | Assign roles and responsibilities for running, supervising and answering for the tool | + | ++ | [Governance and accountability](../deployment/governance-accountability.md) |
 
-| ID | Recommendation | Principle |
-|---|---|---|
-| Un4 | Evaluate local clinical validity | Universality |
-| T3 | Define mechanisms for quality control of AI inputs and outputs | Traceability |
-| T4 | Implement a system for periodic auditing and updating | Traceability |
-| T5 | Implement a logging system for usage recording | Traceability |
-| Us3 | Provide training materials and activities | Usability |
-| G5 | Identify and comply with applicable AI regulatory requirements | General |
-| T6 | Establish mechanisms for AI governance | Traceability |
+## Where the paper and EU law differ
 
-## Compliance levels
-
-FUTURE-AI distinguishes between **research AI** (proof-of-concept tools) and **deployable AI** (tools used in clinical practice):
-
-- `+` Recommended
-- `++` Highly recommended
-
-In general, deployable AI requires higher compliance than research AI across most recommendations. See Table 2 in the FUTURE-AI paper for the full compliance matrix.
+FUTURE-AI is a consensus guideline, and in one place its wording goes further than the legal text. Under G5 the paper says the EU AI Act treats all healthcare AI as high-risk. The Act itself {cite}`euaiact2024` makes a healthcare AI system high-risk in two cases: when it is, or is a safety component of, a medical device that must be assessed by a Notified Body (an independent organisation designated to check conformity, in practice for MDR class IIa and higher), or when its use is listed in Annex III, such as emergency patient triage. [Legal and regulatory considerations](../design/legal-regulatory.md) explains how to check this for your tool.

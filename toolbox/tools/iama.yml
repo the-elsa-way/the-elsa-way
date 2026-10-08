@@ -17,11 +17,13 @@ description: >-
   for certain deployers of high-risk AI systems. The current version is in
   Dutch; an English translation (FRAIA) exists for the first version.
 healthcare: >-
-  The IAMA was written for Dutch government bodies, not specifically for health
-  care, but its fundamental rights part fits clinical AI well. Public hospitals
-  and other organisations that provide public services may fall under the AI
-  Act's Article 27 duty, and the IAMA gives you a ready-made route to that
-  assessment.
+  The IAMA was written for Dutch government bodies, not for health care, but its
+  fundamental rights part is a useful way for a hospital to think through the
+  effects of a clinical AI tool on patients. The AI Act's Article 27 duty only
+  covers high-risk systems listed in Annex III, such as systems that decide on
+  eligibility for healthcare services or triage emergency patients. Most
+  clinical AI is high-risk because it is a medical device (Annex I), and then
+  Article 27 does not apply; the IAMA can still serve as a voluntary check.
 url: https://www.rijksoverheid.nl/documenten/rapporten/2026/02/16/impact-assessment-mensenrechten-en-algoritmes
 developers:
   - Utrecht University (Utrecht Data School)
@@ -51,14 +53,14 @@ references:
 passages:
   - id: design-legal-regulatory-country
     why: >-
-      In the Netherlands the IAMA is the government's standard instrument for
-      checking an algorithm against fundamental rights, so it shows you what a
-      national framework expects in practice.
+      The IAMA is the Dutch government's standard instrument for checking an
+      algorithm against fundamental rights, and shows what a national framework
+      expects in practice.
   - id: design-legal-regulatory-ai-act
     why: >-
-      Version 2 marks the questions that map onto the AI Act's fundamental
-      rights impact assessment, so you can use it to prepare that obligation
-      for a high-risk clinical AI system.
+      If your system falls under Annex III, for example emergency triage,
+      version 2 marks the questions that map onto the AI Act's fundamental
+      rights impact assessment that deployers must complete before first use.
 see_also: [ai-impact-assessment, algoritmekader, altai]
 also_listed_in:
   - name: RAAIT toolbox

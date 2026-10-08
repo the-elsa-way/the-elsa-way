@@ -1,74 +1,70 @@
 (evaluation-clinical-utility-safety)=
-# Clinical Utility and Safety
+# Clinical utility and safety
 
 :::{admonition} FUTURE-AI
 :class: tip
-This chapter supports **Usability recommendation 5**: Evaluate clinical utility and safety (eg, effectiveness, harm, cost-benefit).
+This chapter supports **Usability recommendation 5** (Us5): evaluate clinical utility and safety, for example effectiveness, harm and the balance of costs and benefits {cite}`lekadir2025futureai`.
 :::
 
-Technical performance on a benchmark dataset is not clinical utility. Clinical utility means that the AI, when used in real clinical practice, leads to better outcomes for patients: better diagnoses, better treatment decisions, fewer harms, or more efficient care. It is the most important evaluation criterion, and the hardest to demonstrate.
+:::{admonition} Running case: sepsis early warning
+:class: note
+In the fictional sepsis case, the model reached a good AUC (a measure of how well it ranks patients who develop sepsis above those who do not) on held-out data from both hospitals. That result says nothing yet about whether patients get antibiotics sooner, whether fewer of them end up in intensive care, or whether nurses start ignoring the alerts after a few weeks. To find out, the team first runs the model in silent mode on live patients and then plans a study in which wards use the alerts.
+:::
 
-## Why clinical utility is not the same as accuracy
+Clinical utility means that patients are better off when clinicians use the AI in real practice: better diagnoses, better treatment decisions, fewer harms or more efficient care. It is the most important question in evaluation and the hardest one to answer.
 
-A model may achieve high accuracy on a held-out test set and yet:
+## Why clinical utility differs from accuracy
 
-- Not change clinical decisions that matter (clinicians already make correct decisions on easy cases)
-- Be ignored or overridden in practice due to poor usability
-- Introduce new errors via automation bias
-- Improve outcomes for some patients while worsening them for others
-- Perform worse in the deployment environment than in the test set
+A model can score well on a held-out test set and still fail to help, because:
 
-The only way to establish clinical utility is through rigorous prospective evaluation in the clinical setting.
+- it changes no decisions that matter (clinicians already get the easy cases right);
+- clinicians ignore or override it because it is hard to use;
+- clinicians follow it when it is wrong (automation bias), introducing new errors;
+- it improves outcomes for some patients and worsens them for others;
+- it performs worse in the clinic than on the test set.
+
+Retrospective and external validation show how well the model predicts. Only a prospective evaluation in clinical practice can show that patients benefit.
 
 ## The clinical evaluation plan
 
 :::{admonition} FUTURE-AI
 :class: tip
-This supports **General recommendation 4**: Define an adequate evaluation plan.
+This supports **General recommendation 4** (G4): plan the evaluation properly.
 :::
 
-Define a clinical evaluation plan that specifies:
+Your clinical evaluation plan should state the primary clinical outcome (for sepsis, for example, time to antibiotics or unplanned ICU admission), the study design, the comparator (usually care without the AI), the patients included, the setting and the duration. For an early live evaluation, follow the DECIDE-AI guideline {cite}`decideai2022`. For a randomised trial, use SPIRIT-AI for the protocol {cite}`spiritai2020` and CONSORT-AI for the report {cite}`consortai2020`.
 
-- **Primary clinical outcome**: what patient outcome will improve if the AI is beneficial? (disease missed, treatment delayed, hospital stay, cost)
-- **Study design**: what level of evidence is achievable? (RCT, prospective cohort, stepped-wedge)
-- **Comparator**: what is the AI compared against? (standard of care without AI)
-- **Population**: which patients are included?
-- **Setting**: which clinical environment is evaluated?
-- **Duration**: over what period?
+A study in which the AI's output affects patient care may be research under the Dutch Medical Research Involving Human Subjects Act (WMO), which requires review by an accredited medical research ethics committee (METC). Ask your METC early whether your design falls under the WMO.
 
 :::{include} ../toolbox/_generated/passages/evaluation-clinical-utility-safety-plan.md
 :::
 
-## Evidence pyramid for clinical AI evaluation
+## Levels of evidence for clinical AI
 
-| Level | Design | Evidence strength |
+The table orders study designs from weakest to strongest evidence of benefit.
+
+| Step | Design | What it shows |
 |---|---|---|
-| 5 | Retrospective performance on historical data | Weakest: necessary but not sufficient |
-| 4 | Prospective performance on new cases | Shows real-world performance |
-| 3 | Impact study: comparing decisions with/without AI | Shows influence on clinical decision-making |
-| 2 | Prospective randomised trial | Shows causal effect on patient outcomes |
-| 1 | Systematic review and meta-analysis | Highest level |
+| 1 | Retrospective performance on historical data from the development site | How well the model predicts on data like its training data |
+| 2 | External validation on data from other sites or periods | Whether that performance carries over to new data |
+| 3 | Prospective silent mode: the model scores live patients, clinicians do not see the output | Performance on current patients and workflows, without risk to them |
+| 4 | Impact study: clinical decisions with and without the AI | Whether the AI changes what clinicians do |
+| 5 | Randomised or stepped-wedge trial (wards or hospitals switch to the AI in random order) | Whether the AI causes better patient outcomes |
+| 6 | Systematic review and meta-analysis of several such studies | Whether the benefit holds across settings |
 
-Most published AI studies remain at level 5. Deployment decisions should ideally be supported by level 3 or higher.
+Steps 1 and 2 are needed but do not show benefit to patients. Claims of clinical utility need evidence from step 4 or higher. Where a randomised trial is not feasible, say why and describe how your design limits bias.
 
 ## Assessing safety
 
-Safety evaluation asks: can this AI cause harm?
+Ask how this AI could harm a patient, and look for evidence of each route:
 
-- **Adverse events**: incorrect AI outputs that lead to patient harm
-- **Automation bias incidents**: cases where clinicians over-relied on incorrect AI output
-- **Near-misses**: cases where harm was narrowly avoided
-- **Failure modes**: systematic error patterns (specific disease subtypes, demographics, acquisition conditions)
+- adverse events, where an incorrect output led to harm;
+- automation bias, where clinicians followed an incorrect output;
+- near misses, where harm was narrowly avoided;
+- failure modes, meaning systematic errors in particular patient groups, conditions or data situations.
 
-Document and report all identified safety issues, not just successes.
+Record and report every safety issue you find. If the tool is a medical device, serious incidents after it is placed on the market must be reported through MDR vigilance {cite}`mdr2017`.
 
 ## Cost-effectiveness
 
-For health technology assessment and procurement decisions, cost-effectiveness evidence is increasingly required:
-
-- Reduction in clinician time (diagnostic efficiency)
-- Reduction in unnecessary downstream procedures
-- Health economic modelling of outcome improvements
-- Infrastructure and licensing costs
-
-Cost-effectiveness should not be an afterthought: if clinical utility cannot be demonstrated, the cost of AI deployment is not justified.
+Hospitals, insurers and health technology assessment bodies want to know whether the benefit justifies the cost. Relevant inputs include clinician time saved or added (for example, time spent responding to false alerts), unnecessary tests or treatments avoided, the value of improved outcomes from health economic modelling, and the costs of infrastructure, licences, maintenance and monitoring. Collect these data during your prospective studies, because you cannot reconstruct most of them afterwards.

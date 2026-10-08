@@ -1,8 +1,8 @@
 id: flower
 name: Flower
 summary: >-
-  An open-source Python framework for federated learning, so you can train a
-  model across several sites while patient data stays where it is.
+  An open-source Python framework for federated learning: you train one model
+  across several sites while patient data stays where it is.
 description: >-
   With Flower you write a client app that trains on local data and a server app
   that combines the model updates, using a built-in strategy such as federated
@@ -50,8 +50,8 @@ references:
 passages:
   - id: development-privacy-security-techniques
     why: >-
-      Flower gives you a working implementation of federated learning, with
-      optional differential privacy and secure aggregation, so you can test the
-      performance trade-offs this passage warns about.
+      Flower implements federated learning with optional differential privacy
+      and secure aggregation, which lets you measure the performance
+      trade-offs this passage warns about.
 see_also: [arx, mlflow]
 last_reviewed: "2026-10-08"

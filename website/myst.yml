@@ -6,7 +6,7 @@ project:
   authors:
     - name: The ELSA Way Community
   copyright: "2026"
-  github: sophiedkk/the-elsa-way-claude
+  github: the-elsa-way/the-elsa-way
   license:
     code: MIT
     content: CC-BY-4.0
@@ -190,6 +190,6 @@ project:
 site:
   template: book-theme
   options:
-    url: https://sophiedkk.github.io/the-elsa-way-claude
+    url: https://the-elsa-way.github.io/the-elsa-way
     favicon: figures/logo_elsa-nn.svg
     logo: figures/logo_elsa-nn.svg
